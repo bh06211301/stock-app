@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高度集中警示</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f5f5f7;
+  color: #1d1d1f;
+}
+.app-header {
+  background: linear-gradient(135deg, #E24B4A 0%, #C62828 100%);
+  color: white;
+  padding: 20px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.back-btn {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 12px;
+}
+.app-header h1 {
+  font-size: 22px;
+  font-weight: 600;
+  flex: 1;
+}
+.warning-banner {
+  background: rgba(255,255,255,0.15);
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 12px;
+}
+.container {
+  padding: 16px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.info-card {
+  background: #FFF3CD;
+  color: #856404;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.info-card strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.section-header {
+  background: white;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 20px 0 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-subtitle {
+  font-size: 13px;
+  color: #86868b;
+  margin-top: 4px;
+}
+.level-extreme { border-left: 4px solid #E24B4A; }
+.level-high { border-left: 4px solid #FF6B35; }
+.level-medium { border-left: 4px solid #FFA726; }
+.stock-card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  cursor: pointer;
+  border-left: 4px solid transparent;
+}
+.stock-card:active {
+  transform: scale(0.98);
+}
+.stock-header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.stock-rank {
+  font-size: 18px;
+  font-weight: 700;
+  color: #86868b;
+  width: 32px;
+}
+.stock-icon {
+  font-size: 24px;
+  margin-right: 8px;
+}
+.stock-info {
+  flex: 1;
+}
+.stock-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+.stock-code {
+  font-size: 14px;
+  color: #86868b;
+  margin-top: 2px;
+}
+.concentration-badge {
+  background: #E24B4A;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.stock-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid #f5f5f7;
+  margin-top: 12px;
+}
+.stat-item {
+  text-align: center;
+}
+.stat-label {
+  font-size: 11px;
+  color: #86868b;
+  margin-bottom: 4px;
+}
+.stat-value {
+  font-size: 16px;
+  font-weight: 700;
+}
+.positive { color: #1D9E75; }
+.negative { color: #E24B4A; }
+.warning-box {
+  background: #FFEBEE;
+  border: 1px solid #FFCDD2;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.warning-box.extreme {
+  background: #FFEBEE;
+  border-color: #E24B4A;
+  color: #C62828;
+}
+.warning-box.high {
+  background: #FFF3E0;
+  border-color: #FFB74D;
+  color: #E65100;
+}
+.warning-box.medium {
+  background: #E3F2FD;
+  border-color: #90CAF9;
+  color: #1565C0;
+}
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  color: #86868b;
+}
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #86868b;
+}
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 16px;
+  border: 3px solid #e5e5e7;
+  border-top-color: #E24B4A;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+</style>
+</head>
+<body>
+<div class="app-header">
+  <div class="header-top">
+    <button class="back-btn" onclick="goBack()">← 返回</button>
+    <h1>⚠️ 高度集中警示</h1>
+  </div>
+  <div class="warning-banner">
+    ⚠️ 高度集中 = 籌碼穩定但波動大<br>
+    風險與機會並存,請審慎評估
+  </div>
+</div>
+
+<div id="loading" class="loading">
+  <div class="loading-spinner"></div>
+  <div>分析籌碼集中度...</div>
+</div>
+
+<div class="container" id="content" style="display:none;">
+  <div class="info-card">
+    <strong>📊 集中度說明</strong>
+    🔴 超高集中 (>80%): 極度鎖碼,高風險高報酬<br>
+    🟠 高度集中 (70-80%): 明顯集中,需密切關注<br>
+    🟡 中度集中 (60-70%): 開始集中,可持續觀察
+  </div>
+
+  <div id="extremeSection"></div>
+  <div id="highSection"></div>
+  <div id="mediumSection"></div>
+  
+  <div id="emptyState" class="empty-state" style="display:none;">
+    <div class="empty-icon">✅</div>
+    <div>目前沒有高度集中的股票</div>
+    <div style="margin-top: 8px; font-size: 13px;">市場籌碼分散,相對健康</div>
+  </div>
+</div>
+
+<script>
+function goBack() {
+  window.location.href = 'index.html';
+}
+
+function viewStock(code) {
+  window.location.href = `index.html?stock=${code}`;
+}
+
+async function loadData() {
+  try {
+    const response = await fetch('data/ranking.json');
+    const data = await response.json();
+    
+    if (!data || !data.rankings || !data.rankings.all) {
+      showEmpty();
+      return;
+    }
+    
+    analyzeConcentration(data.rankings.all);
+    
+  } catch (error) {
+    console.error('載入失敗:', error);
+    showEmpty();
+  }
+}
+
+function analyzeConcentration(stocks) {
+  // 按集中度分類
+  const extreme = stocks.filter(s => s.latest.big_ratio > 80);
+  const high = stocks.filter(s => s.latest.big_ratio > 70 && s.latest.big_ratio <= 80);
+  const medium = stocks.filter(s => s.latest.big_ratio > 60 && s.latest.big_ratio <= 70);
+  
+  // 按比例排序
+  extreme.sort((a, b) => b.latest.big_ratio - a.latest.big_ratio);
+  high.sort((a, b) => b.latest.big_ratio - a.latest.big_ratio);
+  medium.sort((a, b) => b.latest.big_ratio - a.latest.big_ratio);
+  
+  if (extreme.length === 0 && high.length === 0 && medium.length === 0) {
+    showEmpty();
+    return;
+  }
+  
+  renderSection('extremeSection', '🔴 超高集中區 (>80%)', 
+    '極度鎖碼,波動風險極高', extreme, 'extreme');
+  renderSection('highSection', '🟠 高度集中區 (70-80%)', 
+    '明顯集中,需密切關注', high, 'high');
+  renderSection('mediumSection', '🟡 中度集中區 (60-70%)', 
+    '開始集中,可持續觀察', medium, 'medium');
+  
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('content').style.display = 'block';
+}
+
+function renderSection(containerId, title, subtitle, stocks, level) {
+  const container = document.getElementById(containerId);
+  
+  if (stocks.length === 0) {
+    container.innerHTML = '';
+    return;
+  }
+  
+  let html = `
+    <div class="section-header">
+      <div class="section-title">${title}</div>
+      <div class="section-subtitle">${subtitle} · 共 ${stocks.length} 支</div>
+    </div>
+  `;
+  
+  stocks.forEach((stock, index) => {
+    const change = stock.trend.holder_change;
+    const ratio = stock.trend.ratio_change;
+    const icon = level === 'extreme' ? '🚨' : level === 'high' ? '⚠️' : '💡';
+    
+    let warningText = '';
+    if (level === 'extreme') {
+      warningText = '極度集中,流動性風險高,波動劇烈';
+    } else if (level === 'high') {
+      warningText = '高度鎖碼,注意籌碼穩定度';
+    } else {
+      warningText = '籌碼開始集中,可持續觀察';
+    }
+    
+    html += `
+      <div class="stock-card level-${level}" onclick="viewStock('${stock.stock_code}')">
+        <div class="stock-header">
+          <div class="stock-rank">${index + 1}</div>
+          <div class="stock-icon">${icon}</div>
+          <div class="stock-info">
+            <div class="stock-name">${stock.stock_name}</div>
+            <div class="stock-code">${stock.stock_code}</div>
+          </div>
+          <div class="concentration-badge">${stock.latest.big_ratio}%</div>
+        </div>
+        
+        <div class="stock-stats">
+          <div class="stat-item">
+            <div class="stat-label">大戶人數</div>
+            <div class="stat-value">${stock.latest.big_holders}</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">近期變化</div>
+            <div class="stat-value ${change >= 0 ? 'positive' : 'negative'}">
+              ${change >= 0 ? '+' : ''}${change}人
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">比例變化</div>
+            <div class="stat-value ${ratio >= 0 ? 'positive' : 'negative'}">
+              ${ratio >= 0 ? '+' : ''}${ratio.toFixed(1)}%
+            </div>
+          </div>
+        </div>
+        
+        <div class="warning-box ${level}">
+          ⚠️ ${warningText}
+        </div>
+      </div>
+    `;
+  });
+  
+  container.innerHTML = html;
+}
+
+function showEmpty() {
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('content').style.display = 'block';
+  document.getElementById('emptyState').style.display = 'block';
+}
+
+window.addEventListener('load', loadData);
+</script>
+</body>
+</html>

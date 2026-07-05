@@ -1,0 +1,128 @@
+{
+  "stock_code": "2301",
+  "stock_name": "光寶科",
+  "last_update": "2026-07-05 12:33:54",
+  "history": [
+    {
+      "date": "20260703",
+      "big_holders": 263,
+      "big_ratio": 73.5,
+      "total_holders": 220137,
+      "total_shares": 2316107763,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 102256,
+          "shares": 21509719,
+          "percent": 0.92
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 102918,
+          "shares": 185114209,
+          "percent": 7.99
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 8502,
+          "shares": 63930704,
+          "percent": 2.76
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 2241,
+          "shares": 27971800,
+          "percent": 1.2
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 1166,
+          "shares": 21140499,
+          "percent": 0.91
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 944,
+          "shares": 23700996,
+          "percent": 1.02
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 447,
+          "shares": 15694668,
+          "percent": 0.67
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 270,
+          "shares": 12301544,
+          "percent": 0.53
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 467,
+          "shares": 33157482,
+          "percent": 1.43
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 292,
+          "shares": 41006066,
+          "percent": 1.77
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 203,
+          "shares": 57923634,
+          "percent": 2.5
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 78,
+          "shares": 38570167,
+          "percent": 1.66
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 48,
+          "shares": 33251609,
+          "percent": 1.43
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 42,
+          "shares": 38382060,
+          "percent": 1.65
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 263,
+          "shares": 1702452606,
+          "percent": 73.5
+        }
+      ]
+    }
+  ],
+  "trend": null,
+  "signal": {
+    "icon": "❓",
+    "text": "資料不足",
+    "level": "unknown",
+    "color": "gray"
+  }
+}

@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="股票持股">
+<meta name="theme-color" content="#378ADD">
+<title>股票持股查詢</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #f5f5f7;
+  color: #1d1d1f;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+.app-header {
+  background: linear-gradient(135deg, #378ADD 0%, #1D5FA5 100%);
+  color: white;
+  padding: 20px 16px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.app-header h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.search-box {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.search-box input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #e5e5e7;
+  border-radius: 10px;
+  font-size: 17px;
+  background: #f5f5f7;
+  color: #1d1d1f;
+}
+.search-box input:focus {
+  outline: none;
+  border-color: #378ADD;
+  background: white;
+}
+.search-box button {
+  padding: 12px 24px;
+  background: #378ADD;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.search-box button:active {
+  transform: scale(0.95);
+  background: #1D5FA5;
+}
+.container {
+  padding: 16px;
+}
+.big-stat {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 16px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(55, 138, 221, 0.12);
+  border: 2px solid #378ADD;
+}
+.big-stat-label {
+  font-size: 15px;
+  color: #86868b;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.big-stat-value {
+  font-size: 56px;
+  font-weight: 700;
+  color: #378ADD;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.big-stat-unit {
+  font-size: 28px;
+  margin-left: 4px;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.stat-card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.stat-label {
+  font-size: 13px;
+  color: #86868b;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.stat-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1d1d1f;
+}
+.chart-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.chart-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1d1d1f;
+}
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #86868b;
+}
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 16px;
+  border: 3px solid #e5e5e7;
+  border-top-color: #378ADD;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.error {
+  background: #FF3B30;
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 16px;
+  text-align: center;
+  font-weight: 500;
+}
+.info-text {
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  margin-top: 8px;
+}
+#results { display: none; }
+.stock-info {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.stock-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1d1d1f;
+}
+.stock-code {
+  font-size: 15px;
+  color: #86868b;
+  margin-top: 4px;
+  font-weight: 500;
+}
+.stock-date {
+  font-size: 13px;
+  color: #86868b;
+  text-align: right;
+}
+.install-prompt {
+  background: linear-gradient(135deg, #1D9E75 0%, #0F6E56 100%);
+  color: white;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 14px;
+  text-align: center;
+  display: none;
+}
+.install-prompt h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.install-prompt p {
+  font-size: 14px;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+.footer {
+  text-align: center;
+  padding: 32px 16px;
+  color: #86868b;
+  font-size: 13px;
+}
+</style>
+</head>
+<body>
+<div class="app-header">
+  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+    <h1 style="margin: 0;">📊 股票持股查詢</h1>
+    <div style="display: flex; gap: 6px;">
+      <button onclick="window.location.href='concentration.html'" style="background: rgba(255,107,53,0.3); border: none; color: white; padding: 8px 12px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">
+        ⚠️ 高度集中
+      </button>
+      <button onclick="window.location.href='watchlist.html'" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 12px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">
+        ⭐ 清單
+      </button>
+      <button onclick="window.location.href='ranking.html'" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 12px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">
+        🔥 排行
+      </button>
+    </div>
+  </div>
+  <div class="search-box">
+    <input type="text" id="stockCode" placeholder="輸入股票代碼 (例如: 2330)" value="2330">
+    <button onclick="searchStock()">查詢</button>
+  </div>
+  <div class="info-text">集保戶股權分散表資料</div>
+</div>
+
+<div id="installPrompt" class="install-prompt">
+  <h3>💡 加入主畫面</h3>
+  <p>點選下方 <strong>分享</strong> 按鈕，選擇「<strong>加入主畫面</strong>」，即可像APP一樣使用</p>
+</div>
+
+<div id="loading" class="loading" style="display:none;">
+  <div class="loading-spinner"></div>
+  <div>載入中...</div>
+  <button onclick="useMockData()" style="margin-top: 20px; padding: 10px 20px; background: white; color: #378ADD; border: 1px solid #378ADD; border-radius: 10px; cursor: pointer;">
+    載入太慢?使用範例資料
+  </button>
+</div>
+
+<div id="error" class="error" style="display:none;"></div>
+
+<div class="container">
+  <div id="results">
+    <div class="stock-info">
+      <div>
+        <div class="stock-name" id="stockName">台積電</div>
+        <div class="stock-code" id="stockCodeDisplay">2330</div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;">
+        <div class="stock-date" id="dataDate">2024-05-22</div>
+        <button id="watchlistBtn" onclick="toggleWatchlist()" style="background: #FF6B35; color: white; border: none; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer;">
+          ⭐ 加入追蹤
+        </button>
+      </div>
+    </div>
+
+    <div class="big-stat">
+      <div class="big-stat-label">千張大戶持股比例</div>
+      <div class="big-stat-value">
+        <span id="bigHolderRatio">75.3</span><span class="big-stat-unit">%</span>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">總持股人數</div>
+        <div class="stat-value" id="totalHolders">1,234,567</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">千張大戶人數</div>
+        <div class="stat-value" id="bigHolders">1,234</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">總發行張數</div>
+        <div class="stat-value" id="totalShares">25,930</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">大戶持股張數</div>
+        <div class="stat-value" id="bigHoldersShares">19,512</div>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <h3>持股級距分布</h3>
+      <canvas id="distributionChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h3>千張大戶比例趨勢 (%)</h3>
+      <canvas id="holdersChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  股票持股查詢 APP<br>
+  資料來源: <a href="http://www.tdcc.com.tw/" style="color: #378ADD; text-decoration: none;">台灣集中保管結算所 (TDCC)</a><br>
+  <small style="opacity: 0.7;">本資料僅供參考，投資決策請自行審慎評估</small>
+</div>
+
+<script>
+// Service Worker 註冊
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js').catch(err => {
+    console.log('Service Worker registration failed:', err);
+  });
+}
+
+// 檢查是否已安裝為APP
+const isStandalone = window.matchMedia('(display-mode: standalone)').matches || 
+                     window.navigator.standalone || 
+                     document.referrer.includes('android-app://');
+
+if (!isStandalone) {
+  // 只在Safari iOS上顯示安裝提示
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+  const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+  
+  if (isIOS && isSafari) {
+    document.getElementById('installPrompt').style.display = 'block';
+  }
+}
+
+let chartInstances = {};
+
+async function searchStock() {
+  const stockCode = document.getElementById('stockCode').value.trim();
+  if (!stockCode) {
+    showError('請輸入股票代碼');
+    return;
+  }
+
+  showLoading();
+  hideError();
+
+  try {
+    // 優先讀取後端產生的個股 JSON (GitHub Pages 同網域，無 CORS 問題)
+    let data = await fetchFromLocalJSON(stockCode);
+
+    // 備援: 透過 CORS proxy 抓集保所 opendata CSV
+    if (!data || !data.success) {
+      data = await fetchFromOpendataCSV(stockCode);
+    }
+
+    if (!data || !data.success) {
+      showError('找不到此股票資料，請確認代碼正確。若為追蹤清單外的股票，資料每週五更新後才會顯示。');
+      return;
+    }
+
+    displayData(data);
+    hideLoading();
+
+  } catch (error) {
+    console.error('Error:', error);
+    showError('載入失敗，請稍後再試');
+    hideLoading();
+  }
+}
+
+// 從後端產生的個股 JSON 讀取 (最快、最穩定)
+async function fetchFromLocalJSON(stockCode) {
+  try {
+    const response = await fetch(`data/stocks/${stockCode}.json`, { cache: 'no-cache' });
+    if (!response.ok) return null;
+
+    const json = await response.json();
+    if (!json || !json.history || json.history.length === 0) return null;
+
+    const latest = json.history[0];
+    const dist = latest.distribution || [];
+
+    // 格式化日期 20260703 -> 2026-07-03
+    const d = latest.date || '';
+    const dataDate = d.length === 8
+      ? `${d.slice(0,4)}-${d.slice(4,6)}-${d.slice(6,8)}`
+      : d;
+
+    return {
+      success: true,
+      stockCode: json.stock_code,
+      stockName: json.stock_name,
+      dataDate,
+      totalHolders: latest.total_holders.toLocaleString(),
+      totalShares: Math.round(latest.total_shares / 1000).toLocaleString(),
+      bigHolders: latest.big_holders.toLocaleString(),
+      bigHoldersShares: Math.round(latest.big_shares / 1000).toLocaleString(),
+      bigHolderRatio: latest.big_ratio.toFixed(1),
+      distributions: dist.map(d => ({
+        range: d.level_name,
+        holders: d.holders,
+        shares: d.shares
+      })),
+      // 趨勢歷史 (用於圖表二)
+      trendHistory: json.history.map(h => ({
+        date: h.date,
+        big_ratio: h.big_ratio,
+        big_holders: h.big_holders
+      })).reverse(),
+      signal: json.signal || null
+    };
+  } catch (err) {
+    console.log('Local JSON fetch failed:', err.message);
+    return null;
+  }
+}
+
+// 備援: 透過 CORS proxy 抓集保所 opendata CSV (較慢)
+async function fetchFromOpendataCSV(stockCode) {
+  const tdccUrl = 'https://opendata.tdcc.com.tw/getOD.ashx?id=1-5';
+  const proxies = [
+    'https://corsproxy.io/?',
+    'https://api.allorigins.win/raw?url='
+  ];
+
+  for (const proxy of proxies) {
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 12000);
+      const response = await fetch(proxy + encodeURIComponent(tdccUrl), {
+        signal: controller.signal
+      });
+      clearTimeout(timeoutId);
+      if (!response.ok) continue;
+
+      const text = await response.text();
+      const result = parseOpendataCSV(text, stockCode);
+      if (result && result.success) return result;
+    } catch (err) {
+      console.log(`CSV proxy ${proxy} failed:`, err.message);
+    }
+  }
+  return null;
+}
+
+// 解析集保所 opendata CSV
+// 欄位: 資料日期, 股票代號(補空白6碼), 持股分級(1-17), 人數, 股數, 比例%
+// Level 15 = 千張以上大戶, Level 17 = 合計
+function parseOpendataCSV(csvText, stockCode) {
+  try {
+    // 移除 BOM
+    const clean = csvText.replace(/^﻿/, '');
+    const lines = clean.split('\n').slice(1); // 跳標題
+
+    const stockRows = lines
+      .map(l => l.replace(/\r$/, '').split(','))
+      .filter(r => r.length >= 6 && r[1].trim() === stockCode);
+
+    if (stockRows.length === 0) return null;
+
+    const date = stockRows[0][0];
+    const totalRow = stockRows.find(r => r[2] === '17');
+    const bigRow = stockRows.find(r => r[2] === '15');
+    if (!totalRow) return null;
+
+    const totalHolders = parseInt(totalRow[3]);
+    const totalShares = parseInt(totalRow[4]);
+    const bigHolders = bigRow ? parseInt(bigRow[3]) : 0;
+    const bigShares = bigRow ? parseInt(bigRow[4]) : 0;
+    const bigRatio = bigRow ? parseFloat(bigRow[5]) : 0;
+
+    const LEVEL_NAMES = {
+      '1':'1-999股','2':'1-5張','3':'5-10張','4':'10-15張','5':'15-20張',
+      '6':'20-30張','7':'30-40張','8':'40-50張','9':'50-100張',
+      '10':'100-200張','11':'200-400張','12':'400-600張',
+      '13':'600-800張','14':'800千-1千張','15':'千張以上'
+    };
+
+    const distributions = stockRows
+      .filter(r => parseInt(r[2]) >= 1 && parseInt(r[2]) <= 15)
+      .map(r => ({
+        range: LEVEL_NAMES[r[2]] || r[2],
+        holders: parseInt(r[3]),
+        shares: parseInt(r[4])
+      }));
+
+    const d = date;
+    const dataDate = d.length === 8
+      ? `${d.slice(0,4)}-${d.slice(4,6)}-${d.slice(6,8)}`
+      : d;
+
+    return {
+      success: true,
+      stockCode,
+      stockName: `股票 ${stockCode}`,
+      dataDate,
+      totalHolders: totalHolders.toLocaleString(),
+      totalShares: Math.round(totalShares / 1000).toLocaleString(),
+      bigHolders: bigHolders.toLocaleString(),
+      bigHoldersShares: Math.round(bigShares / 1000).toLocaleString(),
+      bigHolderRatio: bigRatio.toFixed(1),
+      distributions,
+      trendHistory: null,
+      signal: null
+    };
+  } catch (err) {
+    console.error('CSV parse error:', err);
+    return null;
+  }
+}
+
+// getMockData 已移除，資料來源改為後端產生的 data/stocks/{code}.json
+
+function displayData(data) {
+  document.getElementById('stockName').textContent = data.stockName;
+  document.getElementById('stockCodeDisplay').textContent = data.stockCode;
+  document.getElementById('dataDate').textContent = data.dataDate;
+  document.getElementById('bigHolderRatio').textContent = data.bigHolderRatio;
+  document.getElementById('totalHolders').textContent = data.totalHolders;
+  document.getElementById('bigHolders').textContent = data.bigHolders;
+  document.getElementById('totalShares').textContent = data.totalShares;
+  document.getElementById('bigHoldersShares').textContent = data.bigHoldersShares;
+
+  // 顯示趨勢信號
+  if (data.signal) {
+    const icon = data.signal.icon || '';
+    const text = data.signal.text || '';
+    document.getElementById('stockName').textContent = `${data.stockName}  ${icon} ${text}`;
+  }
+
+  document.getElementById('results').style.display = 'block';
+
+  drawDistributionChart(data.distributions);
+  drawTrendChart(data.trendHistory);
+  updateWatchlistButton();
+}
+
+function drawDistributionChart(distributions) {
+  const ctx = document.getElementById('distributionChart');
+  
+  if (chartInstances.distribution) {
+    chartInstances.distribution.destroy();
+  }
+  
+  const labels = distributions.map(d => d.range);
+  const holdersData = distributions.map(d => d.holders);
+  const sharesData = distributions.map(d => Math.round(d.shares / 1000));
+  
+  chartInstances.distribution = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: '持股人數',
+        data: holdersData,
+        backgroundColor: 'rgba(55, 138, 221, 0.7)',
+        borderColor: 'rgba(55, 138, 221, 1)',
+        borderWidth: 1.5,
+        yAxisID: 'y'
+      }, {
+        label: '持股張數(千)',
+        data: sharesData,
+        backgroundColor: 'rgba(29, 158, 117, 0.7)',
+        borderColor: 'rgba(29, 158, 117, 1)',
+        borderWidth: 1.5,
+        yAxisID: 'y1'
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      aspectRatio: 1.2,
+      plugins: {
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            boxWidth: 14,
+            font: { size: 12, weight: '500' },
+            padding: 12
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: {
+            font: { size: 10 },
+            maxRotation: 45,
+            minRotation: 45
+          },
+          grid: {
+            display: false
+          }
+        },
+        y: {
+          type: 'linear',
+          position: 'left',
+          ticks: {
+            font: { size: 11 },
+            callback: function(value) {
+              return value.toLocaleString();
+            }
+          }
+        },
+        y1: {
+          type: 'linear',
+          position: 'right',
+          ticks: {
+            font: { size: 11 },
+            callback: function(value) {
+              return value.toLocaleString();
+            }
+          },
+          grid: {
+            drawOnChartArea: false
+          }
+        }
+      }
+    }
+  });
+}
+
+function drawTrendChart(trendHistory) {
+  const ctx = document.getElementById('holdersChart');
+
+  if (chartInstances.holders) {
+    chartInstances.holders.destroy();
+  }
+
+  // 若無歷史資料，顯示提示
+  if (!trendHistory || trendHistory.length < 2) {
+    ctx.getContext('2d').fillText('歷史資料累積中，每週自動更新', 20, 80);
+    return;
+  }
+
+  // 最多顯示最近12週
+  const recent = trendHistory.slice(-12);
+  const labels = recent.map(h => {
+    const d = h.date || '';
+    return d.length === 8 ? `${d.slice(4,6)}/${d.slice(6,8)}` : d;
+  });
+  const ratioData = recent.map(h => h.big_ratio);
+
+  chartInstances.holders = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        label: '千張大戶比例 (%)',
+        data: ratioData,
+        borderColor: 'rgba(127, 119, 221, 1)',
+        backgroundColor: 'rgba(127, 119, 221, 0.15)',
+        fill: true,
+        tension: 0.3,
+        pointRadius: 5,
+        pointHoverRadius: 7,
+        pointBackgroundColor: 'rgba(127, 119, 221, 1)',
+        borderWidth: 2.5
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      aspectRatio: 1.5,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => `大戶比例: ${ctx.parsed.y.toFixed(2)}%`
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: { font: { size: 11 } },
+          grid: { display: false }
+        },
+        y: {
+          ticks: {
+            font: { size: 11 },
+            callback: v => v.toFixed(1) + '%'
+          }
+        }
+      }
+    }
+  });
+}
+
+function showLoading() {
+  document.getElementById('loading').style.display = 'block';
+  document.getElementById('results').style.display = 'none';
+}
+
+function hideLoading() {
+  document.getElementById('loading').style.display = 'none';
+}
+
+function showError(message) {
+  const errorDiv = document.getElementById('error');
+  errorDiv.textContent = message;
+  errorDiv.style.display = 'block';
+  document.getElementById('results').style.display = 'none';
+}
+
+function hideError() {
+  document.getElementById('error').style.display = 'none';
+}
+
+// 追蹤清單功能
+function getWatchlist() {
+  const list = localStorage.getItem('stockWatchlist');
+  return list ? JSON.parse(list) : [];
+}
+
+function saveWatchlist(list) {
+  localStorage.setItem('stockWatchlist', JSON.stringify(list));
+}
+
+function isInWatchlist(code) {
+  return getWatchlist().includes(code);
+}
+
+function toggleWatchlist() {
+  const code = document.getElementById('stockCode').value.trim();
+  if (!code) return;
+  
+  let watchlist = getWatchlist();
+  const btn = document.getElementById('watchlistBtn');
+  
+  if (isInWatchlist(code)) {
+    // 移除
+    watchlist = watchlist.filter(c => c !== code);
+    saveWatchlist(watchlist);
+    btn.textContent = '⭐ 加入追蹤';
+    btn.style.background = '#FF6B35';
+  } else {
+    // 加入
+    watchlist.push(code);
+    saveWatchlist(watchlist);
+    btn.textContent = '✅ 已追蹤';
+    btn.style.background = '#1D9E75';
+  }
+}
+
+function updateWatchlistButton() {
+  const code = document.getElementById('stockCode').value.trim();
+  const btn = document.getElementById('watchlistBtn');
+  
+  if (isInWatchlist(code)) {
+    btn.textContent = '✅ 已追蹤';
+    btn.style.background = '#1D9E75';
+  } else {
+    btn.textContent = '⭐ 加入追蹤';
+    btn.style.background = '#FF6B35';
+  }
+}
+
+function useMockData() {
+  hideLoading();
+  showError('載入逾時。請確認網路連線後重試，或等待每週五自動更新後資料將可正常載入。');
+}
+
+window.addEventListener('load', () => {
+  searchStock();
+});
+
+document.getElementById('stockCode').addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    searchStock();
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+{
+  "stock_code": "5876",
+  "stock_name": "上海商銀",
+  "last_update": "2026-07-05 12:33:55",
+  "history": [
+    {
+      "date": "20260703",
+      "big_holders": 371,
+      "big_ratio": 81.31,
+      "total_holders": 54255,
+      "total_shares": 4861603140,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 17169,
+          "shares": 1741067,
+          "percent": 0.03
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 23584,
+          "shares": 46026732,
+          "percent": 0.94
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 4368,
+          "shares": 34104654,
+          "percent": 0.7
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 1807,
+          "shares": 22511804,
+          "percent": 0.46
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 1120,
+          "shares": 20376749,
+          "percent": 0.41
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 1230,
+          "shares": 30999784,
+          "percent": 0.63
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 691,
+          "shares": 24416359,
+          "percent": 0.5
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 511,
+          "shares": 23420965,
+          "percent": 0.48
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1258,
+          "shares": 90139092,
+          "percent": 1.85
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 984,
+          "shares": 138305823,
+          "percent": 2.84
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 716,
+          "shares": 205027861,
+          "percent": 4.21
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 254,
+          "shares": 124276946,
+          "percent": 2.55
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 117,
+          "shares": 80963155,
+          "percent": 1.66
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 75,
+          "shares": 66278660,
+          "percent": 1.36
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 371,
+          "shares": 3953013489,
+          "percent": 81.31
+        }
+      ]
+    }
+  ],
+  "trend": null,
+  "signal": {
+    "icon": "❓",
+    "text": "資料不足",
+    "level": "unknown",
+    "color": "gray"
+  }
+}

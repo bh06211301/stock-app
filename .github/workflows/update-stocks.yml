@@ -1,0 +1,42 @@
+name: 更新股票大戶排行榜
+
+on:
+  schedule:
+    # 每週五晚上11點執行 (UTC+8 = UTC 15:00)
+    - cron: '0 15 * * 5'
+  
+  # 也可以手動執行
+  workflow_dispatch:
+
+jobs:
+  update-rankings:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 檢出代碼
+      uses: actions/checkout@v3
+    
+    - name: 設定 Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: 安裝依賴套件
+      run: |
+        pip install -r backend/requirements.txt
+    
+    - name: 抓取股票資料
+      run: |
+        python backend/fetch_data.py
+    
+    - name: 計算大戶趨勢排行
+      run: |
+        python backend/calculate_trends.py
+    
+    - name: 提交更新
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add data/ranking.json data/stocks_raw.json data/stocks/
+        git diff --quiet && git diff --staged --quiet || git commit -m "🤖 自動更新: $(date +'%Y-%m-%d %H:%M')"
+        git push
