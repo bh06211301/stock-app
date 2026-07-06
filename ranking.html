@@ -71,7 +71,8 @@ body {
 }
 .summary-item:active { background: #f0f0f5; }
 .summary-item.active { background: #eef4ff; outline: 2px solid #378ADD; outline-offset: -2px; }
-.summary-item.active-green { background: #edfbf3; outline: 2px solid #1D9E75; outline-offset: -2px; }
+.summary-item.active-green  { background: #edfbf3; outline: 2px solid #1D9E75; outline-offset: -2px; }
+.summary-item.active-orange { background: #fff4e8; outline: 2px solid #E76F00; outline-offset: -2px; }
 .summary-number {
   font-size: 24px;
   font-weight: 700;
@@ -213,6 +214,11 @@ body {
       <div class="summary-label">📈 持續增加</div>
       <div class="summary-hint">12週比例+2%<br>且人數+5</div>
     </div>
+    <div class="summary-item" id="tab-divergence" onclick="setFilter('divergence')">
+      <div class="summary-number" style="color: #E76F00;" id="divergenceCount">0</div>
+      <div class="summary-label">📊 籌碼背離</div>
+      <div class="summary-hint">大戶↑但<br>股價未跟</div>
+    </div>
   </div>
 
   <div class="filter-title" id="filterTitle">全部追蹤股票（按比例集中幅度排序）</div>
@@ -253,10 +259,11 @@ let rankingData = null;
 function displayRankings(data) {
   rankingData = data;
 
-  document.getElementById('updateTime').textContent = `更新時間: ${data.update_time}`;
-  document.getElementById('totalCount').textContent    = data.summary.total;
+  document.getElementById('updateTime').textContent    = `更新時間: ${data.update_time}`;
+  document.getElementById('totalCount').textContent     = data.summary.total;
   document.getElementById('strongBuyCount').textContent = data.summary.strong_buy;
-  document.getElementById('buyCount').textContent      = data.summary.buy;
+  document.getElementById('buyCount').textContent       = data.summary.buy;
+  document.getElementById('divergenceCount').textContent = data.summary.divergence || 0;
 
   document.getElementById('loading').style.display = 'none';
   document.getElementById('content').style.display = 'block';
@@ -268,15 +275,18 @@ const FILTER_LABELS = {
   all:        '全部追蹤股票（按比例集中幅度排序）',
   strong_buy: '🚀 快速集中：12週比例 +3% 且人數 +10',
   buy:        '📈 持續增加：12週比例 +2% 且人數 +5',
+  divergence: '📊 籌碼背離：大戶比例↑但股價尚未跟漲',
 };
 
 function setFilter(filter) {
-  ['all', 'strong_buy', 'buy'].forEach(f => {
+  ['all', 'strong_buy', 'buy', 'divergence'].forEach(f => {
     const el = document.getElementById(`tab-${f}`);
-    el.classList.remove('active', 'active-green');
+    el.classList.remove('active', 'active-green', 'active-orange');
   });
   const activeEl = document.getElementById(`tab-${filter}`);
-  activeEl.classList.add(filter === 'strong_buy' ? 'active-green' : 'active');
+  if (filter === 'strong_buy')  activeEl.classList.add('active-green');
+  else if (filter === 'divergence') activeEl.classList.add('active-orange');
+  else activeEl.classList.add('active');
   renderList(filter);
 }
 
@@ -290,6 +300,51 @@ function renderList(filter) {
 
   if (stocks.length === 0) {
     container.innerHTML = '<div style="text-align:center;padding:40px 0;color:#86868b;">目前無符合條件的股票</div>';
+    return;
+  }
+
+  if (filter === 'divergence') {
+    stocks.forEach((stock, index) => {
+      const item = document.createElement('div');
+      item.className = 'stock-item';
+      item.onclick = () => viewStock(stock.stock_code);
+      const d = stock.divergence;
+      const priceClass  = d.price_change_pct  >= 0 ? 'positive' : 'negative';
+      const ratioClass  = d.ratio_change       >= 0 ? 'positive' : 'negative';
+      const divClass    = d.divergence_score   >= 0 ? 'positive' : 'negative';
+      const priceStr    = d.latest_price ? `$${d.latest_price.toLocaleString()}` : '—';
+      item.innerHTML = `
+        <div class="stock-header">
+          <div class="stock-rank">${index + 1}</div>
+          <div class="stock-signal">📊</div>
+          <div class="stock-info">
+            <div class="stock-name">${stock.stock_name}</div>
+            <div class="stock-code">${stock.stock_code} &nbsp; 現價 ${priceStr}</div>
+          </div>
+        </div>
+        <div class="stock-stats">
+          <div class="stat-item">
+            <div class="stat-label">大戶比例變化</div>
+            <div class="stat-value ${ratioClass}">
+              ${d.ratio_change >= 0 ? '+' : ''}${d.ratio_change}%
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">股價漲跌(12週)</div>
+            <div class="stat-value ${priceClass}">
+              ${d.price_change_pct >= 0 ? '+' : ''}${d.price_change_pct.toFixed(1)}%
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">背離分數</div>
+            <div class="stat-value ${divClass}" style="font-weight:700;">
+              ${d.divergence_score >= 0 ? '+' : ''}${d.divergence_score}
+            </div>
+          </div>
+        </div>
+      `;
+      container.appendChild(item);
+    });
     return;
   }
 

@@ -1,11 +1,12 @@
 {
-  "update_time": "2026-07-06 15:44:53",
+  "update_time": "2026-07-06 15:57:49",
   "data_source": "20260703",
   "summary": {
     "total": 64,
     "strong_buy": 4,
     "buy": 3,
-    "hold": 16
+    "hold": 16,
+    "divergence": 41
   },
   "rankings": {
     "all": [
@@ -15,7 +16,8 @@
         "latest": {
           "big_holders": 152,
           "big_ratio": 80.83,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 409.5
         },
         "trend": {
           "holder_change": 30,
@@ -29,7 +31,14 @@
           "level": "strong_buy",
           "color": "green"
         },
-        "score": 70.29
+        "score": 70.29,
+        "divergence": {
+          "ratio_change": 4.57,
+          "price_change_pct": 90.47,
+          "divergence_score": -44.77,
+          "latest_price": 409.5,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2376",
@@ -37,7 +46,8 @@
         "latest": {
           "big_holders": 79,
           "big_ratio": 61.55,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 338.5
         },
         "trend": {
           "holder_change": 14,
@@ -51,7 +61,14 @@
           "level": "strong_buy",
           "color": "green"
         },
-        "score": 61.44
+        "score": 61.44,
+        "divergence": {
+          "ratio_change": 3.99,
+          "price_change_pct": 28.95,
+          "divergence_score": 10.95,
+          "latest_price": 338.5,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2356",
@@ -59,7 +76,8 @@
         "latest": {
           "big_holders": 196,
           "big_ratio": 69.82,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 67.6
         },
         "trend": {
           "holder_change": 23,
@@ -73,7 +91,14 @@
           "level": "strong_buy",
           "color": "green"
         },
-        "score": 56.89
+        "score": 56.89,
+        "divergence": {
+          "ratio_change": 4.36,
+          "price_change_pct": 52.6,
+          "divergence_score": -9.0,
+          "latest_price": 67.6,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "3231",
@@ -81,7 +106,8 @@
         "latest": {
           "big_holders": 281,
           "big_ratio": 58.55,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 159.0
         },
         "trend": {
           "holder_change": 11,
@@ -95,7 +121,14 @@
           "level": "strong_buy",
           "color": "green"
         },
-        "score": 55.77
+        "score": 55.77,
+        "divergence": {
+          "ratio_change": 5.17,
+          "price_change_pct": 17.78,
+          "divergence_score": 33.92,
+          "latest_price": 159.0,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2327",
@@ -103,7 +136,8 @@
         "latest": {
           "big_holders": 212,
           "big_ratio": 68.96,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 1045.0
         },
         "trend": {
           "holder_change": 2,
@@ -117,7 +151,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 49.35
+        "score": 49.35,
+        "divergence": {
+          "ratio_change": 4.84,
+          "price_change_pct": 266.67,
+          "divergence_score": -218.27,
+          "latest_price": 1045.0,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "3034",
@@ -125,7 +166,8 @@
         "latest": {
           "big_holders": 99,
           "big_ratio": 58.94,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 538.0
         },
         "trend": {
           "holder_change": 17,
@@ -139,7 +181,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 38.53
+        "score": 38.53,
+        "divergence": {
+          "ratio_change": 1.78,
+          "price_change_pct": 36.55,
+          "divergence_score": -18.75,
+          "latest_price": 538.0,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2317",
@@ -147,7 +196,8 @@
         "latest": {
           "big_holders": 819,
           "big_ratio": 66.38,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 240.5
         },
         "trend": {
           "holder_change": 71,
@@ -161,7 +211,14 @@
           "level": "buy",
           "color": "green"
         },
-        "score": 36.49
+        "score": 36.49,
+        "divergence": {
+          "ratio_change": 2.7,
+          "price_change_pct": 19.95,
+          "divergence_score": 7.05,
+          "latest_price": 240.5,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "1303",
@@ -169,7 +226,8 @@
         "latest": {
           "big_holders": 374,
           "big_ratio": 84.54,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 197.0
         },
         "trend": {
           "holder_change": 6,
@@ -183,7 +241,14 @@
           "level": "buy",
           "color": "green"
         },
-        "score": 33.63
+        "score": 33.63,
+        "divergence": {
+          "ratio_change": 3.2,
+          "price_change_pct": 141.42,
+          "divergence_score": -109.42,
+          "latest_price": 197.0,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "1301",
@@ -191,7 +256,8 @@
         "latest": {
           "big_holders": 297,
           "big_ratio": 72.19,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 62.1
         },
         "trend": {
           "holder_change": 9,
@@ -205,7 +271,14 @@
           "level": "buy",
           "color": "green"
         },
-        "score": 31.92
+        "score": 31.92,
+        "divergence": {
+          "ratio_change": 2.88,
+          "price_change_pct": 32.27,
+          "divergence_score": -3.47,
+          "latest_price": 62.1,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2303",
@@ -213,7 +286,8 @@
         "latest": {
           "big_holders": 696,
           "big_ratio": 74.23,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 170.5
         },
         "trend": {
           "holder_change": 69,
@@ -227,7 +301,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 30.0
+        "score": 30.0,
+        "divergence": {
+          "ratio_change": 1.9,
+          "price_change_pct": 175.0,
+          "divergence_score": -156.0,
+          "latest_price": 170.5,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "5871",
@@ -235,7 +316,8 @@
         "latest": {
           "big_holders": 204,
           "big_ratio": 63.67,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 116.5
         },
         "trend": {
           "holder_change": 12,
@@ -249,7 +331,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 25.65
+        "score": 25.65,
+        "divergence": {
+          "ratio_change": 1.94,
+          "price_change_pct": 8.88,
+          "divergence_score": 10.52,
+          "latest_price": 116.5,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "1326",
@@ -257,7 +346,8 @@
         "latest": {
           "big_holders": 263,
           "big_ratio": 80.47,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 68.0
         },
         "trend": {
           "holder_change": 0,
@@ -271,7 +361,14 @@
           "level": "neutral",
           "color": "gray"
         },
-        "score": 21.1
+        "score": 21.1,
+        "divergence": {
+          "ratio_change": 2.11,
+          "price_change_pct": 49.61,
+          "divergence_score": -28.51,
+          "latest_price": 68.0,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2887",
@@ -279,7 +376,8 @@
         "latest": {
           "big_holders": 1291,
           "big_ratio": 70.45,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 34.15
         },
         "trend": {
           "holder_change": 34,
@@ -293,7 +391,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 18.0
+        "score": 18.0,
+        "divergence": {
+          "ratio_change": 1.53,
+          "price_change_pct": 39.1,
+          "divergence_score": -23.8,
+          "latest_price": 34.15,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2886",
@@ -301,7 +406,8 @@
         "latest": {
           "big_holders": 465,
           "big_ratio": 81.6,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 45.5
         },
         "trend": {
           "holder_change": 4,
@@ -315,7 +421,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 17.97
+        "score": 17.97,
+        "divergence": {
+          "ratio_change": 1.71,
+          "price_change_pct": 14.18,
+          "divergence_score": 2.92,
+          "latest_price": 45.5,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2892",
@@ -323,7 +436,8 @@
         "latest": {
           "big_holders": 749,
           "big_ratio": 67.18,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 32.4
         },
         "trend": {
           "holder_change": 15,
@@ -337,7 +451,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 13.94
+        "score": 13.94,
+        "divergence": {
+          "ratio_change": 1.19,
+          "price_change_pct": 13.29,
+          "divergence_score": -1.39,
+          "latest_price": 32.4,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2883",
@@ -345,7 +466,8 @@
         "latest": {
           "big_holders": 842,
           "big_ratio": 63.32,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 28.45
         },
         "trend": {
           "holder_change": -23,
@@ -359,7 +481,14 @@
           "level": "sell",
           "color": "red"
         },
-        "score": 13.54
+        "score": 13.54,
+        "divergence": {
+          "ratio_change": 1.62,
+          "price_change_pct": 34.52,
+          "divergence_score": -18.32,
+          "latest_price": 28.45,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2881",
@@ -367,7 +496,8 @@
         "latest": {
           "big_holders": 497,
           "big_ratio": 84.19,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 121.0
         },
         "trend": {
           "holder_change": -4,
@@ -381,7 +511,14 @@
           "level": "neutral",
           "color": "gray"
         },
-        "score": 11.9
+        "score": 11.9,
+        "divergence": {
+          "ratio_change": 1.27,
+          "price_change_pct": 38.13,
+          "divergence_score": -25.43,
+          "latest_price": 121.0,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2884",
@@ -389,7 +526,8 @@
         "latest": {
           "big_holders": 894,
           "big_ratio": 67.87,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 33.7
         },
         "trend": {
           "holder_change": -6,
@@ -403,7 +541,14 @@
           "level": "sell",
           "color": "red"
         },
-        "score": 11.83
+        "score": 11.83,
+        "divergence": {
+          "ratio_change": 1.25,
+          "price_change_pct": 4.5,
+          "divergence_score": 8.0,
+          "latest_price": 33.7,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2603",
@@ -411,7 +556,8 @@
         "latest": {
           "big_holders": 179,
           "big_ratio": 64.54,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 195.0
         },
         "trend": {
           "holder_change": -13,
@@ -425,7 +571,14 @@
           "level": "sell",
           "color": "red"
         },
-        "score": 11.33
+        "score": 11.33,
+        "divergence": {
+          "ratio_change": 1.81,
+          "price_change_pct": -3.7,
+          "divergence_score": 21.8,
+          "latest_price": 195.0,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "3045",
@@ -433,7 +586,8 @@
         "latest": {
           "big_holders": 230,
           "big_ratio": 90.49,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 116.5
         },
         "trend": {
           "holder_change": 4,
@@ -447,7 +601,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 10.97
+        "score": 10.97,
+        "divergence": {
+          "ratio_change": 0.92,
+          "price_change_pct": 5.91,
+          "divergence_score": 3.29,
+          "latest_price": 116.5,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2347",
@@ -455,7 +616,8 @@
         "latest": {
           "big_holders": 165,
           "big_ratio": 85.4,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 94.8
         },
         "trend": {
           "holder_change": 5,
@@ -469,7 +631,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 10.12
+        "score": 10.12,
+        "divergence": {
+          "ratio_change": 0.7,
+          "price_change_pct": 19.55,
+          "divergence_score": -12.55,
+          "latest_price": 94.8,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2882",
@@ -477,7 +646,8 @@
         "latest": {
           "big_holders": 669,
           "big_ratio": 83.21,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 93.6
         },
         "trend": {
           "holder_change": 17,
@@ -491,7 +661,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 8.71
+        "score": 8.71,
+        "divergence": {
+          "ratio_change": 0.61,
+          "price_change_pct": 28.4,
+          "divergence_score": -22.3,
+          "latest_price": 93.6,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "5876",
@@ -499,7 +676,8 @@
         "latest": {
           "big_holders": 371,
           "big_ratio": 81.31,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 42.0
         },
         "trend": {
           "holder_change": 0,
@@ -513,7 +691,14 @@
           "level": "neutral",
           "color": "gray"
         },
-        "score": 8.1
+        "score": 8.1,
+        "divergence": {
+          "ratio_change": 0.81,
+          "price_change_pct": 5.66,
+          "divergence_score": 2.44,
+          "latest_price": 42.0,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "5880",
@@ -521,7 +706,8 @@
         "latest": {
           "big_holders": 729,
           "big_ratio": 69.58,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 24.7
         },
         "trend": {
           "holder_change": 8,
@@ -535,7 +721,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 6.91
+        "score": 6.91,
+        "divergence": {
+          "ratio_change": 0.58,
+          "price_change_pct": 3.56,
+          "divergence_score": 2.24,
+          "latest_price": 24.7,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2412",
@@ -543,7 +736,8 @@
         "latest": {
           "big_holders": 293,
           "big_ratio": 78.03,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 141.0
         },
         "trend": {
           "holder_change": -7,
@@ -557,7 +751,14 @@
           "level": "sell",
           "color": "red"
         },
-        "score": 6.37
+        "score": 6.37,
+        "divergence": {
+          "ratio_change": 0.87,
+          "price_change_pct": 4.06,
+          "divergence_score": 4.64,
+          "latest_price": 141.0,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "0050",
@@ -565,7 +766,8 @@
         "latest": {
           "big_holders": 246,
           "big_ratio": 26.37,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 108.35
         },
         "trend": {
           "holder_change": 8,
@@ -579,7 +781,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 6.26
+        "score": 6.26,
+        "divergence": {
+          "ratio_change": 0.29,
+          "price_change_pct": 34.18,
+          "divergence_score": -31.28,
+          "latest_price": 108.35,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "1216",
@@ -587,7 +796,8 @@
         "latest": {
           "big_holders": 444,
           "big_ratio": 85.54,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 76.3
         },
         "trend": {
           "holder_change": -6,
@@ -601,7 +811,14 @@
           "level": "sell",
           "color": "red"
         },
-        "score": 5.37
+        "score": 5.37,
+        "divergence": {
+          "ratio_change": 0.67,
+          "price_change_pct": 6.27,
+          "divergence_score": 0.43,
+          "latest_price": 76.3,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2890",
@@ -609,7 +826,8 @@
         "latest": {
           "big_holders": 813,
           "big_ratio": 77.6,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 39.7
         },
         "trend": {
           "holder_change": 23,
@@ -623,7 +841,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 5.31
+        "score": 5.31,
+        "divergence": {
+          "ratio_change": 0.24,
+          "price_change_pct": 21.41,
+          "divergence_score": -19.01,
+          "latest_price": 39.7,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2615",
@@ -631,7 +856,8 @@
         "latest": {
           "big_holders": 151,
           "big_ratio": 82.57,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 82.8
         },
         "trend": {
           "holder_change": -5,
@@ -645,7 +871,14 @@
           "level": "neutral",
           "color": "gray"
         },
-        "score": 5.09
+        "score": 5.09,
+        "divergence": {
+          "ratio_change": 0.83,
+          "price_change_pct": 7.39,
+          "divergence_score": 0.91,
+          "latest_price": 82.8,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2301",
@@ -653,7 +886,8 @@
         "latest": {
           "big_holders": 263,
           "big_ratio": 73.5,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 219.0
         },
         "trend": {
           "holder_change": 16,
@@ -667,7 +901,8 @@
           "level": "neutral",
           "color": "gray"
         },
-        "score": 4.88
+        "score": 4.88,
+        "divergence": null
       }
     ],
     "strong_buy": [
@@ -677,7 +912,8 @@
         "latest": {
           "big_holders": 152,
           "big_ratio": 80.83,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 409.5
         },
         "trend": {
           "holder_change": 30,
@@ -691,7 +927,14 @@
           "level": "strong_buy",
           "color": "green"
         },
-        "score": 70.29
+        "score": 70.29,
+        "divergence": {
+          "ratio_change": 4.57,
+          "price_change_pct": 90.47,
+          "divergence_score": -44.77,
+          "latest_price": 409.5,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2376",
@@ -699,7 +942,8 @@
         "latest": {
           "big_holders": 79,
           "big_ratio": 61.55,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 338.5
         },
         "trend": {
           "holder_change": 14,
@@ -713,7 +957,14 @@
           "level": "strong_buy",
           "color": "green"
         },
-        "score": 61.44
+        "score": 61.44,
+        "divergence": {
+          "ratio_change": 3.99,
+          "price_change_pct": 28.95,
+          "divergence_score": 10.95,
+          "latest_price": 338.5,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2356",
@@ -721,7 +972,8 @@
         "latest": {
           "big_holders": 196,
           "big_ratio": 69.82,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 67.6
         },
         "trend": {
           "holder_change": 23,
@@ -735,7 +987,14 @@
           "level": "strong_buy",
           "color": "green"
         },
-        "score": 56.89
+        "score": 56.89,
+        "divergence": {
+          "ratio_change": 4.36,
+          "price_change_pct": 52.6,
+          "divergence_score": -9.0,
+          "latest_price": 67.6,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "3231",
@@ -743,7 +1002,8 @@
         "latest": {
           "big_holders": 281,
           "big_ratio": 58.55,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 159.0
         },
         "trend": {
           "holder_change": 11,
@@ -757,7 +1017,14 @@
           "level": "strong_buy",
           "color": "green"
         },
-        "score": 55.77
+        "score": 55.77,
+        "divergence": {
+          "ratio_change": 5.17,
+          "price_change_pct": 17.78,
+          "divergence_score": 33.92,
+          "latest_price": 159.0,
+          "weeks": 12
+        }
       }
     ],
     "buy": [
@@ -767,7 +1034,8 @@
         "latest": {
           "big_holders": 819,
           "big_ratio": 66.38,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 240.5
         },
         "trend": {
           "holder_change": 71,
@@ -781,7 +1049,14 @@
           "level": "buy",
           "color": "green"
         },
-        "score": 36.49
+        "score": 36.49,
+        "divergence": {
+          "ratio_change": 2.7,
+          "price_change_pct": 19.95,
+          "divergence_score": 7.05,
+          "latest_price": 240.5,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "1303",
@@ -789,7 +1064,8 @@
         "latest": {
           "big_holders": 374,
           "big_ratio": 84.54,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 197.0
         },
         "trend": {
           "holder_change": 6,
@@ -803,7 +1079,14 @@
           "level": "buy",
           "color": "green"
         },
-        "score": 33.63
+        "score": 33.63,
+        "divergence": {
+          "ratio_change": 3.2,
+          "price_change_pct": 141.42,
+          "divergence_score": -109.42,
+          "latest_price": 197.0,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "1301",
@@ -811,7 +1094,8 @@
         "latest": {
           "big_holders": 297,
           "big_ratio": 72.19,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 62.1
         },
         "trend": {
           "holder_change": 9,
@@ -825,7 +1109,14 @@
           "level": "buy",
           "color": "green"
         },
-        "score": 31.92
+        "score": 31.92,
+        "divergence": {
+          "ratio_change": 2.88,
+          "price_change_pct": 32.27,
+          "divergence_score": -3.47,
+          "latest_price": 62.1,
+          "weeks": 12
+        }
       }
     ],
     "hold": [
@@ -835,7 +1126,8 @@
         "latest": {
           "big_holders": 212,
           "big_ratio": 68.96,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 1045.0
         },
         "trend": {
           "holder_change": 2,
@@ -849,7 +1141,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 49.35
+        "score": 49.35,
+        "divergence": {
+          "ratio_change": 4.84,
+          "price_change_pct": 266.67,
+          "divergence_score": -218.27,
+          "latest_price": 1045.0,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "3034",
@@ -857,7 +1156,8 @@
         "latest": {
           "big_holders": 99,
           "big_ratio": 58.94,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 538.0
         },
         "trend": {
           "holder_change": 17,
@@ -871,7 +1171,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 38.53
+        "score": 38.53,
+        "divergence": {
+          "ratio_change": 1.78,
+          "price_change_pct": 36.55,
+          "divergence_score": -18.75,
+          "latest_price": 538.0,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2303",
@@ -879,7 +1186,8 @@
         "latest": {
           "big_holders": 696,
           "big_ratio": 74.23,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 170.5
         },
         "trend": {
           "holder_change": 69,
@@ -893,7 +1201,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 30.0
+        "score": 30.0,
+        "divergence": {
+          "ratio_change": 1.9,
+          "price_change_pct": 175.0,
+          "divergence_score": -156.0,
+          "latest_price": 170.5,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "5871",
@@ -901,7 +1216,8 @@
         "latest": {
           "big_holders": 204,
           "big_ratio": 63.67,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 116.5
         },
         "trend": {
           "holder_change": 12,
@@ -915,7 +1231,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 25.65
+        "score": 25.65,
+        "divergence": {
+          "ratio_change": 1.94,
+          "price_change_pct": 8.88,
+          "divergence_score": 10.52,
+          "latest_price": 116.5,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2887",
@@ -923,7 +1246,8 @@
         "latest": {
           "big_holders": 1291,
           "big_ratio": 70.45,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 34.15
         },
         "trend": {
           "holder_change": 34,
@@ -937,7 +1261,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 18.0
+        "score": 18.0,
+        "divergence": {
+          "ratio_change": 1.53,
+          "price_change_pct": 39.1,
+          "divergence_score": -23.8,
+          "latest_price": 34.15,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2886",
@@ -945,7 +1276,8 @@
         "latest": {
           "big_holders": 465,
           "big_ratio": 81.6,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 45.5
         },
         "trend": {
           "holder_change": 4,
@@ -959,7 +1291,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 17.97
+        "score": 17.97,
+        "divergence": {
+          "ratio_change": 1.71,
+          "price_change_pct": 14.18,
+          "divergence_score": 2.92,
+          "latest_price": 45.5,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2892",
@@ -967,7 +1306,8 @@
         "latest": {
           "big_holders": 749,
           "big_ratio": 67.18,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 32.4
         },
         "trend": {
           "holder_change": 15,
@@ -981,7 +1321,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 13.94
+        "score": 13.94,
+        "divergence": {
+          "ratio_change": 1.19,
+          "price_change_pct": 13.29,
+          "divergence_score": -1.39,
+          "latest_price": 32.4,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "3045",
@@ -989,7 +1336,8 @@
         "latest": {
           "big_holders": 230,
           "big_ratio": 90.49,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 116.5
         },
         "trend": {
           "holder_change": 4,
@@ -1003,7 +1351,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 10.97
+        "score": 10.97,
+        "divergence": {
+          "ratio_change": 0.92,
+          "price_change_pct": 5.91,
+          "divergence_score": 3.29,
+          "latest_price": 116.5,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2347",
@@ -1011,7 +1366,8 @@
         "latest": {
           "big_holders": 165,
           "big_ratio": 85.4,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 94.8
         },
         "trend": {
           "holder_change": 5,
@@ -1025,7 +1381,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 10.12
+        "score": 10.12,
+        "divergence": {
+          "ratio_change": 0.7,
+          "price_change_pct": 19.55,
+          "divergence_score": -12.55,
+          "latest_price": 94.8,
+          "weeks": 12
+        }
       },
       {
         "stock_code": "2882",
@@ -1033,7 +1396,8 @@
         "latest": {
           "big_holders": 669,
           "big_ratio": 83.21,
-          "date": "20260703"
+          "date": "20260703",
+          "close_price": 93.6
         },
         "trend": {
           "holder_change": 17,
@@ -1047,7 +1411,476 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 8.71
+        "score": 8.71,
+        "divergence": {
+          "ratio_change": 0.61,
+          "price_change_pct": 28.4,
+          "divergence_score": -22.3,
+          "latest_price": 93.6,
+          "weeks": 12
+        }
+      }
+    ],
+    "divergence": [
+      {
+        "stock_code": "3231",
+        "stock_name": "緯創",
+        "latest": {
+          "big_holders": 281,
+          "big_ratio": 58.55,
+          "date": "20260703",
+          "close_price": 159.0
+        },
+        "divergence": {
+          "ratio_change": 5.17,
+          "price_change_pct": 17.78,
+          "divergence_score": 33.92,
+          "latest_price": 159.0,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "🚀",
+          "text": "大戶快速集中",
+          "level": "strong_buy",
+          "color": "green"
+        }
+      },
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "latest": {
+          "big_holders": 179,
+          "big_ratio": 64.54,
+          "date": "20260703",
+          "close_price": 195.0
+        },
+        "divergence": {
+          "ratio_change": 1.81,
+          "price_change_pct": -3.7,
+          "divergence_score": 21.8,
+          "latest_price": 195.0,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "📉",
+          "text": "大戶持股減少",
+          "level": "sell",
+          "color": "red"
+        }
+      },
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "latest": {
+          "big_holders": 79,
+          "big_ratio": 61.55,
+          "date": "20260703",
+          "close_price": 338.5
+        },
+        "divergence": {
+          "ratio_change": 3.99,
+          "price_change_pct": 28.95,
+          "divergence_score": 10.95,
+          "latest_price": 338.5,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "🚀",
+          "text": "大戶快速集中",
+          "level": "strong_buy",
+          "color": "green"
+        }
+      },
+      {
+        "stock_code": "5871",
+        "stock_name": "中租-KY",
+        "latest": {
+          "big_holders": 204,
+          "big_ratio": 63.67,
+          "date": "20260703",
+          "close_price": 116.5
+        },
+        "divergence": {
+          "ratio_change": 1.94,
+          "price_change_pct": 8.88,
+          "divergence_score": 10.52,
+          "latest_price": 116.5,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        }
+      },
+      {
+        "stock_code": "1101",
+        "stock_name": "台泥",
+        "latest": {
+          "big_holders": 414,
+          "big_ratio": 50.62,
+          "date": "20260703",
+          "close_price": 23.65
+        },
+        "divergence": {
+          "ratio_change": 0.28,
+          "price_change_pct": -6.89,
+          "divergence_score": 9.69,
+          "latest_price": 23.65,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        }
+      },
+      {
+        "stock_code": "2884",
+        "stock_name": "玉山金",
+        "latest": {
+          "big_holders": 894,
+          "big_ratio": 67.87,
+          "date": "20260703",
+          "close_price": 33.7
+        },
+        "divergence": {
+          "ratio_change": 1.25,
+          "price_change_pct": 4.5,
+          "divergence_score": 8.0,
+          "latest_price": 33.7,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "📉",
+          "text": "大戶持股減少",
+          "level": "sell",
+          "color": "red"
+        }
+      },
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "latest": {
+          "big_holders": 819,
+          "big_ratio": 66.38,
+          "date": "20260703",
+          "close_price": 240.5
+        },
+        "divergence": {
+          "ratio_change": 2.7,
+          "price_change_pct": 19.95,
+          "divergence_score": 7.05,
+          "latest_price": 240.5,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "📈",
+          "text": "大戶持續增加",
+          "level": "buy",
+          "color": "green"
+        }
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "latest": {
+          "big_holders": 293,
+          "big_ratio": 78.03,
+          "date": "20260703",
+          "close_price": 141.0
+        },
+        "divergence": {
+          "ratio_change": 0.87,
+          "price_change_pct": 4.06,
+          "divergence_score": 4.64,
+          "latest_price": 141.0,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "📉",
+          "text": "大戶持股減少",
+          "level": "sell",
+          "color": "red"
+        }
+      },
+      {
+        "stock_code": "3045",
+        "stock_name": "台灣大",
+        "latest": {
+          "big_holders": 230,
+          "big_ratio": 90.49,
+          "date": "20260703",
+          "close_price": 116.5
+        },
+        "divergence": {
+          "ratio_change": 0.92,
+          "price_change_pct": 5.91,
+          "divergence_score": 3.29,
+          "latest_price": 116.5,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        }
+      },
+      {
+        "stock_code": "2912",
+        "stock_name": "統一超",
+        "latest": {
+          "big_holders": 65,
+          "big_ratio": 79.81,
+          "date": "20260703",
+          "close_price": 231.0
+        },
+        "divergence": {
+          "ratio_change": 0.45,
+          "price_change_pct": 1.54,
+          "divergence_score": 2.96,
+          "latest_price": 231.0,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "📉",
+          "text": "大戶持股減少",
+          "level": "sell",
+          "color": "red"
+        }
+      },
+      {
+        "stock_code": "2886",
+        "stock_name": "兆豐金",
+        "latest": {
+          "big_holders": 465,
+          "big_ratio": 81.6,
+          "date": "20260703",
+          "close_price": 45.5
+        },
+        "divergence": {
+          "ratio_change": 1.71,
+          "price_change_pct": 14.18,
+          "divergence_score": 2.92,
+          "latest_price": 45.5,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        }
+      },
+      {
+        "stock_code": "5876",
+        "stock_name": "上海商銀",
+        "latest": {
+          "big_holders": 371,
+          "big_ratio": 81.31,
+          "date": "20260703",
+          "close_price": 42.0
+        },
+        "divergence": {
+          "ratio_change": 0.81,
+          "price_change_pct": 5.66,
+          "divergence_score": 2.44,
+          "latest_price": 42.0,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "趨勢不明顯",
+          "level": "neutral",
+          "color": "gray"
+        }
+      },
+      {
+        "stock_code": "5880",
+        "stock_name": "合庫金",
+        "latest": {
+          "big_holders": 729,
+          "big_ratio": 69.58,
+          "date": "20260703",
+          "close_price": 24.7
+        },
+        "divergence": {
+          "ratio_change": 0.58,
+          "price_change_pct": 3.56,
+          "divergence_score": 2.24,
+          "latest_price": 24.7,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        }
+      },
+      {
+        "stock_code": "1102",
+        "stock_name": "亞泥",
+        "latest": {
+          "big_holders": 205,
+          "big_ratio": 79.6,
+          "date": "20260703",
+          "close_price": 36.45
+        },
+        "divergence": {
+          "ratio_change": 0.41,
+          "price_change_pct": 2.24,
+          "divergence_score": 1.86,
+          "latest_price": 36.45,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "📉",
+          "text": "大戶持股減少",
+          "level": "sell",
+          "color": "red"
+        }
+      },
+      {
+        "stock_code": "2615",
+        "stock_name": "萬海",
+        "latest": {
+          "big_holders": 151,
+          "big_ratio": 82.57,
+          "date": "20260703",
+          "close_price": 82.8
+        },
+        "divergence": {
+          "ratio_change": 0.83,
+          "price_change_pct": 7.39,
+          "divergence_score": 0.91,
+          "latest_price": 82.8,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "趨勢不明顯",
+          "level": "neutral",
+          "color": "gray"
+        }
+      },
+      {
+        "stock_code": "1216",
+        "stock_name": "統一",
+        "latest": {
+          "big_holders": 444,
+          "big_ratio": 85.54,
+          "date": "20260703",
+          "close_price": 76.3
+        },
+        "divergence": {
+          "ratio_change": 0.67,
+          "price_change_pct": 6.27,
+          "divergence_score": 0.43,
+          "latest_price": 76.3,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "📉",
+          "text": "大戶持股減少",
+          "level": "sell",
+          "color": "red"
+        }
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "latest": {
+          "big_holders": 749,
+          "big_ratio": 67.18,
+          "date": "20260703",
+          "close_price": 32.4
+        },
+        "divergence": {
+          "ratio_change": 1.19,
+          "price_change_pct": 13.29,
+          "divergence_score": -1.39,
+          "latest_price": 32.4,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        }
+      },
+      {
+        "stock_code": "1301",
+        "stock_name": "台塑",
+        "latest": {
+          "big_holders": 297,
+          "big_ratio": 72.19,
+          "date": "20260703",
+          "close_price": 62.1
+        },
+        "divergence": {
+          "ratio_change": 2.88,
+          "price_change_pct": 32.27,
+          "divergence_score": -3.47,
+          "latest_price": 62.1,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "📈",
+          "text": "大戶持續增加",
+          "level": "buy",
+          "color": "green"
+        }
+      },
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "latest": {
+          "big_holders": 560,
+          "big_ratio": 78.88,
+          "date": "20260703",
+          "close_price": 37.65
+        },
+        "divergence": {
+          "ratio_change": 0.41,
+          "price_change_pct": 10.41,
+          "divergence_score": -6.31,
+          "latest_price": 37.65,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "趨勢不明顯",
+          "level": "neutral",
+          "color": "gray"
+        }
+      },
+      {
+        "stock_code": "4904",
+        "stock_name": "遠傳",
+        "latest": {
+          "big_holders": 233,
+          "big_ratio": 91.11,
+          "date": "20260703",
+          "close_price": 105.0
+        },
+        "divergence": {
+          "ratio_change": 0.28,
+          "price_change_pct": 10.99,
+          "divergence_score": -8.19,
+          "latest_price": 105.0,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "📉",
+          "text": "大戶持股減少",
+          "level": "sell",
+          "color": "red"
+        }
       }
     ]
   }

@@ -34,6 +34,42 @@ def calculate_trend(history):
     }
 
 
+def calculate_divergence(history):
+    """
+    計算籌碼背離分數：大戶比例上升但股價未跟上
+    背離分數 = 大戶比例變化(pp) × 10 − 股價漲幅(%)
+    分數越高 = 大戶越積極吃貨、股價越落後 → 潛在爆發力越強
+    """
+    if len(history) < 2:
+        return None
+
+    weeks_ago = min(12, len(history) - 1)
+    latest   = history[0]
+    previous = history[weeks_ago]
+
+    latest_price = latest.get('close_price')
+    prev_price   = previous.get('close_price')
+
+    if not latest_price or not prev_price or prev_price <= 0:
+        return None
+
+    ratio_change     = latest['big_ratio'] - previous['big_ratio']
+    price_change_pct = (latest_price - prev_price) / prev_price * 100
+
+    if ratio_change <= 0:   # 大戶比例沒增加就不算背離
+        return None
+
+    divergence_score = round(ratio_change * 10 - price_change_pct, 2)
+
+    return {
+        'ratio_change':     round(ratio_change, 2),
+        'price_change_pct': round(price_change_pct, 2),
+        'divergence_score': divergence_score,
+        'latest_price':     latest_price,
+        'weeks':            weeks_ago,
+    }
+
+
 def generate_signal(trend):
     """生成趨勢判斷信號"""
     if not trend:
@@ -97,7 +133,8 @@ def main():
         print('❌ 找不到 data/stocks_raw.json，請先執行 fetch_data.py')
         return
 
-    rankings = []
+    rankings   = []
+    divergence_list = []
 
     for stock in raw_data['stocks']:
         history = stock['history']
@@ -105,8 +142,9 @@ def main():
             continue
 
         latest = history[0]
-        trend = calculate_trend(history)
+        trend  = calculate_trend(history)
         signal = generate_signal(trend)
+        div    = calculate_divergence(history)
 
         save_stock_json(stock, trend, signal)
 
@@ -117,34 +155,53 @@ def main():
                 'stock_name': stock['stock_name'],
                 'latest': {
                     'big_holders': latest['big_holders'],
-                    'big_ratio': latest['big_ratio'],
-                    'date': latest['date']
+                    'big_ratio':   latest['big_ratio'],
+                    'date':        latest['date'],
+                    'close_price': latest.get('close_price'),
                 },
-                'trend': trend,
-                'signal': signal,
-                'score': score
+                'trend':      trend,
+                'signal':     signal,
+                'score':      score,
+                'divergence': div,
+            })
+
+        if div:
+            divergence_list.append({
+                'stock_code': stock['stock_code'],
+                'stock_name': stock['stock_name'],
+                'latest': {
+                    'big_holders': latest['big_holders'],
+                    'big_ratio':   latest['big_ratio'],
+                    'date':        latest['date'],
+                    'close_price': latest.get('close_price'),
+                },
+                'divergence': div,
+                'signal':     signal,
             })
 
     rankings.sort(key=lambda x: x['score'], reverse=True)
+    divergence_list.sort(key=lambda x: x['divergence']['divergence_score'], reverse=True)
 
     strong_buy = [r for r in rankings if r['signal']['level'] == 'strong_buy']
-    buy = [r for r in rankings if r['signal']['level'] == 'buy']
-    hold = [r for r in rankings if r['signal']['level'] == 'hold']
+    buy        = [r for r in rankings if r['signal']['level'] == 'buy']
+    hold       = [r for r in rankings if r['signal']['level'] == 'hold']
 
     output = {
         'update_time': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
         'data_source': raw_data.get('data_date', ''),
         'summary': {
-            'total': len(rankings),
+            'total':      len(rankings),
             'strong_buy': len(strong_buy),
-            'buy': len(buy),
-            'hold': len(hold)
+            'buy':        len(buy),
+            'hold':       len(hold),
+            'divergence': len(divergence_list),
         },
         'rankings': {
-            'all': rankings[:30],
+            'all':        rankings[:30],
             'strong_buy': strong_buy[:10],
-            'buy': buy[:10],
-            'hold': hold[:10]
+            'buy':        buy[:10],
+            'hold':       hold[:10],
+            'divergence': divergence_list[:20],
         }
     }
 
@@ -155,8 +212,17 @@ def main():
     print(f'🚀 強力集中: {len(strong_buy)} 支')
     print(f'📈 持續增加: {len(buy)} 支')
     print(f'➡️  微幅增加: {len(hold)} 支')
+    print(f'📊 籌碼背離: {len(divergence_list)} 支')
     print(f'📁 已產生 data/stocks/{"{code}"}.json 個股檔案')
     print(f'📁 已更新 data/ranking.json')
+
+    print('\n🔍 背離前5名:')
+    for i, s in enumerate(divergence_list[:5], 1):
+        d = s['divergence']
+        print(f'{i}. {s["stock_code"]} {s["stock_name"]}  '
+              f'大戶比例 {d["ratio_change"]:+.2f}pp  '
+              f'股價 {d["price_change_pct"]:+.1f}%  '
+              f'背離分 {d["divergence_score"]:+.1f}')
 
     print('\n🏆 前5名:')
     for i, stock in enumerate(rankings[:5], 1):
