@@ -196,6 +196,12 @@ def main():
     buy        = [r for r in rankings if r['signal']['level'] == 'buy']
     hold       = [r for r in rankings if r['signal']['level'] == 'hold']
 
+    recent_up = sorted(
+        [r for r in rankings if r['recent_change'] is not None and r['recent_change'] > 0],
+        key=lambda x: x['recent_change'],
+        reverse=True
+    )
+
     output = {
         'update_time': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
         'data_source': raw_data.get('data_date', ''),
@@ -205,6 +211,7 @@ def main():
             'buy':        len(buy),
             'hold':       len(hold),
             'divergence': len(divergence_list),
+            'recent_up':  len(recent_up),
         },
         'rankings': {
             'all':        rankings[:30],
@@ -212,6 +219,7 @@ def main():
             'buy':        buy[:10],
             'hold':       hold[:10],
             'divergence': divergence_list[:20],
+            'recent_up':  recent_up[:20],
         }
     }
 

@@ -55,11 +55,13 @@ body {
 .summary-card {
   background: white;
   border-radius: 14px;
-  padding: 16px;
+  padding: 12px;
   margin-bottom: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  gap: 8px;
 }
 .summary-item {
   text-align: center;
@@ -72,7 +74,8 @@ body {
 .summary-item:active { background: #f0f0f5; }
 .summary-item.active { background: #eef4ff; outline: 2px solid #378ADD; outline-offset: -2px; }
 .summary-item.active-green  { background: #edfbf3; outline: 2px solid #1D9E75; outline-offset: -2px; }
-.summary-item.active-orange { background: #fff4e8; outline: 2px solid #E76F00; outline-offset: -2px; }
+.summary-item.active-orange  { background: #fff4e8; outline: 2px solid #E76F00; outline-offset: -2px; }
+.summary-item.active-purple  { background: #f5eeff; outline: 2px solid #9B59B6; outline-offset: -2px; }
 .summary-number {
   font-size: 24px;
   font-weight: 700;
@@ -219,6 +222,11 @@ body {
       <div class="summary-label">📊 籌碼背離</div>
       <div class="summary-hint">大戶↑但<br>股價未跟</div>
     </div>
+    <div class="summary-item" id="tab-recent_up" onclick="setFilter('recent_up')">
+      <div class="summary-number" style="color: #9B59B6;" id="recentUpCount">0</div>
+      <div class="summary-label">⚡ 近期動能</div>
+      <div class="summary-hint">近2週比例<br>仍在上升</div>
+    </div>
   </div>
 
   <div class="filter-title" id="filterTitle">全部追蹤股票（按比例集中幅度排序）</div>
@@ -264,6 +272,7 @@ function displayRankings(data) {
   document.getElementById('strongBuyCount').textContent = data.summary.strong_buy;
   document.getElementById('buyCount').textContent       = data.summary.buy;
   document.getElementById('divergenceCount').textContent = data.summary.divergence || 0;
+  document.getElementById('recentUpCount').textContent   = data.summary.recent_up  || 0;
 
   document.getElementById('loading').style.display = 'none';
   document.getElementById('content').style.display = 'block';
@@ -276,16 +285,18 @@ const FILTER_LABELS = {
   strong_buy: '🚀 快速集中：12週比例 +3% 且人數 +10',
   buy:        '📈 持續增加：12週比例 +2% 且人數 +5',
   divergence: '📊 籌碼背離：大戶比例↑但股價尚未跟漲',
+  recent_up:  '⚡ 近期動能：近2週大戶比例仍在上升（按幅度排序）',
 };
 
 function setFilter(filter) {
-  ['all', 'strong_buy', 'buy', 'divergence'].forEach(f => {
+  ['all', 'strong_buy', 'buy', 'divergence', 'recent_up'].forEach(f => {
     const el = document.getElementById(`tab-${f}`);
-    el.classList.remove('active', 'active-green', 'active-orange');
+    el.classList.remove('active', 'active-green', 'active-orange', 'active-purple');
   });
   const activeEl = document.getElementById(`tab-${filter}`);
-  if (filter === 'strong_buy')  activeEl.classList.add('active-green');
-  else if (filter === 'divergence') activeEl.classList.add('active-orange');
+  if (filter === 'strong_buy')       activeEl.classList.add('active-green');
+  else if (filter === 'divergence')  activeEl.classList.add('active-orange');
+  else if (filter === 'recent_up')   activeEl.classList.add('active-purple');
   else activeEl.classList.add('active');
   renderList(filter);
 }
