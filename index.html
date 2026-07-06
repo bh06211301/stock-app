@@ -872,13 +872,16 @@ function drawDualAxisChart(trendHistory) {
       order: 1,
     },
     {
-      type: 'bar',
+      type: 'line',
       label: '大戶人數',
       data: recent.map(h => h.big_holders),
-      backgroundColor: 'rgba(55, 138, 221, 0.45)',
-      borderColor: 'rgba(55, 138, 221, 0.8)',
-      borderWidth: 1,
-      borderRadius: 3,
+      borderColor: 'rgba(55, 138, 221, 0.9)',
+      backgroundColor: 'rgba(55, 138, 221, 0.08)',
+      fill: false,
+      tension: 0.3,
+      pointRadius: 2,
+      pointHoverRadius: 6,
+      borderWidth: 2,
       yAxisID: 'yHolders',
       order: 2,
     }
@@ -926,7 +929,7 @@ function drawDualAxisChart(trendHistory) {
   };
 
   chartInstances.holders = new Chart(ctx, {
-    type: 'bar',
+    type: 'line',
     data: { labels, datasets },
     options: {
       responsive: true,
