@@ -110,7 +110,7 @@ def main():
         save_stock_json(stock, trend, signal)
 
         if trend:
-            score = trend['holder_change'] + (trend['ratio_change'] * 2)
+            score = round(trend['ratio_change'] * 10 + trend['holder_change_pct'], 2)
             rankings.append({
                 'stock_code': stock['stock_code'],
                 'stock_name': stock['stock_name'],
