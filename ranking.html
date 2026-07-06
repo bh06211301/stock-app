@@ -353,8 +353,14 @@ function renderList(filter) {
     item.className = 'stock-item';
     item.onclick = () => viewStock(stock.stock_code);
 
-    const holderChange = stock.trend.holder_change;
-    const ratioChange  = stock.trend.ratio_change;
+    const holderChange  = stock.trend.holder_change;
+    const ratioChange   = stock.trend.ratio_change;
+    const recentChange  = stock.recent_change;
+    const recentValid   = recentChange !== null && recentChange !== undefined;
+    const recentClass   = !recentValid ? '' : recentChange >= 0 ? 'positive' : 'negative';
+    const recentStr     = !recentValid ? '—'
+      : `${recentChange >= 0 ? '+' : ''}${recentChange}%`;
+    const recentArrow   = !recentValid ? '' : recentChange > 0 ? ' ↑' : recentChange < 0 ? ' ↓' : '';
 
     item.innerHTML = `
       <div class="stock-header">
@@ -373,13 +379,15 @@ function renderList(filter) {
           </div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">持股比例</div>
-          <div class="stat-value">${stock.latest.big_ratio}%</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-label">比例變化</div>
+          <div class="stat-label">12週比例</div>
           <div class="stat-value ${ratioChange >= 0 ? 'positive' : 'negative'}">
             ${ratioChange >= 0 ? '+' : ''}${ratioChange}%
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">近2週動向</div>
+          <div class="stat-value ${recentClass}">
+            ${recentStr}${recentArrow}
           </div>
         </div>
       </div>

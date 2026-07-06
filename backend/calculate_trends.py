@@ -9,6 +9,14 @@ import os
 from datetime import datetime
 
 
+def calculate_recent_change(history):
+    """計算近2週比例變化（最新 vs 2週前），反映當下動能"""
+    if len(history) < 2:
+        return None
+    ref = history[2] if len(history) >= 3 else history[1]
+    return round(history[0]['big_ratio'] - ref['big_ratio'], 2)
+
+
 def calculate_trend(history):
     """比較最新一週 vs 12週前的變化"""
     if len(history) < 2:
@@ -142,9 +150,10 @@ def main():
             continue
 
         latest = history[0]
-        trend  = calculate_trend(history)
-        signal = generate_signal(trend)
-        div    = calculate_divergence(history)
+        trend         = calculate_trend(history)
+        signal        = generate_signal(trend)
+        div           = calculate_divergence(history)
+        recent_change = calculate_recent_change(history)
 
         save_stock_json(stock, trend, signal)
 
@@ -159,10 +168,11 @@ def main():
                     'date':        latest['date'],
                     'close_price': latest.get('close_price'),
                 },
-                'trend':      trend,
-                'signal':     signal,
-                'score':      score,
-                'divergence': div,
+                'trend':         trend,
+                'signal':        signal,
+                'score':         score,
+                'divergence':    div,
+                'recent_change': recent_change,
             })
 
         if div:
