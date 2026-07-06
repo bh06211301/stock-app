@@ -860,15 +860,29 @@ function drawDualAxisChart(trendHistory) {
     }
   ];
 
+  function dynRange(values, pad = 0.2) {
+    const valid = values.filter(v => v != null && isFinite(v));
+    if (!valid.length) return {};
+    const lo = Math.min(...valid), hi = Math.max(...valid);
+    const margin = (hi - lo) * pad || hi * 0.05;
+    return { min: lo - margin, max: hi + margin };
+  }
+
+  const ratioRange   = dynRange(recent.map(h => h.big_ratio));
+  const holdersRange = dynRange(recent.map(h => h.big_holders));
+  const priceRange   = dynRange(recent.map(h => h.close_price));
+
   const scalesConfig = hasPriceData ? {
     x: { ticks: { font: { size: 10 }, maxRotation: 45 }, grid: { display: false } },
     yRatio: {
       type: 'linear', position: 'left',
+      ...ratioRange,
       ticks: { font: { size: 11 }, callback: v => v.toFixed(1) + '%' },
       title: { display: false }
     },
     yPrice: {
       type: 'linear', position: 'right',
+      ...priceRange,
       ticks: { font: { size: 11 }, callback: v => v.toLocaleString() },
       grid: { drawOnChartArea: false }
     }
@@ -876,10 +890,12 @@ function drawDualAxisChart(trendHistory) {
     x: { ticks: { font: { size: 10 }, maxRotation: 45 }, grid: { display: false } },
     yRatio: {
       type: 'linear', position: 'left',
+      ...ratioRange,
       ticks: { font: { size: 11 }, callback: v => v.toFixed(1) + '%' }
     },
     yHolders: {
       type: 'linear', position: 'right',
+      ...holdersRange,
       ticks: { font: { size: 11 }, callback: v => v.toLocaleString() },
       grid: { drawOnChartArea: false }
     }
