@@ -63,7 +63,15 @@ body {
 }
 .summary-item {
   text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 8px 10px;
+  transition: background 0.15s;
+  flex: 1;
 }
+.summary-item:active { background: #f0f0f5; }
+.summary-item.active { background: #eef4ff; outline: 2px solid #378ADD; outline-offset: -2px; }
+.summary-item.active-green { background: #edfbf3; outline: 2px solid #1D9E75; outline-offset: -2px; }
 .summary-number {
   font-size: 24px;
   font-weight: 700;
@@ -73,6 +81,19 @@ body {
   font-size: 13px;
   color: #86868b;
   margin-top: 4px;
+}
+.summary-hint {
+  font-size: 10px;
+  color: #b0b0b8;
+  margin-top: 3px;
+  line-height: 1.3;
+}
+.filter-title {
+  font-size: 13px;
+  color: #86868b;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 .stock-item {
   background: white;
@@ -177,20 +198,24 @@ body {
 
 <div class="container" id="content" style="display:none;">
   <div class="summary-card">
-    <div class="summary-item">
+    <div class="summary-item active" id="tab-all" onclick="setFilter('all')">
       <div class="summary-number" id="totalCount">0</div>
-      <div class="summary-label">追蹤股票</div>
+      <div class="summary-label">全部排行</div>
+      <div class="summary-hint">比例幅度排序</div>
     </div>
-    <div class="summary-item">
+    <div class="summary-item" id="tab-strong_buy" onclick="setFilter('strong_buy')">
       <div class="summary-number" style="color: #1D9E75;" id="strongBuyCount">0</div>
-      <div class="summary-label">快速集中</div>
+      <div class="summary-label">🚀 快速集中</div>
+      <div class="summary-hint">12週比例+3%<br>且人數+10</div>
     </div>
-    <div class="summary-item">
+    <div class="summary-item" id="tab-buy" onclick="setFilter('buy')">
       <div class="summary-number" style="color: #378ADD;" id="buyCount">0</div>
-      <div class="summary-label">持續增加</div>
+      <div class="summary-label">📈 持續增加</div>
+      <div class="summary-hint">12週比例+2%<br>且人數+5</div>
     </div>
   </div>
 
+  <div class="filter-title" id="filterTitle">全部追蹤股票（按比例集中幅度排序）</div>
   <div id="rankings"></div>
 </div>
 
@@ -223,25 +248,59 @@ async function loadRankings() {
   }
 }
 
+let rankingData = null;
+
 function displayRankings(data) {
-  document.getElementById('updateTime').textContent = 
-    `更新時間: ${data.update_time}`;
-  
-  document.getElementById('totalCount').textContent = data.summary.total;
+  rankingData = data;
+
+  document.getElementById('updateTime').textContent = `更新時間: ${data.update_time}`;
+  document.getElementById('totalCount').textContent    = data.summary.total;
   document.getElementById('strongBuyCount').textContent = data.summary.strong_buy;
-  document.getElementById('buyCount').textContent = data.summary.buy;
-  
+  document.getElementById('buyCount').textContent      = data.summary.buy;
+
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('content').style.display = 'block';
+
+  renderList('all');
+}
+
+const FILTER_LABELS = {
+  all:        '全部追蹤股票（按比例集中幅度排序）',
+  strong_buy: '🚀 快速集中：12週比例 +3% 且人數 +10',
+  buy:        '📈 持續增加：12週比例 +2% 且人數 +5',
+};
+
+function setFilter(filter) {
+  ['all', 'strong_buy', 'buy'].forEach(f => {
+    const el = document.getElementById(`tab-${f}`);
+    el.classList.remove('active', 'active-green');
+  });
+  const activeEl = document.getElementById(`tab-${filter}`);
+  activeEl.classList.add(filter === 'strong_buy' ? 'active-green' : 'active');
+  renderList(filter);
+}
+
+function renderList(filter) {
+  if (!rankingData) return;
+  const stocks = rankingData.rankings[filter] || [];
+  document.getElementById('filterTitle').textContent = FILTER_LABELS[filter] || '';
+
   const container = document.getElementById('rankings');
   container.innerHTML = '';
-  
-  data.rankings.all.forEach((stock, index) => {
+
+  if (stocks.length === 0) {
+    container.innerHTML = '<div style="text-align:center;padding:40px 0;color:#86868b;">目前無符合條件的股票</div>';
+    return;
+  }
+
+  stocks.forEach((stock, index) => {
     const item = document.createElement('div');
     item.className = 'stock-item';
     item.onclick = () => viewStock(stock.stock_code);
-    
+
     const holderChange = stock.trend.holder_change;
-    const ratioChange = stock.trend.ratio_change;
-    
+    const ratioChange  = stock.trend.ratio_change;
+
     item.innerHTML = `
       <div class="stock-header">
         <div class="stock-rank">${index + 1}</div>
@@ -270,12 +329,8 @@ function displayRankings(data) {
         </div>
       </div>
     `;
-    
     container.appendChild(item);
   });
-  
-  document.getElementById('loading').style.display = 'none';
-  document.getElementById('content').style.display = 'block';
 }
 
 function showEmptyState() {
