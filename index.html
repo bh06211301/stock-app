@@ -405,9 +405,18 @@ body {
 </div>
 
 <script>
-// Service Worker 註冊
+// Service Worker 註冊，新版本安裝後自動重新載入頁面
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js').catch(err => {
+  navigator.serviceWorker.register('service-worker.js').then(reg => {
+    reg.addEventListener('updatefound', () => {
+      const newWorker = reg.installing;
+      newWorker.addEventListener('statechange', () => {
+        if (newWorker.state === 'activated') {
+          window.location.reload();
+        }
+      });
+    });
+  }).catch(err => {
     console.log('Service Worker registration failed:', err);
   });
 }
@@ -450,6 +459,7 @@ async function searchStock() {
     }
 
     if (!data || !data.success) {
+      hideLoading();
       showError('找不到此股票資料，請確認代碼是否正確（例：2330、0050）');
       return;
     }
