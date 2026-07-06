@@ -346,15 +346,15 @@ body {
 
     <!-- 52週籌碼位置 -->
     <div class="chart-card" id="percentileCard" style="display:none;">
-      <h3>52週籌碼位置</h3>
+      <h3>籌碼位置</h3>
+
+      <!-- 52週 -->
+      <div style="font-size:12px; color:#86868b; font-weight:600; margin-bottom:2px;">近52週</div>
       <div class="pct-track"><div class="pct-marker" id="pctMarker"></div></div>
-      <div class="pct-edge-labels">
-        <span>分散（低）</span>
-        <span>集中（高）</span>
-      </div>
+      <div class="pct-edge-labels"><span>分散（低）</span><span>集中（高）</span></div>
       <div class="pct-stats">
         <div class="pct-stat">
-          <div class="pct-stat-label">52週最低</div>
+          <div class="pct-stat-label">最低</div>
           <div class="pct-stat-value" id="pctMinVal">—</div>
         </div>
         <div class="pct-stat">
@@ -362,12 +362,36 @@ body {
           <div class="pct-stat-value" id="pctCurVal">—</div>
         </div>
         <div class="pct-stat">
-          <div class="pct-stat-label">52週最高</div>
+          <div class="pct-stat-label">最高</div>
           <div class="pct-stat-value" id="pctMaxVal">—</div>
         </div>
       </div>
+      <div style="text-align:center; margin-top:10px; margin-bottom:18px;">
+        <span class="pct-rank-badge">52週第 <span id="pctRank">—</span> 百分位</span>
+      </div>
+
+      <div style="border-top:1px solid #e5e5ea; margin-bottom:14px;"></div>
+
+      <!-- 近3個月 (12週) -->
+      <div style="font-size:12px; color:#86868b; font-weight:600; margin-bottom:2px;">近3個月（12週）</div>
+      <div class="pct-track"><div class="pct-marker" id="pct3mMarker"></div></div>
+      <div class="pct-edge-labels"><span>分散（低）</span><span>集中（高）</span></div>
+      <div class="pct-stats">
+        <div class="pct-stat">
+          <div class="pct-stat-label">最低</div>
+          <div class="pct-stat-value" id="pct3mMinVal">—</div>
+        </div>
+        <div class="pct-stat">
+          <div class="pct-stat-label">目前</div>
+          <div class="pct-stat-value" id="pct3mCurVal">—</div>
+        </div>
+        <div class="pct-stat">
+          <div class="pct-stat-label">最高</div>
+          <div class="pct-stat-value" id="pct3mMaxVal">—</div>
+        </div>
+      </div>
       <div style="text-align:center; margin-top:10px;">
-        <span class="pct-rank-badge">近52週第 <span id="pctRank">—</span> 百分位</span>
+        <span class="pct-rank-badge" style="background:#ff9500;">3個月第 <span id="pct3mRank">—</span> 百分位</span>
       </div>
     </div>
 
@@ -1001,23 +1025,25 @@ function drawPercentileIndicator(trendHistory) {
   }
   card.style.display = 'block';
 
-  const ratios  = trendHistory.map(h => h.big_ratio);
-  const current = ratios[ratios.length - 1];
-  const min52   = Math.min(...ratios);
-  const max52   = Math.max(...ratios);
-  const range   = max52 - min52;
+  function fillIndicator(ratios, markerEl, minEl, curEl, maxEl, rankEl) {
+    const current = ratios[ratios.length - 1];
+    const lo      = Math.min(...ratios);
+    const hi      = Math.max(...ratios);
+    const range   = hi - lo;
+    const pct     = range > 0 ? ((current - lo) / range) * 100 : 50;
+    const rankPct = Math.round((ratios.filter(r => r <= current).length / ratios.length) * 100);
+    document.getElementById(markerEl).style.left = Math.min(98, Math.max(2, pct)) + '%';
+    document.getElementById(minEl).textContent   = lo.toFixed(2) + '%';
+    document.getElementById(curEl).textContent   = current.toFixed(2) + '%';
+    document.getElementById(maxEl).textContent   = hi.toFixed(2) + '%';
+    document.getElementById(rankEl).textContent  = rankPct;
+  }
 
-  const pct      = range > 0 ? ((current - min52) / range) * 100 : 50;
-  const below    = ratios.filter(r => r <= current).length;
-  const rankPct  = Math.round((below / ratios.length) * 100);
+  const allRatios = trendHistory.map(h => h.big_ratio);
+  fillIndicator(allRatios, 'pctMarker', 'pctMinVal', 'pctCurVal', 'pctMaxVal', 'pctRank');
 
-  // 限制 marker 在 2%~98% 避免超出圓形一半
-  const markerPct = Math.min(98, Math.max(2, pct));
-  document.getElementById('pctMarker').style.left = markerPct + '%';
-  document.getElementById('pctMinVal').textContent = min52.toFixed(2) + '%';
-  document.getElementById('pctCurVal').textContent = current.toFixed(2) + '%';
-  document.getElementById('pctMaxVal').textContent = max52.toFixed(2) + '%';
-  document.getElementById('pctRank').textContent   = rankPct;
+  const ratios3m = allRatios.slice(-12);
+  fillIndicator(ratios3m, 'pct3mMarker', 'pct3mMinVal', 'pct3mCurVal', 'pct3mMaxVal', 'pct3mRank');
 }
 
 function showLoading() {
