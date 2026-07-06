@@ -222,6 +222,57 @@ body {
   color: #86868b;
   font-size: 13px;
 }
+/* 52週位置指標 */
+.pct-track {
+  position: relative;
+  height: 14px;
+  background: linear-gradient(to right, #ff3b30, #ff9500, #34c759);
+  border-radius: 7px;
+  margin: 14px 0 6px;
+}
+.pct-marker {
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  background: white;
+  border: 3px solid #1d1d1f;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  transition: left 0.4s ease;
+}
+.pct-edge-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #86868b;
+  margin-bottom: 12px;
+}
+.pct-stats {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  gap: 8px;
+}
+.pct-stat {
+  flex: 1;
+  background: #f5f5f7;
+  border-radius: 10px;
+  padding: 8px 4px;
+}
+.pct-stat-label { font-size: 11px; color: #86868b; margin-bottom: 2px; }
+.pct-stat-value { font-size: 15px; font-weight: 700; color: #1d1d1f; }
+.pct-rank-badge {
+  display: inline-block;
+  background: #378ADD;
+  color: white;
+  border-radius: 12px;
+  padding: 2px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 10px;
+}
 </style>
 </head>
 <body>
@@ -254,10 +305,7 @@ body {
 
 <div id="loading" class="loading" style="display:none;">
   <div class="loading-spinner"></div>
-  <div>載入中...</div>
-  <button onclick="useMockData()" style="margin-top: 20px; padding: 10px 20px; background: white; color: #378ADD; border: 1px solid #378ADD; border-radius: 10px; cursor: pointer;">
-    載入太慢?使用範例資料
-  </button>
+  <div id="loadingText">載入中...</div>
 </div>
 
 <div id="error" class="error" style="display:none;"></div>
@@ -303,14 +351,49 @@ body {
       </div>
     </div>
 
-    <div class="chart-card">
-      <h3>持股級距分布</h3>
-      <canvas id="distributionChart"></canvas>
+    <!-- 52週籌碼位置 -->
+    <div class="chart-card" id="percentileCard" style="display:none;">
+      <h3>52週籌碼位置</h3>
+      <div class="pct-track"><div class="pct-marker" id="pctMarker"></div></div>
+      <div class="pct-edge-labels">
+        <span>分散（低）</span>
+        <span>集中（高）</span>
+      </div>
+      <div class="pct-stats">
+        <div class="pct-stat">
+          <div class="pct-stat-label">52週最低</div>
+          <div class="pct-stat-value" id="pctMinVal">—</div>
+        </div>
+        <div class="pct-stat">
+          <div class="pct-stat-label">目前</div>
+          <div class="pct-stat-value" id="pctCurVal">—</div>
+        </div>
+        <div class="pct-stat">
+          <div class="pct-stat-label">52週最高</div>
+          <div class="pct-stat-value" id="pctMaxVal">—</div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:10px;">
+        <span class="pct-rank-badge">近52週第 <span id="pctRank">—</span> 百分位</span>
+      </div>
     </div>
 
+    <!-- 雙軸趨勢圖（比例 % + 大戶人數）-->
     <div class="chart-card">
-      <h3>千張大戶比例趨勢 (%)</h3>
+      <h3>大戶比例 &amp; 人數趨勢</h3>
       <canvas id="holdersChart"></canvas>
+    </div>
+
+    <!-- 週變化量柱狀圖 -->
+    <div class="chart-card" id="changeCard" style="display:none;">
+      <h3>大戶人數週變化</h3>
+      <canvas id="changeChart"></canvas>
+    </div>
+
+    <!-- 持股級距分布（僅預存股票有資料）-->
+    <div class="chart-card" id="distributionCard" style="display:none;">
+      <h3>持股級距分布</h3>
+      <canvas id="distributionChart"></canvas>
     </div>
   </div>
 </div>
@@ -357,16 +440,17 @@ async function searchStock() {
   hideError();
 
   try {
-    // 優先讀取後端產生的個股 JSON (GitHub Pages 同網域，無 CORS 問題)
+    // 第一步：讀取預先產生的個股 JSON（快速）
     let data = await fetchFromLocalJSON(stockCode);
 
-    // 備援: 透過 CORS proxy 抓集保所 opendata CSV
+    // 第二步：若無預存資料，即時從 Norway 下載歷史資料
     if (!data || !data.success) {
-      data = await fetchFromOpendataCSV(stockCode);
+      setLoadingText('即時下載中，約需 5-15 秒...');
+      data = await fetchFromNorway(stockCode);
     }
 
     if (!data || !data.success) {
-      showError('找不到此股票資料，請確認代碼正確。若為追蹤清單外的股票，資料每週五更新後才會顯示。');
+      showError('找不到此股票資料，請確認代碼是否正確（例：2330、0050）');
       return;
     }
 
@@ -427,101 +511,149 @@ async function fetchFromLocalJSON(stockCode) {
   }
 }
 
-// 備援: 透過 CORS proxy 抓集保所 opendata CSV (較慢)
-async function fetchFromOpendataCSV(stockCode) {
-  const tdccUrl = 'https://opendata.tdcc.com.tw/getOD.ashx?id=1-5';
+// 備援: 即時從 norway.twsthr.info 下載任意股票的歷史資料（含趨勢分析）
+async function fetchFromNorway(stockCode) {
+  const norUrl = `https://norway.twsthr.info/StockHolders.aspx?stock=${stockCode}`;
   const proxies = [
     'https://corsproxy.io/?',
-    'https://api.allorigins.win/raw?url='
+    'https://api.allorigins.win/raw?url=',
   ];
 
   for (const proxy of proxies) {
     try {
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 12000);
-      const response = await fetch(proxy + encodeURIComponent(tdccUrl), {
+      const timeoutId = setTimeout(() => controller.abort(), 18000);
+      const response = await fetch(proxy + encodeURIComponent(norUrl), {
         signal: controller.signal
       });
       clearTimeout(timeoutId);
       if (!response.ok) continue;
 
-      const text = await response.text();
-      const result = parseOpendataCSV(text, stockCode);
+      const html = await response.text();
+      const result = parseNorwayHtml(html, stockCode);
       if (result && result.success) return result;
     } catch (err) {
-      console.log(`CSV proxy ${proxy} failed:`, err.message);
+      console.log(`Norway proxy ${proxy} failed:`, err.message);
     }
   }
   return null;
 }
 
-// 解析集保所 opendata CSV
-// 欄位: 資料日期, 股票代號(補空白6碼), 持股分級(1-17), 人數, 股數, 比例%
-// Level 15 = 千張以上大戶, Level 17 = 合計
-function parseOpendataCSV(csvText, stockCode) {
+// 解析 norway.twsthr.info 的股權分散週報 HTML
+// 表格結構（16欄）: [2]=日期 [3]=總張數 [4]=總股東人數 [12]=千張人數 [13]=千張%
+function parseNorwayHtml(html, stockCode) {
   try {
-    // 移除 BOM
-    const clean = csvText.replace(/^﻿/, '');
-    const lines = clean.split('\n').slice(1); // 跳標題
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
 
-    const stockRows = lines
-      .map(l => l.replace(/\r$/, '').split(','))
-      .filter(r => r.length >= 6 && r[1].trim() === stockCode);
+    // 找股票名稱：頁面中格式為「2330   台積電」
+    const nameMatch = html.match(new RegExp(stockCode + '\\s{1,5}([\\u4e00-\\u9fa5A-Za-z\\-·]{2,12})'));
+    const stockName = nameMatch ? `${stockCode} ${nameMatch[1]}` : stockCode;
 
-    if (stockRows.length === 0) return null;
+    // 找週報資料表：16 欄且 col[2] 是 8 位日期
+    let weeklyTable = null;
+    for (const tbl of doc.querySelectorAll('table')) {
+      for (const tr of tbl.querySelectorAll('tr')) {
+        const cells = tr.querySelectorAll('td, th');
+        if (cells.length !== 16) continue;
+        const val = cells[2].textContent.trim();
+        if (/^\d{8}$/.test(val) && val.startsWith('20')) {
+          weeklyTable = tbl;
+          break;
+        }
+      }
+      if (weeklyTable) break;
+    }
 
-    const date = stockRows[0][0];
-    const totalRow = stockRows.find(r => r[2] === '17');
-    const bigRow = stockRows.find(r => r[2] === '15');
-    if (!totalRow) return null;
+    if (!weeklyTable) return null;
 
-    const totalHolders = parseInt(totalRow[3]);
-    const totalShares = parseInt(totalRow[4]);
-    const bigHolders = bigRow ? parseInt(bigRow[3]) : 0;
-    const bigShares = bigRow ? parseInt(bigRow[4]) : 0;
-    const bigRatio = bigRow ? parseFloat(bigRow[5]) : 0;
+    const history = [];
+    for (const tr of weeklyTable.querySelectorAll('tr')) {
+      const cells = tr.querySelectorAll('td, th');
+      if (cells.length !== 16) continue;
 
-    const LEVEL_NAMES = {
-      '1':'1-999股','2':'1-5張','3':'5-10張','4':'10-15張','5':'15-20張',
-      '6':'20-30張','7':'30-40張','8':'40-50張','9':'50-100張',
-      '10':'100-200張','11':'200-400張','12':'400-600張',
-      '13':'600-800張','14':'800千-1千張','15':'千張以上'
-    };
+      const date = cells[2].textContent.trim();
+      if (!/^\d{8}$/.test(date) || !date.startsWith('20')) continue;
 
-    const distributions = stockRows
-      .filter(r => parseInt(r[2]) >= 1 && parseInt(r[2]) <= 15)
-      .map(r => ({
-        range: LEVEL_NAMES[r[2]] || r[2],
-        holders: parseInt(r[3]),
-        shares: parseInt(r[4])
-      }));
+      const totalLots    = norParseInt(cells[3].textContent);
+      const totalHolders = norParseInt(cells[4].textContent);
+      const bigHolders   = norParseInt(cells[12].textContent);
+      const bigRatio     = norParseFloat(cells[13].textContent);
 
-    const d = date;
-    const dataDate = d.length === 8
-      ? `${d.slice(0,4)}-${d.slice(4,6)}-${d.slice(6,8)}`
-      : d;
+      if (totalLots === 0 && bigHolders === 0) continue;
+
+      history.push({
+        date,
+        big_holders: bigHolders,
+        big_ratio: bigRatio,
+        total_holders: totalHolders,
+        total_shares: totalLots * 1000,
+        big_shares: Math.round(bigRatio / 100 * totalLots) * 1000,
+      });
+    }
+
+    if (history.length === 0) return null;
+
+    // Norway 資料已是最新在前，限制 52 週
+    history.sort((a, b) => b.date.localeCompare(a.date));
+    history.splice(52);
+    const latest = history[0];
+
+    // 計算趨勢（與 calculate_trends.py 邏輯相同）
+    const weeksAgo = Math.min(12, history.length - 1);
+    const prev = history[weeksAgo];
+    const trend = weeksAgo > 0 ? {
+      holder_change: latest.big_holders - prev.big_holders,
+      ratio_change: parseFloat((latest.big_ratio - prev.big_ratio).toFixed(2)),
+      weeks: weeksAgo,
+    } : null;
+
+    const signal = norGenerateSignal(trend);
+    const d = latest.date;
+    const dataDate = `${d.slice(0,4)}-${d.slice(4,6)}-${d.slice(6,8)}`;
 
     return {
       success: true,
       stockCode,
-      stockName: `股票 ${stockCode}`,
+      stockName,
       dataDate,
-      totalHolders: totalHolders.toLocaleString(),
-      totalShares: Math.round(totalShares / 1000).toLocaleString(),
-      bigHolders: bigHolders.toLocaleString(),
-      bigHoldersShares: Math.round(bigShares / 1000).toLocaleString(),
-      bigHolderRatio: bigRatio.toFixed(1),
-      distributions,
-      trendHistory: null,
-      signal: null
+      totalHolders: latest.total_holders.toLocaleString(),
+      totalShares: Math.round(latest.total_shares / 1000).toLocaleString(),
+      bigHolders: latest.big_holders.toLocaleString(),
+      bigHoldersShares: Math.round(latest.big_shares / 1000).toLocaleString(),
+      bigHolderRatio: latest.big_ratio.toFixed(1),
+      distributions: [],
+      trendHistory: [...history].reverse().map(h => ({
+        date: h.date, big_ratio: h.big_ratio, big_holders: h.big_holders
+      })),
+      signal,
+      trend,
     };
   } catch (err) {
-    console.error('CSV parse error:', err);
+    console.error('Norway parse error:', err);
     return null;
   }
 }
 
-// getMockData 已移除，資料來源改為後端產生的 data/stocks/{code}.json
+function norParseInt(s) {
+  const n = parseInt(s.replace(/,/g, '').trim(), 10);
+  return isNaN(n) ? 0 : n;
+}
+
+function norParseFloat(s) {
+  const n = parseFloat(s.replace(/,/g, '').trim());
+  return isNaN(n) ? 0 : n;
+}
+
+function norGenerateSignal(trend) {
+  if (!trend) return { icon: '❓', text: '資料不足', level: 'unknown', color: 'gray' };
+  const { holder_change: hc, ratio_change: rc } = trend;
+  if (hc > 10 && rc > 3)  return { icon: '🚀', text: '大戶快速集中', level: 'strong_buy', color: 'green' };
+  if (hc > 5  && rc > 2)  return { icon: '📈', text: '大戶持續增加', level: 'buy',        color: 'green' };
+  if (hc > 0  && rc > 0)  return { icon: '➡️', text: '大戶微幅增加', level: 'hold',       color: 'gray'  };
+  if (hc < -5 || rc < -2) return { icon: '📉', text: '大戶持股減少', level: 'sell',       color: 'red'   };
+  return { icon: '➡️', text: '趨勢不明顯', level: 'neutral', color: 'gray' };
+}
 
 function displayData(data) {
   document.getElementById('stockName').textContent = data.stockName;
@@ -542,8 +674,14 @@ function displayData(data) {
 
   document.getElementById('results').style.display = 'block';
 
-  drawDistributionChart(data.distributions);
-  drawTrendChart(data.trendHistory);
+  drawPercentileIndicator(data.trendHistory);
+  drawDualAxisChart(data.trendHistory);
+  drawChangeChart(data.trendHistory);
+
+  const hasDist = data.distributions && data.distributions.length > 0;
+  document.getElementById('distributionCard').style.display = hasDist ? 'block' : 'none';
+  if (hasDist) drawDistributionChart(data.distributions);
+
   updateWatchlistButton();
 }
 
@@ -632,42 +770,115 @@ function drawDistributionChart(distributions) {
   });
 }
 
-function drawTrendChart(trendHistory) {
+// ── 圖表一：雙軸趨勢圖（大戶比例折線 + 大戶人數柱狀）──────────────
+function drawDualAxisChart(trendHistory) {
   const ctx = document.getElementById('holdersChart');
+  if (chartInstances.holders) chartInstances.holders.destroy();
 
-  if (chartInstances.holders) {
-    chartInstances.holders.destroy();
-  }
-
-  // 若無歷史資料，顯示提示
   if (!trendHistory || trendHistory.length < 2) {
     ctx.getContext('2d').fillText('歷史資料累積中，每週自動更新', 20, 80);
     return;
   }
 
-  // 最多顯示最近12週
-  const recent = trendHistory.slice(-12);
+  const recent = trendHistory.slice(-24);
   const labels = recent.map(h => {
     const d = h.date || '';
     return d.length === 8 ? `${d.slice(4,6)}/${d.slice(6,8)}` : d;
   });
-  const ratioData = recent.map(h => h.big_ratio);
 
   chartInstances.holders = new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     data: {
       labels,
       datasets: [{
-        label: '千張大戶比例 (%)',
-        data: ratioData,
+        type: 'line',
+        label: '大戶比例 (%)',
+        data: recent.map(h => h.big_ratio),
         borderColor: 'rgba(127, 119, 221, 1)',
-        backgroundColor: 'rgba(127, 119, 221, 0.15)',
-        fill: true,
+        backgroundColor: 'rgba(127, 119, 221, 0)',
         tension: 0.3,
-        pointRadius: 5,
-        pointHoverRadius: 7,
-        pointBackgroundColor: 'rgba(127, 119, 221, 1)',
-        borderWidth: 2.5
+        pointRadius: 3,
+        pointHoverRadius: 6,
+        borderWidth: 2.5,
+        yAxisID: 'yRatio',
+        order: 1,
+      }, {
+        type: 'bar',
+        label: '大戶人數',
+        data: recent.map(h => h.big_holders),
+        backgroundColor: 'rgba(55, 138, 221, 0.45)',
+        borderColor: 'rgba(55, 138, 221, 0.8)',
+        borderWidth: 1,
+        borderRadius: 3,
+        yAxisID: 'yHolders',
+        order: 2,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      aspectRatio: 1.5,
+      plugins: {
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: { boxWidth: 14, font: { size: 12 }, padding: 10 }
+        },
+        tooltip: {
+          callbacks: {
+            label: c => c.dataset.label === '大戶比例 (%)'
+              ? `比例: ${c.parsed.y.toFixed(2)}%`
+              : `人數: ${c.parsed.y.toLocaleString()} 人`
+          }
+        }
+      },
+      scales: {
+        x: { ticks: { font: { size: 10 }, maxRotation: 45 }, grid: { display: false } },
+        yRatio: {
+          type: 'linear', position: 'left',
+          ticks: { font: { size: 11 }, callback: v => v.toFixed(1) + '%' }
+        },
+        yHolders: {
+          type: 'linear', position: 'right',
+          ticks: { font: { size: 11 }, callback: v => v.toLocaleString() },
+          grid: { drawOnChartArea: false }
+        }
+      }
+    }
+  });
+}
+
+// ── 圖表二：週變化量柱狀圖（綠漲紅跌）──────────────────────────────
+function drawChangeChart(trendHistory) {
+  const card = document.getElementById('changeCard');
+  const ctx  = document.getElementById('changeChart');
+  if (chartInstances.change) chartInstances.change.destroy();
+
+  if (!trendHistory || trendHistory.length < 3) {
+    card.style.display = 'none';
+    return;
+  }
+  card.style.display = 'block';
+
+  const src = trendHistory.slice(-25);
+  const labels = [], changes = [];
+  for (let i = 1; i < src.length; i++) {
+    changes.push(src[i].big_holders - src[i - 1].big_holders);
+    const d = src[i].date || '';
+    labels.push(d.length === 8 ? `${d.slice(4,6)}/${d.slice(6,8)}` : d);
+  }
+
+  chartInstances.change = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{
+        label: '大戶人數週變化',
+        data: changes,
+        backgroundColor: changes.map(v => v >= 0 ? 'rgba(52,199,89,0.7)'  : 'rgba(255,59,48,0.7)'),
+        borderColor:      changes.map(v => v >= 0 ? 'rgba(52,199,89,1)'   : 'rgba(255,59,48,1)'),
+        borderWidth: 1,
+        borderRadius: 3,
       }]
     },
     options: {
@@ -678,19 +889,20 @@ function drawTrendChart(trendHistory) {
         legend: { display: false },
         tooltip: {
           callbacks: {
-            label: ctx => `大戶比例: ${ctx.parsed.y.toFixed(2)}%`
+            label: c => {
+              const v = c.parsed.y;
+              return `${v >= 0 ? '+' : ''}${v} 人`;
+            }
           }
         }
       },
       scales: {
-        x: {
-          ticks: { font: { size: 11 } },
-          grid: { display: false }
-        },
+        x: { ticks: { font: { size: 10 }, maxRotation: 45 }, grid: { display: false } },
         y: {
-          ticks: {
-            font: { size: 11 },
-            callback: v => v.toFixed(1) + '%'
+          ticks: { font: { size: 11 }, callback: v => (v >= 0 ? '+' : '') + v },
+          grid: {
+            color: ctx2 => ctx2.tick.value === 0 ? '#1d1d1f' : 'rgba(0,0,0,0.06)',
+            lineWidth: ctx2 => ctx2.tick.value === 0 ? 1.5 : 1,
           }
         }
       }
@@ -698,9 +910,43 @@ function drawTrendChart(trendHistory) {
   });
 }
 
+// ── 圖表三：52週籌碼位置指標 ─────────────────────────────────────────
+function drawPercentileIndicator(trendHistory) {
+  const card = document.getElementById('percentileCard');
+  if (!trendHistory || trendHistory.length < 4) {
+    card.style.display = 'none';
+    return;
+  }
+  card.style.display = 'block';
+
+  const ratios  = trendHistory.map(h => h.big_ratio);
+  const current = ratios[ratios.length - 1];
+  const min52   = Math.min(...ratios);
+  const max52   = Math.max(...ratios);
+  const range   = max52 - min52;
+
+  const pct      = range > 0 ? ((current - min52) / range) * 100 : 50;
+  const below    = ratios.filter(r => r <= current).length;
+  const rankPct  = Math.round((below / ratios.length) * 100);
+
+  // 限制 marker 在 2%~98% 避免超出圓形一半
+  const markerPct = Math.min(98, Math.max(2, pct));
+  document.getElementById('pctMarker').style.left = markerPct + '%';
+  document.getElementById('pctMinVal').textContent = min52.toFixed(2) + '%';
+  document.getElementById('pctCurVal').textContent = current.toFixed(2) + '%';
+  document.getElementById('pctMaxVal').textContent = max52.toFixed(2) + '%';
+  document.getElementById('pctRank').textContent   = rankPct;
+}
+
 function showLoading() {
   document.getElementById('loading').style.display = 'block';
   document.getElementById('results').style.display = 'none';
+  setLoadingText('載入中...');
+}
+
+function setLoadingText(msg) {
+  const el = document.getElementById('loadingText');
+  if (el) el.textContent = msg;
 }
 
 function hideLoading() {

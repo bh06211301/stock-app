@@ -1,0 +1,487 @@
+{
+  "stock_code": "2347",
+  "stock_name": "聯強",
+  "last_update": "2026-07-06 10:14:35",
+  "history": [
+    {
+      "date": "20260703",
+      "big_holders": 165,
+      "big_shares": 1424427000,
+      "big_ratio": 85.4,
+      "total_holders": 39762,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260626",
+      "big_holders": 168,
+      "big_shares": 1423926000,
+      "big_ratio": 85.37,
+      "total_holders": 39907,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260618",
+      "big_holders": 163,
+      "big_shares": 1419256000,
+      "big_ratio": 85.09,
+      "total_holders": 40364,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260612",
+      "big_holders": 164,
+      "big_shares": 1418422000,
+      "big_ratio": 85.04,
+      "total_holders": 40646,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260605",
+      "big_holders": 164,
+      "big_shares": 1420757000,
+      "big_ratio": 85.18,
+      "total_holders": 40679,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260529",
+      "big_holders": 162,
+      "big_shares": 1419590000,
+      "big_ratio": 85.11,
+      "total_holders": 40140,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260522",
+      "big_holders": 163,
+      "big_shares": 1418422000,
+      "big_ratio": 85.04,
+      "total_holders": 40463,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260515",
+      "big_holders": 160,
+      "big_shares": 1417421000,
+      "big_ratio": 84.98,
+      "total_holders": 40694,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260508",
+      "big_holders": 161,
+      "big_shares": 1418756000,
+      "big_ratio": 85.06,
+      "total_holders": 40771,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260430",
+      "big_holders": 159,
+      "big_shares": 1415420000,
+      "big_ratio": 84.86,
+      "total_holders": 40924,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260424",
+      "big_holders": 160,
+      "big_shares": 1413919000,
+      "big_ratio": 84.77,
+      "total_holders": 41187,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260417",
+      "big_holders": 160,
+      "big_shares": 1413085000,
+      "big_ratio": 84.72,
+      "total_holders": 41779,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260410",
+      "big_holders": 160,
+      "big_shares": 1412751000,
+      "big_ratio": 84.7,
+      "total_holders": 42419,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260402",
+      "big_holders": 158,
+      "big_shares": 1410416000,
+      "big_ratio": 84.56,
+      "total_holders": 42960,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260327",
+      "big_holders": 160,
+      "big_shares": 1410416000,
+      "big_ratio": 84.56,
+      "total_holders": 43073,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260320",
+      "big_holders": 157,
+      "big_shares": 1401743000,
+      "big_ratio": 84.04,
+      "total_holders": 44377,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260313",
+      "big_holders": 158,
+      "big_shares": 1389900000,
+      "big_ratio": 83.33,
+      "total_holders": 46023,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260306",
+      "big_holders": 157,
+      "big_shares": 1390234000,
+      "big_ratio": 83.35,
+      "total_holders": 46095,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260226",
+      "big_holders": 156,
+      "big_shares": 1387565000,
+      "big_ratio": 83.19,
+      "total_holders": 47124,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260211",
+      "big_holders": 156,
+      "big_shares": 1383729000,
+      "big_ratio": 82.96,
+      "total_holders": 48309,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260206",
+      "big_holders": 152,
+      "big_shares": 1379225000,
+      "big_ratio": 82.69,
+      "total_holders": 49516,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260130",
+      "big_holders": 149,
+      "big_shares": 1376890000,
+      "big_ratio": 82.55,
+      "total_holders": 49824,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260123",
+      "big_holders": 148,
+      "big_shares": 1375389000,
+      "big_ratio": 82.46,
+      "total_holders": 50645,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260116",
+      "big_holders": 142,
+      "big_shares": 1365715000,
+      "big_ratio": 81.88,
+      "total_holders": 52273,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260109",
+      "big_holders": 142,
+      "big_shares": 1362546000,
+      "big_ratio": 81.69,
+      "total_holders": 53060,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20260102",
+      "big_holders": 141,
+      "big_shares": 1356541000,
+      "big_ratio": 81.33,
+      "total_holders": 54943,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20251226",
+      "big_holders": 141,
+      "big_shares": 1362212000,
+      "big_ratio": 81.67,
+      "total_holders": 54320,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20251219",
+      "big_holders": 137,
+      "big_shares": 1366883000,
+      "big_ratio": 81.95,
+      "total_holders": 53936,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20251212",
+      "big_holders": 132,
+      "big_shares": 1374388000,
+      "big_ratio": 82.4,
+      "total_holders": 52654,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20251205",
+      "big_holders": 133,
+      "big_shares": 1379559000,
+      "big_ratio": 82.71,
+      "total_holders": 52103,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20251128",
+      "big_holders": 132,
+      "big_shares": 1386898000,
+      "big_ratio": 83.15,
+      "total_holders": 51910,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20251121",
+      "big_holders": 151,
+      "big_shares": 1364881000,
+      "big_ratio": 81.83,
+      "total_holders": 52309,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20251114",
+      "big_holders": 146,
+      "big_shares": 1356041000,
+      "big_ratio": 81.3,
+      "total_holders": 52849,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20251107",
+      "big_holders": 146,
+      "big_shares": 1350203000,
+      "big_ratio": 80.95,
+      "total_holders": 53376,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20251031",
+      "big_holders": 146,
+      "big_shares": 1352038000,
+      "big_ratio": 81.06,
+      "total_holders": 52743,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20251023",
+      "big_holders": 148,
+      "big_shares": 1355707000,
+      "big_ratio": 81.28,
+      "total_holders": 52163,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20251017",
+      "big_holders": 152,
+      "big_shares": 1358876000,
+      "big_ratio": 81.47,
+      "total_holders": 51823,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20251009",
+      "big_holders": 153,
+      "big_shares": 1359043000,
+      "big_ratio": 81.48,
+      "total_holders": 51654,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20251003",
+      "big_holders": 150,
+      "big_shares": 1357375000,
+      "big_ratio": 81.38,
+      "total_holders": 51629,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20250926",
+      "big_holders": 149,
+      "big_shares": 1352205000,
+      "big_ratio": 81.07,
+      "total_holders": 52183,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20250919",
+      "big_holders": 148,
+      "big_shares": 1350870000,
+      "big_ratio": 80.99,
+      "total_holders": 52866,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20250912",
+      "big_holders": 149,
+      "big_shares": 1350870000,
+      "big_ratio": 80.99,
+      "total_holders": 53271,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20250905",
+      "big_holders": 151,
+      "big_shares": 1353539000,
+      "big_ratio": 81.15,
+      "total_holders": 53481,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20250829",
+      "big_holders": 154,
+      "big_shares": 1367717000,
+      "big_ratio": 82.0,
+      "total_holders": 47133,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20250822",
+      "big_holders": 155,
+      "big_shares": 1370218000,
+      "big_ratio": 82.15,
+      "total_holders": 47480,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20250815",
+      "big_holders": 159,
+      "big_shares": 1378058000,
+      "big_ratio": 82.62,
+      "total_holders": 45865,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20250808",
+      "big_holders": 160,
+      "big_shares": 1387899000,
+      "big_ratio": 83.21,
+      "total_holders": 43740,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20250801",
+      "big_holders": 159,
+      "big_shares": 1386398000,
+      "big_ratio": 83.12,
+      "total_holders": 43824,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20250725",
+      "big_holders": 162,
+      "big_shares": 1389233000,
+      "big_ratio": 83.29,
+      "total_holders": 43791,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20250718",
+      "big_holders": 159,
+      "big_shares": 1383062000,
+      "big_ratio": 82.92,
+      "total_holders": 44162,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20250711",
+      "big_holders": 160,
+      "big_shares": 1384396000,
+      "big_ratio": 83.0,
+      "total_holders": 44326,
+      "total_shares": 1667947000,
+      "distribution": []
+    },
+    {
+      "date": "20250704",
+      "big_holders": 165,
+      "big_shares": 1382561000,
+      "big_ratio": 82.89,
+      "total_holders": 44630,
+      "total_shares": 1667947000,
+      "distribution": []
+    }
+  ],
+  "trend": {
+    "holder_change": 5,
+    "holder_change_pct": 3.12,
+    "ratio_change": 0.7,
+    "weeks": 12
+  },
+  "signal": {
+    "icon": "➡️",
+    "text": "大戶微幅增加",
+    "level": "hold",
+    "color": "gray"
+  }
+}

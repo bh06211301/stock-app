@@ -65,6 +65,7 @@ def save_stock_json(stock, trend, signal):
         history_lite.append({
             'date': h['date'],
             'big_holders': h['big_holders'],
+            'big_shares': h.get('big_shares', 0),
             'big_ratio': h['big_ratio'],
             'total_holders': h['total_holders'],
             'total_shares': h['total_shares'],

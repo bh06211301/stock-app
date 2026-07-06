@@ -1,16 +1,1054 @@
 {
-  "update_time": "2026-07-05 12:33:55",
+  "update_time": "2026-07-06 10:14:35",
   "data_source": "20260703",
   "summary": {
-    "total": 0,
-    "strong_buy": 0,
-    "buy": 0,
-    "hold": 0
+    "total": 66,
+    "strong_buy": 4,
+    "buy": 3,
+    "hold": 16
   },
   "rankings": {
-    "all": [],
-    "strong_buy": [],
-    "buy": [],
-    "hold": []
+    "all": [
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "latest": {
+          "big_holders": 819,
+          "big_ratio": 66.38,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 71,
+          "holder_change_pct": 9.49,
+          "ratio_change": 2.7,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "📈",
+          "text": "大戶持續增加",
+          "level": "buy",
+          "color": "green"
+        },
+        "score": 76.4
+      },
+      {
+        "stock_code": "2303",
+        "stock_name": "聯電",
+        "latest": {
+          "big_holders": 696,
+          "big_ratio": 74.23,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 69,
+          "holder_change_pct": 11.0,
+          "ratio_change": 1.9,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 72.8
+      },
+      {
+        "stock_code": "2408",
+        "stock_name": "南亞科",
+        "latest": {
+          "big_holders": 152,
+          "big_ratio": 80.83,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 30,
+          "holder_change_pct": 24.59,
+          "ratio_change": 4.57,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "🚀",
+          "text": "大戶快速集中",
+          "level": "strong_buy",
+          "color": "green"
+        },
+        "score": 39.14
+      },
+      {
+        "stock_code": "2887",
+        "stock_name": "台新新光金",
+        "latest": {
+          "big_holders": 1291,
+          "big_ratio": 70.45,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 34,
+          "holder_change_pct": 2.7,
+          "ratio_change": 1.54,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 37.08
+      },
+      {
+        "stock_code": "2356",
+        "stock_name": "英業達",
+        "latest": {
+          "big_holders": 196,
+          "big_ratio": 69.82,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 23,
+          "holder_change_pct": 13.29,
+          "ratio_change": 4.36,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "🚀",
+          "text": "大戶快速集中",
+          "level": "strong_buy",
+          "color": "green"
+        },
+        "score": 31.72
+      },
+      {
+        "stock_code": "2890",
+        "stock_name": "永豐金",
+        "latest": {
+          "big_holders": 813,
+          "big_ratio": 77.59,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 23,
+          "holder_change_pct": 2.91,
+          "ratio_change": 0.23,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 23.46
+      },
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "latest": {
+          "big_holders": 79,
+          "big_ratio": 61.55,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 14,
+          "holder_change_pct": 21.54,
+          "ratio_change": 3.99,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "🚀",
+          "text": "大戶快速集中",
+          "level": "strong_buy",
+          "color": "green"
+        },
+        "score": 21.98
+      },
+      {
+        "stock_code": "3231",
+        "stock_name": "緯創",
+        "latest": {
+          "big_holders": 281,
+          "big_ratio": 58.54,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 11,
+          "holder_change_pct": 4.07,
+          "ratio_change": 5.16,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "🚀",
+          "text": "大戶快速集中",
+          "level": "strong_buy",
+          "color": "green"
+        },
+        "score": 21.32
+      },
+      {
+        "stock_code": "3034",
+        "stock_name": "聯詠",
+        "latest": {
+          "big_holders": 99,
+          "big_ratio": 58.94,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 17,
+          "holder_change_pct": 20.73,
+          "ratio_change": 1.78,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 20.56
+      },
+      {
+        "stock_code": "2885",
+        "stock_name": "元大金",
+        "latest": {
+          "big_holders": 681,
+          "big_ratio": 80.43,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 19,
+          "holder_change_pct": 2.87,
+          "ratio_change": -0.06,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "趨勢不明顯",
+          "level": "neutral",
+          "color": "gray"
+        },
+        "score": 18.88
+      },
+      {
+        "stock_code": "2882",
+        "stock_name": "國泰金",
+        "latest": {
+          "big_holders": 669,
+          "big_ratio": 83.21,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 17,
+          "holder_change_pct": 2.61,
+          "ratio_change": 0.62,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 18.24
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "latest": {
+          "big_holders": 749,
+          "big_ratio": 67.17,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 15,
+          "holder_change_pct": 2.04,
+          "ratio_change": 1.19,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 17.38
+      },
+      {
+        "stock_code": "5871",
+        "stock_name": "中租-KY",
+        "latest": {
+          "big_holders": 204,
+          "big_ratio": 63.66,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 12,
+          "holder_change_pct": 6.25,
+          "ratio_change": 1.94,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 15.879999999999999
+      },
+      {
+        "stock_code": "2301",
+        "stock_name": "光寶科",
+        "latest": {
+          "big_holders": 263,
+          "big_ratio": 73.5,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 16,
+          "holder_change_pct": 6.48,
+          "ratio_change": -0.15,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "趨勢不明顯",
+          "level": "neutral",
+          "color": "gray"
+        },
+        "score": 15.7
+      },
+      {
+        "stock_code": "1301",
+        "stock_name": "台塑",
+        "latest": {
+          "big_holders": 297,
+          "big_ratio": 72.19,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 9,
+          "holder_change_pct": 3.12,
+          "ratio_change": 2.89,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "📈",
+          "text": "大戶持續增加",
+          "level": "buy",
+          "color": "green"
+        },
+        "score": 14.780000000000001
+      },
+      {
+        "stock_code": "1303",
+        "stock_name": "南亞",
+        "latest": {
+          "big_holders": 374,
+          "big_ratio": 84.53,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 6,
+          "holder_change_pct": 1.63,
+          "ratio_change": 3.19,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "📈",
+          "text": "大戶持續增加",
+          "level": "buy",
+          "color": "green"
+        },
+        "score": 12.379999999999999
+      },
+      {
+        "stock_code": "2327",
+        "stock_name": "國巨*",
+        "latest": {
+          "big_holders": 212,
+          "big_ratio": 68.96,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 2,
+          "holder_change_pct": 0.95,
+          "ratio_change": 4.85,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 11.7
+      },
+      {
+        "stock_code": "2002",
+        "stock_name": "中鋼",
+        "latest": {
+          "big_holders": 475,
+          "big_ratio": 48.07,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 16,
+          "holder_change_pct": 3.49,
+          "ratio_change": -2.65,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "📉",
+          "text": "大戶持股減少",
+          "level": "sell",
+          "color": "red"
+        },
+        "score": 10.7
+      },
+      {
+        "stock_code": "5880",
+        "stock_name": "合庫金",
+        "latest": {
+          "big_holders": 729,
+          "big_ratio": 69.58,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 8,
+          "holder_change_pct": 1.11,
+          "ratio_change": 0.58,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 9.16
+      },
+      {
+        "stock_code": "00878",
+        "stock_name": "國泰永續高股息",
+        "latest": {
+          "big_holders": 147,
+          "big_ratio": 9.45,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 10,
+          "holder_change_pct": 7.3,
+          "ratio_change": -0.7,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "趨勢不明顯",
+          "level": "neutral",
+          "color": "gray"
+        },
+        "score": 8.6
+      },
+      {
+        "stock_code": "0050",
+        "stock_name": "元大台灣50",
+        "latest": {
+          "big_holders": 246,
+          "big_ratio": 26.37,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 8,
+          "holder_change_pct": 3.36,
+          "ratio_change": 0.29,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 8.58
+      },
+      {
+        "stock_code": "2886",
+        "stock_name": "兆豐金",
+        "latest": {
+          "big_holders": 465,
+          "big_ratio": 81.6,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 4,
+          "holder_change_pct": 0.87,
+          "ratio_change": 1.72,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 7.4399999999999995
+      },
+      {
+        "stock_code": "2891",
+        "stock_name": "中信金",
+        "latest": {
+          "big_holders": 946,
+          "big_ratio": 79.44,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 6,
+          "holder_change_pct": 0.64,
+          "ratio_change": 0.39,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 6.78
+      },
+      {
+        "stock_code": "2347",
+        "stock_name": "聯強",
+        "latest": {
+          "big_holders": 165,
+          "big_ratio": 85.4,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 5,
+          "holder_change_pct": 3.12,
+          "ratio_change": 0.7,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 6.4
+      },
+      {
+        "stock_code": "3045",
+        "stock_name": "台灣大",
+        "latest": {
+          "big_holders": 230,
+          "big_ratio": 90.49,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 4,
+          "holder_change_pct": 1.77,
+          "ratio_change": 0.93,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 5.86
+      },
+      {
+        "stock_code": "1326",
+        "stock_name": "台化",
+        "latest": {
+          "big_holders": 263,
+          "big_ratio": 80.46,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 0,
+          "holder_change_pct": 0.0,
+          "ratio_change": 2.11,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "趨勢不明顯",
+          "level": "neutral",
+          "color": "gray"
+        },
+        "score": 4.22
+      },
+      {
+        "stock_code": "2345",
+        "stock_name": "智邦",
+        "latest": {
+          "big_holders": 99,
+          "big_ratio": 57.02,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 3,
+          "holder_change_pct": 3.12,
+          "ratio_change": -0.04,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "趨勢不明顯",
+          "level": "neutral",
+          "color": "gray"
+        },
+        "score": 2.92
+      },
+      {
+        "stock_code": "1101",
+        "stock_name": "台泥",
+        "latest": {
+          "big_holders": 414,
+          "big_ratio": 50.62,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 2,
+          "holder_change_pct": 0.49,
+          "ratio_change": 0.28,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 2.56
+      },
+      {
+        "stock_code": "00881",
+        "stock_name": "國泰台灣科技龍頭",
+        "latest": {
+          "big_holders": 41,
+          "big_ratio": 12.69,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 4,
+          "holder_change_pct": 10.81,
+          "ratio_change": -0.87,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "趨勢不明顯",
+          "level": "neutral",
+          "color": "gray"
+        },
+        "score": 2.26
+      },
+      {
+        "stock_code": "2357",
+        "stock_name": "華碩",
+        "latest": {
+          "big_holders": 99,
+          "big_ratio": 62.72,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 1,
+          "holder_change_pct": 1.02,
+          "ratio_change": 0.37,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 1.74
+      }
+    ],
+    "strong_buy": [
+      {
+        "stock_code": "2408",
+        "stock_name": "南亞科",
+        "latest": {
+          "big_holders": 152,
+          "big_ratio": 80.83,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 30,
+          "holder_change_pct": 24.59,
+          "ratio_change": 4.57,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "🚀",
+          "text": "大戶快速集中",
+          "level": "strong_buy",
+          "color": "green"
+        },
+        "score": 39.14
+      },
+      {
+        "stock_code": "2356",
+        "stock_name": "英業達",
+        "latest": {
+          "big_holders": 196,
+          "big_ratio": 69.82,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 23,
+          "holder_change_pct": 13.29,
+          "ratio_change": 4.36,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "🚀",
+          "text": "大戶快速集中",
+          "level": "strong_buy",
+          "color": "green"
+        },
+        "score": 31.72
+      },
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "latest": {
+          "big_holders": 79,
+          "big_ratio": 61.55,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 14,
+          "holder_change_pct": 21.54,
+          "ratio_change": 3.99,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "🚀",
+          "text": "大戶快速集中",
+          "level": "strong_buy",
+          "color": "green"
+        },
+        "score": 21.98
+      },
+      {
+        "stock_code": "3231",
+        "stock_name": "緯創",
+        "latest": {
+          "big_holders": 281,
+          "big_ratio": 58.54,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 11,
+          "holder_change_pct": 4.07,
+          "ratio_change": 5.16,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "🚀",
+          "text": "大戶快速集中",
+          "level": "strong_buy",
+          "color": "green"
+        },
+        "score": 21.32
+      }
+    ],
+    "buy": [
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "latest": {
+          "big_holders": 819,
+          "big_ratio": 66.38,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 71,
+          "holder_change_pct": 9.49,
+          "ratio_change": 2.7,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "📈",
+          "text": "大戶持續增加",
+          "level": "buy",
+          "color": "green"
+        },
+        "score": 76.4
+      },
+      {
+        "stock_code": "1301",
+        "stock_name": "台塑",
+        "latest": {
+          "big_holders": 297,
+          "big_ratio": 72.19,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 9,
+          "holder_change_pct": 3.12,
+          "ratio_change": 2.89,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "📈",
+          "text": "大戶持續增加",
+          "level": "buy",
+          "color": "green"
+        },
+        "score": 14.780000000000001
+      },
+      {
+        "stock_code": "1303",
+        "stock_name": "南亞",
+        "latest": {
+          "big_holders": 374,
+          "big_ratio": 84.53,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 6,
+          "holder_change_pct": 1.63,
+          "ratio_change": 3.19,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "📈",
+          "text": "大戶持續增加",
+          "level": "buy",
+          "color": "green"
+        },
+        "score": 12.379999999999999
+      }
+    ],
+    "hold": [
+      {
+        "stock_code": "2303",
+        "stock_name": "聯電",
+        "latest": {
+          "big_holders": 696,
+          "big_ratio": 74.23,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 69,
+          "holder_change_pct": 11.0,
+          "ratio_change": 1.9,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 72.8
+      },
+      {
+        "stock_code": "2887",
+        "stock_name": "台新新光金",
+        "latest": {
+          "big_holders": 1291,
+          "big_ratio": 70.45,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 34,
+          "holder_change_pct": 2.7,
+          "ratio_change": 1.54,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 37.08
+      },
+      {
+        "stock_code": "2890",
+        "stock_name": "永豐金",
+        "latest": {
+          "big_holders": 813,
+          "big_ratio": 77.59,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 23,
+          "holder_change_pct": 2.91,
+          "ratio_change": 0.23,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 23.46
+      },
+      {
+        "stock_code": "3034",
+        "stock_name": "聯詠",
+        "latest": {
+          "big_holders": 99,
+          "big_ratio": 58.94,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 17,
+          "holder_change_pct": 20.73,
+          "ratio_change": 1.78,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 20.56
+      },
+      {
+        "stock_code": "2882",
+        "stock_name": "國泰金",
+        "latest": {
+          "big_holders": 669,
+          "big_ratio": 83.21,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 17,
+          "holder_change_pct": 2.61,
+          "ratio_change": 0.62,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 18.24
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "latest": {
+          "big_holders": 749,
+          "big_ratio": 67.17,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 15,
+          "holder_change_pct": 2.04,
+          "ratio_change": 1.19,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 17.38
+      },
+      {
+        "stock_code": "5871",
+        "stock_name": "中租-KY",
+        "latest": {
+          "big_holders": 204,
+          "big_ratio": 63.66,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 12,
+          "holder_change_pct": 6.25,
+          "ratio_change": 1.94,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 15.879999999999999
+      },
+      {
+        "stock_code": "2327",
+        "stock_name": "國巨*",
+        "latest": {
+          "big_holders": 212,
+          "big_ratio": 68.96,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 2,
+          "holder_change_pct": 0.95,
+          "ratio_change": 4.85,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 11.7
+      },
+      {
+        "stock_code": "5880",
+        "stock_name": "合庫金",
+        "latest": {
+          "big_holders": 729,
+          "big_ratio": 69.58,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 8,
+          "holder_change_pct": 1.11,
+          "ratio_change": 0.58,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 9.16
+      },
+      {
+        "stock_code": "0050",
+        "stock_name": "元大台灣50",
+        "latest": {
+          "big_holders": 246,
+          "big_ratio": 26.37,
+          "date": "20260703"
+        },
+        "trend": {
+          "holder_change": 8,
+          "holder_change_pct": 3.36,
+          "ratio_change": 0.29,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "大戶微幅增加",
+          "level": "hold",
+          "color": "gray"
+        },
+        "score": 8.58
+      }
+    ]
   }
 }

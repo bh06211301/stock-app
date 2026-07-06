@@ -1,11 +1,12 @@
 {
   "stock_code": "3231",
   "stock_name": "緯創",
-  "last_update": "2026-07-05 12:33:55",
+  "last_update": "2026-07-06 10:14:34",
   "history": [
     {
       "date": "20260703",
       "big_holders": 281,
+      "big_shares": 1862051090,
       "big_ratio": 58.54,
       "total_holders": 404220,
       "total_shares": 3180412250,
@@ -116,13 +117,5777 @@
           "percent": 58.54
         }
       ]
+    },
+    {
+      "date": "20260626",
+      "big_holders": 284,
+      "big_shares": 1871283074,
+      "big_ratio": 58.83,
+      "total_holders": 402349,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 139334,
+          "shares": 28224274,
+          "percent": 0.88
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 223632,
+          "shares": 422640207,
+          "percent": 13.28
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 22277,
+          "shares": 172867305,
+          "percent": 5.43
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 6182,
+          "shares": 78403502,
+          "percent": 2.46
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3566,
+          "shares": 65958458,
+          "percent": 2.07
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2739,
+          "shares": 69615411,
+          "percent": 2.18
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1133,
+          "shares": 40364943,
+          "percent": 1.26
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 792,
+          "shares": 36597031,
+          "percent": 1.15
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1305,
+          "shares": 93401058,
+          "percent": 2.93
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 611,
+          "shares": 86522246,
+          "percent": 2.72
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 265,
+          "shares": 75194134,
+          "percent": 2.36
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 130,
+          "shares": 62521055,
+          "percent": 1.96
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 59,
+          "shares": 40727438,
+          "percent": 1.28
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 40,
+          "shares": 36162114,
+          "percent": 1.13
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 284,
+          "shares": 1871283074,
+          "percent": 58.83
+        }
+      ]
+    },
+    {
+      "date": "20260618",
+      "big_holders": 292,
+      "big_shares": 1910868903,
+      "big_ratio": 60.08,
+      "total_holders": 389724,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 137336,
+          "shares": 27594458,
+          "percent": 0.86
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 214436,
+          "shares": 405072576,
+          "percent": 12.73
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 21414,
+          "shares": 166275089,
+          "percent": 5.22
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5942,
+          "shares": 75329550,
+          "percent": 2.36
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3417,
+          "shares": 63115284,
+          "percent": 1.98
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2629,
+          "shares": 66736913,
+          "percent": 2.09
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1116,
+          "shares": 39688932,
+          "percent": 1.24
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 768,
+          "shares": 35536494,
+          "percent": 1.11
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1280,
+          "shares": 91483994,
+          "percent": 2.87
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 597,
+          "shares": 84691804,
+          "percent": 2.66
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 271,
+          "shares": 77164775,
+          "percent": 2.42
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 133,
+          "shares": 64348886,
+          "percent": 2.02
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 56,
+          "shares": 38773381,
+          "percent": 1.21
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 37,
+          "shares": 33741137,
+          "percent": 1.06
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 292,
+          "shares": 1910868903,
+          "percent": 60.08
+        }
+      ]
+    },
+    {
+      "date": "20260612",
+      "big_holders": 287,
+      "big_shares": 1928841155,
+      "big_ratio": 60.64,
+      "total_holders": 384415,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 136267,
+          "shares": 27253637,
+          "percent": 0.85
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 210682,
+          "shares": 398425342,
+          "percent": 12.52
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 21124,
+          "shares": 163701156,
+          "percent": 5.14
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5912,
+          "shares": 74922793,
+          "percent": 2.35
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3375,
+          "shares": 62354371,
+          "percent": 1.96
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2575,
+          "shares": 65400387,
+          "percent": 2.05
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1107,
+          "shares": 39341055,
+          "percent": 1.23
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 757,
+          "shares": 35002936,
+          "percent": 1.1
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1249,
+          "shares": 89315725,
+          "percent": 2.8
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 589,
+          "shares": 83631279,
+          "percent": 2.62
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 269,
+          "shares": 77111518,
+          "percent": 2.42
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 128,
+          "shares": 62090353,
+          "percent": 1.95
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 57,
+          "shares": 39530220,
+          "percent": 1.24
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 37,
+          "shares": 33499323,
+          "percent": 1.05
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 287,
+          "shares": 1928841155,
+          "percent": 60.64
+        }
+      ]
+    },
+    {
+      "date": "20260605",
+      "big_holders": 289,
+      "big_shares": 1961713682,
+      "big_ratio": 61.68,
+      "total_holders": 372676,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 131988,
+          "shares": 25958177,
+          "percent": 0.81
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 204481,
+          "shares": 383055479,
+          "percent": 12.04
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 20362,
+          "shares": 157824396,
+          "percent": 4.96
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5692,
+          "shares": 72015890,
+          "percent": 2.26
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3280,
+          "shares": 60615340,
+          "percent": 1.9
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2484,
+          "shares": 63185475,
+          "percent": 1.98
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1056,
+          "shares": 37599864,
+          "percent": 1.18
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 754,
+          "shares": 34883031,
+          "percent": 1.09
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1227,
+          "shares": 87731641,
+          "percent": 2.75
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 570,
+          "shares": 80764729,
+          "percent": 2.53
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 267,
+          "shares": 76608138,
+          "percent": 2.4
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 128,
+          "shares": 62318854,
+          "percent": 1.95
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 61,
+          "shares": 42473625,
+          "percent": 1.33
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 37,
+          "shares": 33732929,
+          "percent": 1.06
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 289,
+          "shares": 1961713682,
+          "percent": 61.68
+        }
+      ]
+    },
+    {
+      "date": "20260529",
+      "big_holders": 272,
+      "big_shares": 1850672001,
+      "big_ratio": 58.18,
+      "total_holders": 363771,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 114957,
+          "shares": 24101303,
+          "percent": 0.75
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 207342,
+          "shares": 401690766,
+          "percent": 12.63
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 23146,
+          "shares": 178794802,
+          "percent": 5.62
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 6633,
+          "shares": 84180532,
+          "percent": 2.64
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3825,
+          "shares": 70537531,
+          "percent": 2.21
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2958,
+          "shares": 75366778,
+          "percent": 2.36
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1230,
+          "shares": 43776958,
+          "percent": 1.37
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 872,
+          "shares": 40430846,
+          "percent": 1.27
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1395,
+          "shares": 99754572,
+          "percent": 3.13
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 628,
+          "shares": 88892603,
+          "percent": 2.79
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 285,
+          "shares": 81961804,
+          "percent": 2.57
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 126,
+          "shares": 61127165,
+          "percent": 1.92
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 63,
+          "shares": 43571021,
+          "percent": 1.36
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 39,
+          "shares": 35553568,
+          "percent": 1.11
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 272,
+          "shares": 1850672001,
+          "percent": 58.18
+        }
+      ]
+    },
+    {
+      "date": "20260522",
+      "big_holders": 267,
+      "big_shares": 1803301834,
+      "big_ratio": 56.7,
+      "total_holders": 370001,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 113579,
+          "shares": 24328898,
+          "percent": 0.76
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 212668,
+          "shares": 416474105,
+          "percent": 13.09
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 24504,
+          "shares": 189246522,
+          "percent": 5.95
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 7094,
+          "shares": 90107548,
+          "percent": 2.83
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 4025,
+          "shares": 74256081,
+          "percent": 2.33
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 3086,
+          "shares": 78724596,
+          "percent": 2.47
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1291,
+          "shares": 45950006,
+          "percent": 1.44
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 882,
+          "shares": 40832383,
+          "percent": 1.28
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1426,
+          "shares": 101936821,
+          "percent": 3.2
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 669,
+          "shares": 94842974,
+          "percent": 2.98
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 279,
+          "shares": 79859183,
+          "percent": 2.51
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 132,
+          "shares": 64128060,
+          "percent": 2.01
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 63,
+          "shares": 43627669,
+          "percent": 1.37
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 36,
+          "shares": 32898288,
+          "percent": 1.03
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 267,
+          "shares": 1803301834,
+          "percent": 56.7
+        }
+      ]
+    },
+    {
+      "date": "20260515",
+      "big_holders": 271,
+      "big_shares": 1797863628,
+      "big_ratio": 56.52,
+      "total_holders": 372659,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 114583,
+          "shares": 24474059,
+          "percent": 0.76
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 214155,
+          "shares": 418901735,
+          "percent": 13.17
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 24554,
+          "shares": 189639821,
+          "percent": 5.96
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 7136,
+          "shares": 90554355,
+          "percent": 2.84
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 4025,
+          "shares": 74250301,
+          "percent": 2.33
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 3104,
+          "shares": 79225355,
+          "percent": 2.49
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1323,
+          "shares": 47161302,
+          "percent": 1.48
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 893,
+          "shares": 41385767,
+          "percent": 1.3
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1433,
+          "shares": 102774938,
+          "percent": 3.23
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 672,
+          "shares": 94923788,
+          "percent": 2.98
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 284,
+          "shares": 81169476,
+          "percent": 2.55
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 130,
+          "shares": 63239693,
+          "percent": 1.98
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 58,
+          "shares": 40147724,
+          "percent": 1.26
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 38,
+          "shares": 34702308,
+          "percent": 1.09
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 271,
+          "shares": 1797863628,
+          "percent": 56.52
+        }
+      ]
+    },
+    {
+      "date": "20260508",
+      "big_holders": 282,
+      "big_shares": 1841925453,
+      "big_ratio": 57.91,
+      "total_holders": 358256,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 111268,
+          "shares": 23888090,
+          "percent": 0.75
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 204637,
+          "shares": 400092222,
+          "percent": 12.57
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 23641,
+          "shares": 182513168,
+          "percent": 5.73
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 6875,
+          "shares": 87204889,
+          "percent": 2.74
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3886,
+          "shares": 71749079,
+          "percent": 2.25
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2988,
+          "shares": 76192936,
+          "percent": 2.39
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1276,
+          "shares": 45381782,
+          "percent": 1.42
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 852,
+          "shares": 39435097,
+          "percent": 1.23
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1391,
+          "shares": 99870561,
+          "percent": 3.14
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 653,
+          "shares": 92810809,
+          "percent": 2.91
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 278,
+          "shares": 80069712,
+          "percent": 2.51
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 130,
+          "shares": 62858756,
+          "percent": 1.97
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 63,
+          "shares": 43687100,
+          "percent": 1.37
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 36,
+          "shares": 32732596,
+          "percent": 1.02
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 282,
+          "shares": 1841925453,
+          "percent": 57.91
+        }
+      ]
+    },
+    {
+      "date": "20260430",
+      "big_holders": 282,
+      "big_shares": 1802009290,
+      "big_ratio": 56.65,
+      "total_holders": 372153,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 114306,
+          "shares": 24805605,
+          "percent": 0.77
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 213741,
+          "shares": 419331086,
+          "percent": 13.18
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 24786,
+          "shares": 191209239,
+          "percent": 6.01
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 7168,
+          "shares": 90944253,
+          "percent": 2.85
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 4003,
+          "shares": 73841557,
+          "percent": 2.32
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 3139,
+          "shares": 79945028,
+          "percent": 2.51
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1282,
+          "shares": 45641197,
+          "percent": 1.43
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 889,
+          "shares": 41138689,
+          "percent": 1.29
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1398,
+          "shares": 100221963,
+          "percent": 3.15
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 644,
+          "shares": 90945583,
+          "percent": 2.85
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 285,
+          "shares": 81463514,
+          "percent": 2.56
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 133,
+          "shares": 64413614,
+          "percent": 2.02
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 63,
+          "shares": 43569986,
+          "percent": 1.36
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 34,
+          "shares": 30941646,
+          "percent": 0.97
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 282,
+          "shares": 1802009290,
+          "percent": 56.65
+        }
+      ]
+    },
+    {
+      "date": "20260424",
+      "big_holders": 282,
+      "big_shares": 1788203270,
+      "big_ratio": 56.22,
+      "total_holders": 377962,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 115552,
+          "shares": 25196946,
+          "percent": 0.79
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 217673,
+          "shares": 427141794,
+          "percent": 13.43
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 25225,
+          "shares": 194740723,
+          "percent": 6.12
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 7263,
+          "shares": 92139031,
+          "percent": 2.89
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 4030,
+          "shares": 74386596,
+          "percent": 2.33
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 3168,
+          "shares": 80698836,
+          "percent": 2.53
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1296,
+          "shares": 46158799,
+          "percent": 1.45
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 899,
+          "shares": 41632605,
+          "percent": 1.3
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1422,
+          "shares": 102072654,
+          "percent": 3.2
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 641,
+          "shares": 90445952,
+          "percent": 2.84
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 286,
+          "shares": 81756644,
+          "percent": 2.57
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 126,
+          "shares": 61093309,
+          "percent": 1.92
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 68,
+          "shares": 46790850,
+          "percent": 1.47
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 31,
+          "shares": 27954241,
+          "percent": 0.87
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 282,
+          "shares": 1788203270,
+          "percent": 56.22
+        }
+      ]
+    },
+    {
+      "date": "20260417",
+      "big_holders": 275,
+      "big_shares": 1719967838,
+      "big_ratio": 54.08,
+      "total_holders": 398543,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 119280,
+          "shares": 26417676,
+          "percent": 0.83
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 231582,
+          "shares": 457129844,
+          "percent": 14.37
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 27023,
+          "shares": 208569245,
+          "percent": 6.55
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 7747,
+          "shares": 98349716,
+          "percent": 3.09
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 4342,
+          "shares": 80102919,
+          "percent": 2.51
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 3371,
+          "shares": 85874731,
+          "percent": 2.7
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1389,
+          "shares": 49494861,
+          "percent": 1.55
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 890,
+          "shares": 41224550,
+          "percent": 1.29
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1485,
+          "shares": 106277160,
+          "percent": 3.34
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 655,
+          "shares": 92772296,
+          "percent": 2.91
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 280,
+          "shares": 79383041,
+          "percent": 2.49
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 129,
+          "shares": 62994045,
+          "percent": 1.98
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 69,
+          "shares": 48090828,
+          "percent": 1.51
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 26,
+          "shares": 23768500,
+          "percent": 0.74
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 275,
+          "shares": 1719967838,
+          "percent": 54.08
+        }
+      ]
+    },
+    {
+      "date": "20260410",
+      "big_holders": 270,
+      "big_shares": 1697731539,
+      "big_ratio": 53.38,
+      "total_holders": 406497,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 121195,
+          "shares": 27056555,
+          "percent": 0.85
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 236779,
+          "shares": 468134199,
+          "percent": 14.71
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 27627,
+          "shares": 213144122,
+          "percent": 6.7
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 7829,
+          "shares": 99276384,
+          "percent": 3.12
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 4466,
+          "shares": 82337122,
+          "percent": 2.58
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 3385,
+          "shares": 86231714,
+          "percent": 2.71
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1421,
+          "shares": 50658048,
+          "percent": 1.59
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 885,
+          "shares": 41011432,
+          "percent": 1.28
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1481,
+          "shares": 106096425,
+          "percent": 3.33
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 644,
+          "shares": 91324747,
+          "percent": 2.87
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 292,
+          "shares": 82304169,
+          "percent": 2.58
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 127,
+          "shares": 62068794,
+          "percent": 1.95
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 65,
+          "shares": 45038489,
+          "percent": 1.41
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 31,
+          "shares": 27998511,
+          "percent": 0.88
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 270,
+          "shares": 1697731539,
+          "percent": 53.38
+        }
+      ]
+    },
+    {
+      "date": "20260402",
+      "big_holders": 266,
+      "big_shares": 1673302098,
+      "big_ratio": 52.61,
+      "total_holders": 413143,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 122402,
+          "shares": 27302056,
+          "percent": 0.85
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 241369,
+          "shares": 477024370,
+          "percent": 14.99
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 28221,
+          "shares": 217811026,
+          "percent": 6.84
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 7882,
+          "shares": 100035464,
+          "percent": 3.14
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 4537,
+          "shares": 83688830,
+          "percent": 2.63
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 3456,
+          "shares": 88085184,
+          "percent": 2.76
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1448,
+          "shares": 51660868,
+          "percent": 1.62
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 894,
+          "shares": 41440297,
+          "percent": 1.3
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1498,
+          "shares": 106907420,
+          "percent": 3.36
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 649,
+          "shares": 92032245,
+          "percent": 2.89
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 292,
+          "shares": 81694588,
+          "percent": 2.56
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 128,
+          "shares": 62296608,
+          "percent": 1.95
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 68,
+          "shares": 47230656,
+          "percent": 1.48
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 33,
+          "shares": 29905540,
+          "percent": 0.94
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 266,
+          "shares": 1673302098,
+          "percent": 52.61
+        }
+      ]
+    },
+    {
+      "date": "20260327",
+      "big_holders": 265,
+      "big_shares": 1668885788,
+      "big_ratio": 52.47,
+      "total_holders": 415238,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 123137,
+          "shares": 27452085,
+          "percent": 0.86
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 242641,
+          "shares": 478713040,
+          "percent": 15.05
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 28296,
+          "shares": 218378896,
+          "percent": 6.86
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 7879,
+          "shares": 100017473,
+          "percent": 3.14
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 4552,
+          "shares": 84009082,
+          "percent": 2.64
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 3443,
+          "shares": 87731084,
+          "percent": 2.75
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1436,
+          "shares": 51225905,
+          "percent": 1.61
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 904,
+          "shares": 41889307,
+          "percent": 1.31
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1511,
+          "shares": 107917377,
+          "percent": 3.39
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 649,
+          "shares": 92197151,
+          "percent": 2.89
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 295,
+          "shares": 82625575,
+          "percent": 2.59
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 128,
+          "shares": 62410580,
+          "percent": 1.96
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 73,
+          "shares": 50678122,
+          "percent": 1.59
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 29,
+          "shares": 26280785,
+          "percent": 0.82
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 265,
+          "shares": 1668885788,
+          "percent": 52.47
+        }
+      ]
+    },
+    {
+      "date": "20260320",
+      "big_holders": 267,
+      "big_shares": 1669468589,
+      "big_ratio": 52.49,
+      "total_holders": 415855,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 123149,
+          "shares": 27436921,
+          "percent": 0.86
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 243266,
+          "shares": 479317191,
+          "percent": 15.07
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 28248,
+          "shares": 218021485,
+          "percent": 6.85
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 7878,
+          "shares": 100053934,
+          "percent": 3.14
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 4581,
+          "shares": 84543718,
+          "percent": 2.65
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 3446,
+          "shares": 87775493,
+          "percent": 2.75
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1433,
+          "shares": 51115499,
+          "percent": 1.6
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 925,
+          "shares": 42862354,
+          "percent": 1.34
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1490,
+          "shares": 106507255,
+          "percent": 3.34
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 651,
+          "shares": 92418514,
+          "percent": 2.9
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 294,
+          "shares": 82519815,
+          "percent": 2.59
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 128,
+          "shares": 62415917,
+          "percent": 1.96
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 64,
+          "shares": 44394376,
+          "percent": 1.39
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 35,
+          "shares": 31561189,
+          "percent": 0.99
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 267,
+          "shares": 1669468589,
+          "percent": 52.49
+        }
+      ]
+    },
+    {
+      "date": "20260313",
+      "big_holders": 269,
+      "big_shares": 1690805498,
+      "big_ratio": 53.16,
+      "total_holders": 411357,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 122309,
+          "shares": 27269378,
+          "percent": 0.85
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 240410,
+          "shares": 473089493,
+          "percent": 14.87
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 27753,
+          "shares": 214292435,
+          "percent": 6.73
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 7767,
+          "shares": 98733755,
+          "percent": 3.1
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 4510,
+          "shares": 83270365,
+          "percent": 2.61
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 3365,
+          "shares": 85716471,
+          "percent": 2.69
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1412,
+          "shares": 50368845,
+          "percent": 1.58
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 924,
+          "shares": 42896152,
+          "percent": 1.34
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1461,
+          "shares": 104481326,
+          "percent": 3.28
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 669,
+          "shares": 95163572,
+          "percent": 2.99
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 292,
+          "shares": 82174862,
+          "percent": 2.58
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 120,
+          "shares": 58955016,
+          "percent": 1.85
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 63,
+          "shares": 43304909,
+          "percent": 1.36
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 33,
+          "shares": 29890173,
+          "percent": 0.93
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 269,
+          "shares": 1690805498,
+          "percent": 53.16
+        }
+      ]
+    },
+    {
+      "date": "20260306",
+      "big_holders": 273,
+      "big_shares": 1677756655,
+      "big_ratio": 52.75,
+      "total_holders": 413943,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 122525,
+          "shares": 27355187,
+          "percent": 0.86
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 242355,
+          "shares": 477161312,
+          "percent": 15.0
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 27967,
+          "shares": 216016183,
+          "percent": 6.79
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 7842,
+          "shares": 99654686,
+          "percent": 3.13
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 4540,
+          "shares": 83731152,
+          "percent": 2.63
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 3439,
+          "shares": 87558608,
+          "percent": 2.75
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1417,
+          "shares": 50569607,
+          "percent": 1.59
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 932,
+          "shares": 43267784,
+          "percent": 1.36
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1463,
+          "shares": 104538794,
+          "percent": 3.28
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 680,
+          "shares": 96482419,
+          "percent": 3.03
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 293,
+          "shares": 82882605,
+          "percent": 2.6
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 117,
+          "shares": 57415966,
+          "percent": 1.8
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 66,
+          "shares": 45391877,
+          "percent": 1.42
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 34,
+          "shares": 30629415,
+          "percent": 0.96
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 273,
+          "shares": 1677756655,
+          "percent": 52.75
+        }
+      ]
+    },
+    {
+      "date": "20260226",
+      "big_holders": 272,
+      "big_shares": 1699284721,
+      "big_ratio": 53.42,
+      "total_holders": 409733,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 121297,
+          "shares": 26871764,
+          "percent": 0.84
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 240306,
+          "shares": 470573132,
+          "percent": 14.79
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 27448,
+          "shares": 212350325,
+          "percent": 6.67
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 7703,
+          "shares": 97939942,
+          "percent": 3.07
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 4397,
+          "shares": 81263857,
+          "percent": 2.55
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 3344,
+          "shares": 85369212,
+          "percent": 2.68
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1391,
+          "shares": 49608635,
+          "percent": 1.55
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 935,
+          "shares": 43468427,
+          "percent": 1.36
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1446,
+          "shares": 103195398,
+          "percent": 3.24
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 690,
+          "shares": 98008848,
+          "percent": 3.08
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 288,
+          "shares": 81261757,
+          "percent": 2.55
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 120,
+          "shares": 58820966,
+          "percent": 1.84
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 65,
+          "shares": 44794289,
+          "percent": 1.4
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 31,
+          "shares": 27602977,
+          "percent": 0.86
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 272,
+          "shares": 1699284721,
+          "percent": 53.42
+        }
+      ]
+    },
+    {
+      "date": "20260213",
+      "big_holders": 271,
+      "big_shares": 1695962868,
+      "big_ratio": 53.32,
+      "total_holders": 409182,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 121461,
+          "shares": 27023485,
+          "percent": 0.84
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 239425,
+          "shares": 470498117,
+          "percent": 14.79
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 27618,
+          "shares": 213170013,
+          "percent": 6.7
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 7709,
+          "shares": 97990360,
+          "percent": 3.08
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 4396,
+          "shares": 81189621,
+          "percent": 2.55
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 3340,
+          "shares": 85149042,
+          "percent": 2.67
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1385,
+          "shares": 49347089,
+          "percent": 1.55
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 937,
+          "shares": 43469009,
+          "percent": 1.36
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1440,
+          "shares": 102651019,
+          "percent": 3.22
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 688,
+          "shares": 97869717,
+          "percent": 3.07
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 291,
+          "shares": 82336020,
+          "percent": 2.58
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 124,
+          "shares": 60760583,
+          "percent": 1.91
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 68,
+          "shares": 47129394,
+          "percent": 1.48
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 29,
+          "shares": 25865913,
+          "percent": 0.81
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 271,
+          "shares": 1695962868,
+          "percent": 53.32
+        }
+      ]
+    },
+    {
+      "date": "20260211",
+      "big_holders": 271,
+      "big_shares": 1696114000,
+      "big_ratio": 53.33,
+      "total_holders": 409182,
+      "total_shares": 3180412000,
+      "distribution": []
+    },
+    {
+      "date": "20260206",
+      "big_holders": 268,
+      "big_shares": 1706578769,
+      "big_ratio": 53.65,
+      "total_holders": 406455,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 121245,
+          "shares": 26918721,
+          "percent": 0.84
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 237611,
+          "shares": 466712669,
+          "percent": 14.67
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 27178,
+          "shares": 209712845,
+          "percent": 6.59
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 7600,
+          "shares": 96433468,
+          "percent": 3.03
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 4324,
+          "shares": 79705288,
+          "percent": 2.5
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 3314,
+          "shares": 84368764,
+          "percent": 2.65
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1373,
+          "shares": 48943404,
+          "percent": 1.53
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 920,
+          "shares": 42625311,
+          "percent": 1.34
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1435,
+          "shares": 102788458,
+          "percent": 3.23
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 669,
+          "shares": 95271067,
+          "percent": 2.99
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 288,
+          "shares": 81050115,
+          "percent": 2.54
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 131,
+          "shares": 64160439,
+          "percent": 2.01
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 66,
+          "shares": 45521215,
+          "percent": 1.43
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 33,
+          "shares": 29621717,
+          "percent": 0.93
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 268,
+          "shares": 1706578769,
+          "percent": 53.65
+        }
+      ]
+    },
+    {
+      "date": "20260130",
+      "big_holders": 267,
+      "big_shares": 1719634510,
+      "big_ratio": 54.06,
+      "total_holders": 405952,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 121389,
+          "shares": 26670749,
+          "percent": 0.83
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 237865,
+          "shares": 464348761,
+          "percent": 14.6
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 26621,
+          "shares": 205687134,
+          "percent": 6.46
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 7495,
+          "shares": 95059629,
+          "percent": 2.98
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 4222,
+          "shares": 77896107,
+          "percent": 2.44
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 3230,
+          "shares": 82287684,
+          "percent": 2.58
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1340,
+          "shares": 47917875,
+          "percent": 1.5
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 934,
+          "shares": 43259628,
+          "percent": 1.36
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1399,
+          "shares": 100279575,
+          "percent": 3.15
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 670,
+          "shares": 94956753,
+          "percent": 2.98
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 285,
+          "shares": 80244255,
+          "percent": 2.52
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 138,
+          "shares": 67840710,
+          "percent": 2.13
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 62,
+          "shares": 42894083,
+          "percent": 1.34
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 35,
+          "shares": 31443797,
+          "percent": 0.98
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 267,
+          "shares": 1719634510,
+          "percent": 54.06
+        }
+      ]
+    },
+    {
+      "date": "20260123",
+      "big_holders": 274,
+      "big_shares": 1775391859,
+      "big_ratio": 55.82,
+      "total_holders": 396085,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 120188,
+          "shares": 26066632,
+          "percent": 0.81
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 231481,
+          "shares": 449441385,
+          "percent": 14.13
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 25330,
+          "shares": 195656821,
+          "percent": 6.15
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 7090,
+          "shares": 89907284,
+          "percent": 2.82
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 4028,
+          "shares": 74368109,
+          "percent": 2.33
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 3047,
+          "shares": 77692360,
+          "percent": 2.44
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1255,
+          "shares": 44796392,
+          "percent": 1.4
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 889,
+          "shares": 41110278,
+          "percent": 1.29
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1349,
+          "shares": 96633949,
+          "percent": 3.03
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 637,
+          "shares": 90711554,
+          "percent": 2.85
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 291,
+          "shares": 81733432,
+          "percent": 2.56
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 132,
+          "shares": 65095739,
+          "percent": 2.04
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 62,
+          "shares": 42739964,
+          "percent": 1.34
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 32,
+          "shares": 29066492,
+          "percent": 0.91
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 274,
+          "shares": 1775391859,
+          "percent": 55.82
+        }
+      ]
+    },
+    {
+      "date": "20260116",
+      "big_holders": 280,
+      "big_shares": 1923690231,
+      "big_ratio": 60.48,
+      "total_holders": 354082,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 113117,
+          "shares": 23751542,
+          "percent": 0.74
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 202743,
+          "shares": 385554762,
+          "percent": 12.12
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 21492,
+          "shares": 165976095,
+          "percent": 5.21
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 6069,
+          "shares": 76874088,
+          "percent": 2.41
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3443,
+          "shares": 63389043,
+          "percent": 1.99
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2674,
+          "shares": 67977697,
+          "percent": 2.13
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1103,
+          "shares": 39190398,
+          "percent": 1.23
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 809,
+          "shares": 37378415,
+          "percent": 1.17
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1244,
+          "shares": 89084654,
+          "percent": 2.8
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 586,
+          "shares": 83635386,
+          "percent": 2.62
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 292,
+          "shares": 82833896,
+          "percent": 2.6
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 128,
+          "shares": 62655057,
+          "percent": 1.97
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 64,
+          "shares": 43970842,
+          "percent": 1.38
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 38,
+          "shares": 34450144,
+          "percent": 1.08
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 280,
+          "shares": 1923690231,
+          "percent": 60.48
+        }
+      ]
+    },
+    {
+      "date": "20260109",
+      "big_holders": 284,
+      "big_shares": 1984905170,
+      "big_ratio": 62.41,
+      "total_holders": 332798,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 109630,
+          "shares": 22759008,
+          "percent": 0.71
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 187264,
+          "shares": 354822887,
+          "percent": 11.15
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 20066,
+          "shares": 154817527,
+          "percent": 4.86
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5661,
+          "shares": 71678630,
+          "percent": 2.25
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3214,
+          "shares": 59186440,
+          "percent": 1.86
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2551,
+          "shares": 64809013,
+          "percent": 2.03
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1049,
+          "shares": 37358401,
+          "percent": 1.17
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 770,
+          "shares": 35536877,
+          "percent": 1.11
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1203,
+          "shares": 85627851,
+          "percent": 2.69
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 586,
+          "shares": 83540430,
+          "percent": 2.62
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 287,
+          "shares": 81994175,
+          "percent": 2.57
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 126,
+          "shares": 61991302,
+          "percent": 1.94
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 74,
+          "shares": 51177092,
+          "percent": 1.6
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 33,
+          "shares": 30232447,
+          "percent": 0.95
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 284,
+          "shares": 1984905170,
+          "percent": 62.41
+        }
+      ]
+    },
+    {
+      "date": "20260102",
+      "big_holders": 283,
+      "big_shares": 1932445172,
+      "big_ratio": 60.76,
+      "total_holders": 352074,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 112659,
+          "shares": 23695360,
+          "percent": 0.74
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 201884,
+          "shares": 382480181,
+          "percent": 12.02
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 21112,
+          "shares": 163108679,
+          "percent": 5.12
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5885,
+          "shares": 74553397,
+          "percent": 2.34
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3401,
+          "shares": 62614552,
+          "percent": 1.96
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2608,
+          "shares": 66327183,
+          "percent": 2.08
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1106,
+          "shares": 39303954,
+          "percent": 1.23
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 789,
+          "shares": 36490995,
+          "percent": 1.14
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1240,
+          "shares": 89034713,
+          "percent": 2.79
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 586,
+          "shares": 82875831,
+          "percent": 2.6
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 280,
+          "shares": 79319670,
+          "percent": 2.49
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 133,
+          "shares": 65373403,
+          "percent": 2.05
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 72,
+          "shares": 49707129,
+          "percent": 1.56
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 36,
+          "shares": 33083031,
+          "percent": 1.04
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 283,
+          "shares": 1932445172,
+          "percent": 60.76
+        }
+      ]
+    },
+    {
+      "date": "20251226",
+      "big_holders": 279,
+      "big_shares": 1897381442,
+      "big_ratio": 59.65,
+      "total_holders": 362998,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 114492,
+          "shares": 24145325,
+          "percent": 0.75
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 209739,
+          "shares": 397826582,
+          "percent": 12.5
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 21889,
+          "shares": 169173652,
+          "percent": 5.31
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 6074,
+          "shares": 76955813,
+          "percent": 2.41
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3500,
+          "shares": 64424048,
+          "percent": 2.02
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2674,
+          "shares": 67982697,
+          "percent": 2.13
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1147,
+          "shares": 40860904,
+          "percent": 1.28
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 814,
+          "shares": 37642803,
+          "percent": 1.18
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1259,
+          "shares": 89941490,
+          "percent": 2.82
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 607,
+          "shares": 85646754,
+          "percent": 2.69
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 281,
+          "shares": 79975940,
+          "percent": 2.51
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 135,
+          "shares": 66346761,
+          "percent": 2.08
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 75,
+          "shares": 51941213,
+          "percent": 1.63
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 33,
+          "shares": 30166826,
+          "percent": 0.94
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 279,
+          "shares": 1897381442,
+          "percent": 59.65
+        }
+      ]
+    },
+    {
+      "date": "20251219",
+      "big_holders": 276,
+      "big_shares": 1881449689,
+      "big_ratio": 59.15,
+      "total_holders": 368361,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 115792,
+          "shares": 24405910,
+          "percent": 0.76
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 213293,
+          "shares": 405157317,
+          "percent": 12.73
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 22222,
+          "shares": 171589178,
+          "percent": 5.39
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 6191,
+          "shares": 78333010,
+          "percent": 2.46
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3487,
+          "shares": 64199654,
+          "percent": 2.01
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2708,
+          "shares": 68850799,
+          "percent": 2.16
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1162,
+          "shares": 41383116,
+          "percent": 1.3
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 819,
+          "shares": 37909388,
+          "percent": 1.19
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1275,
+          "shares": 91143430,
+          "percent": 2.86
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 609,
+          "shares": 85563117,
+          "percent": 2.69
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 277,
+          "shares": 77988535,
+          "percent": 2.45
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 139,
+          "shares": 68114846,
+          "percent": 2.14
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 76,
+          "shares": 52381435,
+          "percent": 1.64
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 35,
+          "shares": 31942826,
+          "percent": 1.0
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 276,
+          "shares": 1881449689,
+          "percent": 59.15
+        }
+      ]
+    },
+    {
+      "date": "20251212",
+      "big_holders": 280,
+      "big_shares": 1928251065,
+      "big_ratio": 60.62,
+      "total_holders": 354546,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 113075,
+          "shares": 23527567,
+          "percent": 0.73
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 203852,
+          "shares": 385437511,
+          "percent": 12.11
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 21188,
+          "shares": 163665677,
+          "percent": 5.14
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5889,
+          "shares": 74610619,
+          "percent": 2.34
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3355,
+          "shares": 61729860,
+          "percent": 1.94
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2620,
+          "shares": 66498265,
+          "percent": 2.09
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1116,
+          "shares": 39677075,
+          "percent": 1.24
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 804,
+          "shares": 37176424,
+          "percent": 1.16
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1247,
+          "shares": 89430327,
+          "percent": 2.81
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 596,
+          "shares": 83882653,
+          "percent": 2.63
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 289,
+          "shares": 82330358,
+          "percent": 2.58
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 133,
+          "shares": 65549703,
+          "percent": 2.06
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 67,
+          "shares": 46428811,
+          "percent": 1.45
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 35,
+          "shares": 32216335,
+          "percent": 1.01
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 280,
+          "shares": 1928251065,
+          "percent": 60.62
+        }
+      ]
+    },
+    {
+      "date": "20251205",
+      "big_holders": 282,
+      "big_shares": 1953765350,
+      "big_ratio": 61.43,
+      "total_holders": 344758,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 111520,
+          "shares": 23294048,
+          "percent": 0.73
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 196456,
+          "shares": 373365311,
+          "percent": 11.73
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 20715,
+          "shares": 159806766,
+          "percent": 5.02
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5737,
+          "shares": 72554548,
+          "percent": 2.28
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3272,
+          "shares": 60214121,
+          "percent": 1.89
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2606,
+          "shares": 66137556,
+          "percent": 2.07
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1092,
+          "shares": 38987355,
+          "percent": 1.22
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 763,
+          "shares": 35259039,
+          "percent": 1.1
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1201,
+          "shares": 86053240,
+          "percent": 2.7
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 580,
+          "shares": 81773480,
+          "percent": 2.57
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 295,
+          "shares": 83609831,
+          "percent": 2.62
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 134,
+          "shares": 65565893,
+          "percent": 2.06
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 72,
+          "shares": 49834034,
+          "percent": 1.56
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 33,
+          "shares": 30237678,
+          "percent": 0.95
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 282,
+          "shares": 1953765350,
+          "percent": 61.43
+        }
+      ]
+    },
+    {
+      "date": "20251128",
+      "big_holders": 280,
+      "big_shares": 1955756594,
+      "big_ratio": 61.49,
+      "total_holders": 345836,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 111686,
+          "shares": 23348431,
+          "percent": 0.73
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 197287,
+          "shares": 375114651,
+          "percent": 11.79
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 20761,
+          "shares": 160259271,
+          "percent": 5.03
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5796,
+          "shares": 73338753,
+          "percent": 2.3
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3274,
+          "shares": 60242281,
+          "percent": 1.89
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2594,
+          "shares": 65879009,
+          "percent": 2.07
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1093,
+          "shares": 39006946,
+          "percent": 1.22
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 762,
+          "shares": 35260633,
+          "percent": 1.1
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1200,
+          "shares": 85707401,
+          "percent": 2.69
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 578,
+          "shares": 81577254,
+          "percent": 2.56
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 286,
+          "shares": 81116293,
+          "percent": 2.55
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 141,
+          "shares": 69203936,
+          "percent": 2.17
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 68,
+          "shares": 47133684,
+          "percent": 1.48
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 30,
+          "shares": 27469113,
+          "percent": 0.86
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 280,
+          "shares": 1955756594,
+          "percent": 61.49
+        }
+      ]
+    },
+    {
+      "date": "20251121",
+      "big_holders": 276,
+      "big_shares": 1944132579,
+      "big_ratio": 61.12,
+      "total_holders": 349134,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 112288,
+          "shares": 23479022,
+          "percent": 0.73
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 199802,
+          "shares": 379917924,
+          "percent": 11.94
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 20887,
+          "shares": 161331584,
+          "percent": 5.07
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5790,
+          "shares": 73271996,
+          "percent": 2.3
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3318,
+          "shares": 61101850,
+          "percent": 1.92
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2608,
+          "shares": 66243905,
+          "percent": 2.08
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1092,
+          "shares": 38986575,
+          "percent": 1.22
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 769,
+          "shares": 35542381,
+          "percent": 1.11
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1197,
+          "shares": 85175968,
+          "percent": 2.67
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 576,
+          "shares": 81782816,
+          "percent": 2.57
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 290,
+          "shares": 82559668,
+          "percent": 2.59
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 137,
+          "shares": 67435797,
+          "percent": 2.12
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 70,
+          "shares": 48594078,
+          "percent": 1.52
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 34,
+          "shares": 30856107,
+          "percent": 0.97
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 276,
+          "shares": 1944132579,
+          "percent": 61.12
+        }
+      ]
+    },
+    {
+      "date": "20251114",
+      "big_holders": 280,
+      "big_shares": 1962936629,
+      "big_ratio": 61.71,
+      "total_holders": 345938,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 112374,
+          "shares": 23469379,
+          "percent": 0.73
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 197022,
+          "shares": 374296122,
+          "percent": 11.76
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 20579,
+          "shares": 158664419,
+          "percent": 4.98
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5741,
+          "shares": 72674332,
+          "percent": 2.28
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3246,
+          "shares": 59841965,
+          "percent": 1.88
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2562,
+          "shares": 64991360,
+          "percent": 2.04
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1088,
+          "shares": 38872821,
+          "percent": 1.22
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 751,
+          "shares": 34689189,
+          "percent": 1.09
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1198,
+          "shares": 85421660,
+          "percent": 2.68
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 583,
+          "shares": 83053903,
+          "percent": 2.61
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 278,
+          "shares": 78485581,
+          "percent": 2.46
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 139,
+          "shares": 68611432,
+          "percent": 2.15
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 62,
+          "shares": 42841506,
+          "percent": 1.34
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 35,
+          "shares": 31561952,
+          "percent": 0.99
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 280,
+          "shares": 1962936629,
+          "percent": 61.71
+        }
+      ]
+    },
+    {
+      "date": "20251107",
+      "big_holders": 271,
+      "big_shares": 1982316086,
+      "big_ratio": 62.32,
+      "total_holders": 338562,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 110038,
+          "shares": 23048577,
+          "percent": 0.72
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 192552,
+          "shares": 366776804,
+          "percent": 11.53
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 20231,
+          "shares": 155744365,
+          "percent": 4.89
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5674,
+          "shares": 71867998,
+          "percent": 2.25
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3188,
+          "shares": 58731055,
+          "percent": 1.84
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2540,
+          "shares": 64325846,
+          "percent": 2.02
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1071,
+          "shares": 38265807,
+          "percent": 1.2
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 750,
+          "shares": 34599441,
+          "percent": 1.08
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1162,
+          "shares": 82895223,
+          "percent": 2.6
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 579,
+          "shares": 82195058,
+          "percent": 2.58
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 274,
+          "shares": 77507235,
+          "percent": 2.43
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 128,
+          "shares": 62553918,
+          "percent": 1.96
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 65,
+          "shares": 44768885,
+          "percent": 1.4
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 39,
+          "shares": 34815952,
+          "percent": 1.09
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 271,
+          "shares": 1982316086,
+          "percent": 62.32
+        }
+      ]
+    },
+    {
+      "date": "20251031",
+      "big_holders": 283,
+      "big_shares": 2047194867,
+      "big_ratio": 64.36,
+      "total_holders": 317533,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 105894,
+          "shares": 21756286,
+          "percent": 0.68
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 178508,
+          "shares": 337066300,
+          "percent": 10.59
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 18472,
+          "shares": 142531059,
+          "percent": 4.48
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5179,
+          "shares": 65433010,
+          "percent": 2.05
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 2993,
+          "shares": 55199618,
+          "percent": 1.73
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2344,
+          "shares": 59487005,
+          "percent": 1.87
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1004,
+          "shares": 35879638,
+          "percent": 1.12
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 679,
+          "shares": 31345598,
+          "percent": 0.98
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1109,
+          "shares": 78987231,
+          "percent": 2.48
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 555,
+          "shares": 79117081,
+          "percent": 2.48
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 269,
+          "shares": 76173443,
+          "percent": 2.39
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 135,
+          "shares": 66276184,
+          "percent": 2.08
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 66,
+          "shares": 45404303,
+          "percent": 1.42
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 43,
+          "shares": 38698627,
+          "percent": 1.21
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 283,
+          "shares": 2047194867,
+          "percent": 64.36
+        }
+      ]
+    },
+    {
+      "date": "20251023",
+      "big_holders": 278,
+      "big_shares": 2022341879,
+      "big_ratio": 63.58,
+      "total_holders": 328196,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 107545,
+          "shares": 22220543,
+          "percent": 0.69
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 186486,
+          "shares": 352965951,
+          "percent": 11.09
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 19159,
+          "shares": 147696176,
+          "percent": 4.64
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5328,
+          "shares": 67356685,
+          "percent": 2.11
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3100,
+          "shares": 57132712,
+          "percent": 1.79
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2399,
+          "shares": 60814547,
+          "percent": 1.91
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1018,
+          "shares": 36294725,
+          "percent": 1.14
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 695,
+          "shares": 32028090,
+          "percent": 1.0
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1121,
+          "shares": 80096076,
+          "percent": 2.51
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 569,
+          "shares": 81463423,
+          "percent": 2.56
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 259,
+          "shares": 72817559,
+          "percent": 2.28
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 131,
+          "shares": 64135667,
+          "percent": 2.01
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 68,
+          "shares": 46852430,
+          "percent": 1.47
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 40,
+          "shares": 36205787,
+          "percent": 1.13
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 278,
+          "shares": 2022341879,
+          "percent": 63.58
+        }
+      ]
+    },
+    {
+      "date": "20251017",
+      "big_holders": 273,
+      "big_shares": 2067124865,
+      "big_ratio": 64.99,
+      "total_holders": 312177,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 104672,
+          "shares": 21541474,
+          "percent": 0.67
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 174860,
+          "shares": 332167066,
+          "percent": 10.44
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 18209,
+          "shares": 139963028,
+          "percent": 4.4
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5113,
+          "shares": 64681177,
+          "percent": 2.03
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 2937,
+          "shares": 54043149,
+          "percent": 1.69
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2341,
+          "shares": 59440357,
+          "percent": 1.86
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 967,
+          "shares": 34367749,
+          "percent": 1.08
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 650,
+          "shares": 29949712,
+          "percent": 0.94
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1097,
+          "shares": 78374497,
+          "percent": 2.46
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 560,
+          "shares": 79876960,
+          "percent": 2.51
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 259,
+          "shares": 72728456,
+          "percent": 2.28
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 132,
+          "shares": 64132081,
+          "percent": 2.01
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 70,
+          "shares": 48244570,
+          "percent": 1.51
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 37,
+          "shares": 33777109,
+          "percent": 1.06
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 273,
+          "shares": 2067124865,
+          "percent": 64.99
+        }
+      ]
+    },
+    {
+      "date": "20251009",
+      "big_holders": 274,
+      "big_shares": 2113609306,
+      "big_ratio": 66.45,
+      "total_holders": 295003,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 100394,
+          "shares": 20139846,
+          "percent": 0.63
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 163756,
+          "shares": 307937970,
+          "percent": 9.68
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 17058,
+          "shares": 131205568,
+          "percent": 4.12
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 4833,
+          "shares": 61068478,
+          "percent": 1.92
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 2788,
+          "shares": 51222475,
+          "percent": 1.61
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2181,
+          "shares": 55377276,
+          "percent": 1.74
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 943,
+          "shares": 33497414,
+          "percent": 1.05
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 648,
+          "shares": 29910276,
+          "percent": 0.94
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1067,
+          "shares": 76274791,
+          "percent": 2.39
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 563,
+          "shares": 80279369,
+          "percent": 2.52
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 261,
+          "shares": 73702062,
+          "percent": 2.31
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 128,
+          "shares": 62610493,
+          "percent": 1.96
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 71,
+          "shares": 48809474,
+          "percent": 1.53
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 38,
+          "shares": 34767452,
+          "percent": 1.09
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 274,
+          "shares": 2113609306,
+          "percent": 66.45
+        }
+      ]
+    },
+    {
+      "date": "20251003",
+      "big_holders": 276,
+      "big_shares": 2127843357,
+      "big_ratio": 66.9,
+      "total_holders": 285510,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 96494,
+          "shares": 19312030,
+          "percent": 0.6
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 158549,
+          "shares": 299297346,
+          "percent": 9.41
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 16812,
+          "shares": 129231106,
+          "percent": 4.06
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 4724,
+          "shares": 59753467,
+          "percent": 1.87
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 2773,
+          "shares": 50958971,
+          "percent": 1.6
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2202,
+          "shares": 55972085,
+          "percent": 1.75
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 940,
+          "shares": 33413125,
+          "percent": 1.05
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 621,
+          "shares": 28575577,
+          "percent": 0.89
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1057,
+          "shares": 75426052,
+          "percent": 2.37
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 552,
+          "shares": 78643435,
+          "percent": 2.47
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 272,
+          "shares": 76761663,
+          "percent": 2.41
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 131,
+          "shares": 63660416,
+          "percent": 2.0
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 70,
+          "shares": 47948795,
+          "percent": 1.5
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 37,
+          "shares": 33619825,
+          "percent": 1.05
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 276,
+          "shares": 2127843357,
+          "percent": 66.9
+        }
+      ]
+    },
+    {
+      "date": "20250926",
+      "big_holders": 265,
+      "big_shares": 2039719445,
+      "big_ratio": 64.13,
+      "total_holders": 300745,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 93944,
+          "shares": 19459847,
+          "percent": 0.61
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 171650,
+          "shares": 331761674,
+          "percent": 10.43
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 19601,
+          "shares": 151105124,
+          "percent": 4.75
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5492,
+          "shares": 69569465,
+          "percent": 2.18
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3211,
+          "shares": 59151730,
+          "percent": 1.85
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2548,
+          "shares": 64714024,
+          "percent": 2.03
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1100,
+          "shares": 39124160,
+          "percent": 1.23
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 709,
+          "shares": 32765415,
+          "percent": 1.03
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1158,
+          "shares": 83079846,
+          "percent": 2.61
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 585,
+          "shares": 83708288,
+          "percent": 2.63
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 268,
+          "shares": 76929180,
+          "percent": 2.41
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 121,
+          "shares": 58672565,
+          "percent": 1.84
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 65,
+          "shares": 44939321,
+          "percent": 1.41
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 28,
+          "shares": 25723166,
+          "percent": 0.8
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 265,
+          "shares": 2039719445,
+          "percent": 64.13
+        }
+      ]
+    },
+    {
+      "date": "20250919",
+      "big_holders": 263,
+      "big_shares": 1959572626,
+      "big_ratio": 61.61,
+      "total_holders": 323259,
+      "total_shares": 3180412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 96958,
+          "shares": 20335598,
+          "percent": 0.63
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 187953,
+          "shares": 364718038,
+          "percent": 11.46
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 21592,
+          "shares": 166666283,
+          "percent": 5.24
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 6008,
+          "shares": 76071878,
+          "percent": 2.39
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3489,
+          "shares": 64334338,
+          "percent": 2.02
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2724,
+          "shares": 69301053,
+          "percent": 2.17
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1173,
+          "shares": 41835584,
+          "percent": 1.31
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 760,
+          "shares": 35107597,
+          "percent": 1.1
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1255,
+          "shares": 89875495,
+          "percent": 2.82
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 597,
+          "shares": 85554680,
+          "percent": 2.69
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 274,
+          "shares": 78042836,
+          "percent": 2.45
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 125,
+          "shares": 61181417,
+          "percent": 1.92
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 58,
+          "shares": 40197077,
+          "percent": 1.26
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 30,
+          "shares": 27617750,
+          "percent": 0.86
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 263,
+          "shares": 1959572626,
+          "percent": 61.61
+        }
+      ]
+    },
+    {
+      "date": "20250912",
+      "big_holders": 265,
+      "big_shares": 1907580630,
+      "big_ratio": 60.66,
+      "total_holders": 328527,
+      "total_shares": 3144412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 97853,
+          "shares": 20593021,
+          "percent": 0.65
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 191707,
+          "shares": 372143775,
+          "percent": 11.83
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 21991,
+          "shares": 169793817,
+          "percent": 5.39
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 6103,
+          "shares": 77337975,
+          "percent": 2.45
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3528,
+          "shares": 65030946,
+          "percent": 2.06
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2764,
+          "shares": 70291447,
+          "percent": 2.23
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1180,
+          "shares": 42086560,
+          "percent": 1.33
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 773,
+          "shares": 35704706,
+          "percent": 1.13
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1277,
+          "shares": 91241613,
+          "percent": 2.9
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 600,
+          "shares": 85897572,
+          "percent": 2.73
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 272,
+          "shares": 77539040,
+          "percent": 2.46
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 125,
+          "shares": 61175895,
+          "percent": 1.94
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 59,
+          "shares": 40797402,
+          "percent": 1.29
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 30,
+          "shares": 27249851,
+          "percent": 0.86
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 265,
+          "shares": 1907580630,
+          "percent": 60.66
+        }
+      ]
+    },
+    {
+      "date": "20250905",
+      "big_holders": 263,
+      "big_shares": 1834325790,
+      "big_ratio": 58.33,
+      "total_holders": 346062,
+      "total_shares": 3144412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 99818,
+          "shares": 21192338,
+          "percent": 0.67
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 204623,
+          "shares": 399779829,
+          "percent": 12.71
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 23510,
+          "shares": 181323915,
+          "percent": 5.76
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 6618,
+          "shares": 83853995,
+          "percent": 2.66
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3754,
+          "shares": 69169635,
+          "percent": 2.19
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2953,
+          "shares": 75252005,
+          "percent": 2.39
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1251,
+          "shares": 44694312,
+          "percent": 1.42
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 795,
+          "shares": 36771970,
+          "percent": 1.16
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1351,
+          "shares": 96101583,
+          "percent": 3.05
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 630,
+          "shares": 89443117,
+          "percent": 2.84
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 274,
+          "shares": 77959658,
+          "percent": 2.47
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 130,
+          "shares": 63857291,
+          "percent": 2.03
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 63,
+          "shares": 44082666,
+          "percent": 1.4
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 29,
+          "shares": 26604146,
+          "percent": 0.84
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 263,
+          "shares": 1834325790,
+          "percent": 58.33
+        }
+      ]
+    },
+    {
+      "date": "20250829",
+      "big_holders": 261,
+      "big_shares": 1844314750,
+      "big_ratio": 58.65,
+      "total_holders": 344248,
+      "total_shares": 3144412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 99541,
+          "shares": 21038413,
+          "percent": 0.66
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 203596,
+          "shares": 396577810,
+          "percent": 12.61
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 23278,
+          "shares": 179435596,
+          "percent": 5.7
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 6466,
+          "shares": 81965675,
+          "percent": 2.6
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3712,
+          "shares": 68428541,
+          "percent": 2.17
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2929,
+          "shares": 74594868,
+          "percent": 2.37
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1225,
+          "shares": 43729906,
+          "percent": 1.39
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 788,
+          "shares": 36392749,
+          "percent": 1.15
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1334,
+          "shares": 94920806,
+          "percent": 3.01
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 616,
+          "shares": 87110857,
+          "percent": 2.77
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 279,
+          "shares": 79695382,
+          "percent": 2.53
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 129,
+          "shares": 63551486,
+          "percent": 2.02
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 60,
+          "shares": 41751587,
+          "percent": 1.32
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 34,
+          "shares": 30903824,
+          "percent": 0.98
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 261,
+          "shares": 1844314750,
+          "percent": 58.65
+        }
+      ]
+    },
+    {
+      "date": "20250822",
+      "big_holders": 264,
+      "big_shares": 1855083672,
+      "big_ratio": 58.99,
+      "total_holders": 339657,
+      "total_shares": 3144412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 98783,
+          "shares": 20797306,
+          "percent": 0.66
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 200403,
+          "shares": 390228427,
+          "percent": 12.41
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 22793,
+          "shares": 175536236,
+          "percent": 5.58
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 6396,
+          "shares": 81071283,
+          "percent": 2.57
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3669,
+          "shares": 67558206,
+          "percent": 2.14
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2907,
+          "shares": 73931003,
+          "percent": 2.35
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1223,
+          "shares": 43625722,
+          "percent": 1.38
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 775,
+          "shares": 35746099,
+          "percent": 1.13
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1323,
+          "shares": 93995931,
+          "percent": 2.98
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 620,
+          "shares": 88491583,
+          "percent": 2.81
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 275,
+          "shares": 78205593,
+          "percent": 2.48
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 126,
+          "shares": 62218578,
+          "percent": 1.97
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 62,
+          "shares": 43182319,
+          "percent": 1.37
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 38,
+          "shares": 34740292,
+          "percent": 1.1
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 264,
+          "shares": 1855083672,
+          "percent": 58.99
+        }
+      ]
+    },
+    {
+      "date": "20250815",
+      "big_holders": 272,
+      "big_shares": 1901772203,
+      "big_ratio": 60.48,
+      "total_holders": 328555,
+      "total_shares": 3144412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 97030,
+          "shares": 20080223,
+          "percent": 0.63
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 193098,
+          "shares": 372306075,
+          "percent": 11.84
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 21584,
+          "shares": 166658374,
+          "percent": 5.3
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 6000,
+          "shares": 76027244,
+          "percent": 2.41
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3507,
+          "shares": 64604406,
+          "percent": 2.05
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2752,
+          "shares": 69968787,
+          "percent": 2.22
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1161,
+          "shares": 41337984,
+          "percent": 1.31
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 778,
+          "shares": 35911384,
+          "percent": 1.14
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1272,
+          "shares": 90670715,
+          "percent": 2.88
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 604,
+          "shares": 86162472,
+          "percent": 2.74
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 270,
+          "shares": 77262451,
+          "percent": 2.45
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 123,
+          "shares": 60405886,
+          "percent": 1.92
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 62,
+          "shares": 42746089,
+          "percent": 1.35
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 42,
+          "shares": 38497957,
+          "percent": 1.22
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 272,
+          "shares": 1901772203,
+          "percent": 60.48
+        }
+      ]
+    },
+    {
+      "date": "20250808",
+      "big_holders": 290,
+      "big_shares": 1983951003,
+      "big_ratio": 63.09,
+      "total_holders": 301023,
+      "total_shares": 3144412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 91565,
+          "shares": 18866741,
+          "percent": 0.6
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 174098,
+          "shares": 336370369,
+          "percent": 10.69
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 19729,
+          "shares": 152154155,
+          "percent": 4.83
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5495,
+          "shares": 69508434,
+          "percent": 2.21
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3201,
+          "shares": 58879865,
+          "percent": 1.87
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2560,
+          "shares": 65280145,
+          "percent": 2.07
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1087,
+          "shares": 38648669,
+          "percent": 1.22
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 727,
+          "shares": 33571368,
+          "percent": 1.06
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1185,
+          "shares": 84735681,
+          "percent": 2.69
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 589,
+          "shares": 83766977,
+          "percent": 2.66
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 267,
+          "shares": 77013331,
+          "percent": 2.44
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 132,
+          "shares": 64549776,
+          "percent": 2.05
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 56,
+          "shares": 38636418,
+          "percent": 1.22
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 42,
+          "shares": 38479318,
+          "percent": 1.22
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 290,
+          "shares": 1983951003,
+          "percent": 63.09
+        }
+      ]
+    },
+    {
+      "date": "20250801",
+      "big_holders": 295,
+      "big_shares": 1972116307,
+      "big_ratio": 62.71,
+      "total_holders": 306008,
+      "total_shares": 3144412250,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 92406,
+          "shares": 19092495,
+          "percent": 0.6
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 177617,
+          "shares": 343745925,
+          "percent": 10.93
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 20182,
+          "shares": 155604737,
+          "percent": 4.94
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5548,
+          "shares": 70154736,
+          "percent": 2.23
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3247,
+          "shares": 59741229,
+          "percent": 1.89
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2596,
+          "shares": 66057042,
+          "percent": 2.1
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1094,
+          "shares": 38944380,
+          "percent": 1.23
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 727,
+          "shares": 33581650,
+          "percent": 1.06
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1210,
+          "shares": 86442433,
+          "percent": 2.74
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 592,
+          "shares": 84200564,
+          "percent": 2.67
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 273,
+          "shares": 78644358,
+          "percent": 2.5
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 127,
+          "shares": 62367517,
+          "percent": 1.98
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 56,
+          "shares": 38820418,
+          "percent": 1.23
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 38,
+          "shares": 34899459,
+          "percent": 1.1
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 295,
+          "shares": 1972116307,
+          "percent": 62.71
+        }
+      ]
+    },
+    {
+      "date": "20250725",
+      "big_holders": 290,
+      "big_shares": 1929470060,
+      "big_ratio": 61.36,
+      "total_holders": 316833,
+      "total_shares": 3144435050,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 93366,
+          "shares": 19392451,
+          "percent": 0.61
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 185926,
+          "shares": 360766775,
+          "percent": 11.47
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 21089,
+          "shares": 162626123,
+          "percent": 5.17
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5833,
+          "shares": 73771426,
+          "percent": 2.34
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3419,
+          "shares": 62939338,
+          "percent": 2.0
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2681,
+          "shares": 68296371,
+          "percent": 2.17
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1156,
+          "shares": 41311215,
+          "percent": 1.31
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 744,
+          "shares": 34370222,
+          "percent": 1.09
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1221,
+          "shares": 87073387,
+          "percent": 2.76
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 604,
+          "shares": 85505834,
+          "percent": 2.71
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 275,
+          "shares": 78960813,
+          "percent": 2.51
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 132,
+          "shares": 64563995,
+          "percent": 2.05
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 60,
+          "shares": 41587781,
+          "percent": 1.32
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 37,
+          "shares": 33809259,
+          "percent": 1.07
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 290,
+          "shares": 1929470060,
+          "percent": 61.36
+        }
+      ]
+    },
+    {
+      "date": "20250718",
+      "big_holders": 287,
+      "big_shares": 1945120422,
+      "big_ratio": 61.85,
+      "total_holders": 313710,
+      "total_shares": 3144435050,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 93247,
+          "shares": 19234393,
+          "percent": 0.61
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 183639,
+          "shares": 354802895,
+          "percent": 11.28
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 20705,
+          "shares": 159820080,
+          "percent": 5.08
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5699,
+          "shares": 71972659,
+          "percent": 2.28
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3334,
+          "shares": 61314835,
+          "percent": 1.94
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2640,
+          "shares": 67261854,
+          "percent": 2.13
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1114,
+          "shares": 39712674,
+          "percent": 1.26
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 722,
+          "shares": 33293066,
+          "percent": 1.05
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1221,
+          "shares": 87050661,
+          "percent": 2.76
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 599,
+          "shares": 85163086,
+          "percent": 2.7
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 277,
+          "shares": 80220958,
+          "percent": 2.55
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 127,
+          "shares": 62183734,
+          "percent": 1.97
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 61,
+          "shares": 42597751,
+          "percent": 1.35
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 38,
+          "shares": 34685982,
+          "percent": 1.1
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 287,
+          "shares": 1945120422,
+          "percent": 61.85
+        }
+      ]
+    },
+    {
+      "date": "20250711",
+      "big_holders": 292,
+      "big_shares": 1961426412,
+      "big_ratio": 62.37,
+      "total_holders": 310068,
+      "total_shares": 3144435050,
+      "distribution": [
+        {
+          "level": 1,
+          "level_name": "1-999股",
+          "holders": 92938,
+          "shares": 19136931,
+          "percent": 0.6
+        },
+        {
+          "level": 2,
+          "level_name": "1-5張",
+          "holders": 180913,
+          "shares": 349181620,
+          "percent": 11.1
+        },
+        {
+          "level": 3,
+          "level_name": "5-10張",
+          "holders": 20286,
+          "shares": 156453207,
+          "percent": 4.97
+        },
+        {
+          "level": 4,
+          "level_name": "10-15張",
+          "holders": 5658,
+          "shares": 71542339,
+          "percent": 2.27
+        },
+        {
+          "level": 5,
+          "level_name": "15-20張",
+          "holders": 3272,
+          "shares": 60182251,
+          "percent": 1.91
+        },
+        {
+          "level": 6,
+          "level_name": "20-30張",
+          "holders": 2604,
+          "shares": 66303893,
+          "percent": 2.1
+        },
+        {
+          "level": 7,
+          "level_name": "30-40張",
+          "holders": 1078,
+          "shares": 38408616,
+          "percent": 1.22
+        },
+        {
+          "level": 8,
+          "level_name": "40-50張",
+          "holders": 715,
+          "shares": 33031270,
+          "percent": 1.05
+        },
+        {
+          "level": 9,
+          "level_name": "50-100張",
+          "holders": 1216,
+          "shares": 86833949,
+          "percent": 2.76
+        },
+        {
+          "level": 10,
+          "level_name": "100-200張",
+          "holders": 589,
+          "shares": 83482107,
+          "percent": 2.65
+        },
+        {
+          "level": 11,
+          "level_name": "200-400張",
+          "holders": 282,
+          "shares": 81260919,
+          "percent": 2.58
+        },
+        {
+          "level": 12,
+          "level_name": "400-600張",
+          "holders": 126,
+          "shares": 61629464,
+          "percent": 1.95
+        },
+        {
+          "level": 13,
+          "level_name": "600-800張",
+          "holders": 65,
+          "shares": 45182141,
+          "percent": 1.43
+        },
+        {
+          "level": 14,
+          "level_name": "800千-1千張",
+          "holders": 34,
+          "shares": 30379931,
+          "percent": 0.96
+        },
+        {
+          "level": 15,
+          "level_name": "千張以上",
+          "holders": 292,
+          "shares": 1961426412,
+          "percent": 62.37
+        }
+      ]
     }
   ],
-  "trend": null,
+  "trend": {
+    "holder_change": 11,
+    "holder_change_pct": 4.07,
+    "ratio_change": 5.16,
+    "weeks": 12
+  },
   "signal": {
-    "icon": "❓",
-    "text": "資料不足",
-    "level": "unknown",
-    "color": "gray"
+    "icon": "🚀",
+    "text": "大戶快速集中",
+    "level": "strong_buy",
+    "color": "green"
   }
 }
