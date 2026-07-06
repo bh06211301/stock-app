@@ -69,6 +69,7 @@ def save_stock_json(stock, trend, signal):
             'big_ratio': h['big_ratio'],
             'total_holders': h['total_holders'],
             'total_shares': h['total_shares'],
+            'close_price': h.get('close_price') or None,
             'distribution': h.get('distribution', [])
         })
 

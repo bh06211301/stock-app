@@ -130,10 +130,11 @@ def fetch_norway_history(stock_code):
             continue
 
         try:
-            total_lots    = parse_int(cells[3].get_text())   # 集保總張數（張）
-            total_holders = parse_int(cells[4].get_text())   # 總股東人數
-            big_holders   = parse_int(cells[12].get_text())  # >1000張人數
+            total_lots    = parse_int(cells[3].get_text())    # 集保總張數（張）
+            total_holders = parse_int(cells[4].get_text())    # 總股東人數
+            big_holders   = parse_int(cells[12].get_text())   # >1000張人數
             big_ratio     = parse_float(cells[13].get_text()) # >1000張持有%
+            close_price   = parse_float(cells[14].get_text()) # 收盤價
         except IndexError:
             continue
 
@@ -151,6 +152,7 @@ def fetch_norway_history(stock_code):
             'big_ratio': big_ratio,
             'total_holders': total_holders,
             'total_shares': total_shares,
+            'close_price': close_price if close_price > 0 else None,
             'distribution': [],  # 歷史週無分布細項；最新週由 fetch_data.py 補入
         })
 
@@ -219,13 +221,16 @@ def main():
             all_data.append(entry)
             continue
 
-        # 只補入不存在的週（保留 fetch_data.py 帶 distribution 的最新週）
+        # 補入不存在的週；同時補齊既有週缺漏的 close_price
+        date_to_entry = {h['date']: h for h in entry['history']}
         added = 0
         for week in norway_history:
             if week['date'] not in existing_dates:
                 entry['history'].append(week)
                 existing_dates.add(week['date'])
                 added += 1
+            elif week.get('close_price') and not date_to_entry[week['date']].get('close_price'):
+                date_to_entry[week['date']]['close_price'] = week['close_price']
 
         entry['history'].sort(key=lambda h: h['date'], reverse=True)
         entry['history'] = entry['history'][:52]  # 保留最多 52 週

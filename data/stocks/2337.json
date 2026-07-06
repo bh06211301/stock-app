@@ -1,7 +1,7 @@
 {
   "stock_code": "2337",
   "stock_name": "旺宏",
-  "last_update": "2026-07-06 10:14:34",
+  "last_update": "2026-07-06 15:44:53",
   "history": [
     {
       "date": "20260703",
@@ -10,6 +10,7 @@
       "big_ratio": 43.2,
       "total_holders": 464181,
       "total_shares": 1981861000,
+      "close_price": 142.5,
       "distribution": []
     },
     {
@@ -19,6 +20,7 @@
       "big_ratio": 46.23,
       "total_holders": 439545,
       "total_shares": 1981857000,
+      "close_price": 162.5,
       "distribution": []
     },
     {
@@ -28,6 +30,7 @@
       "big_ratio": 45.21,
       "total_holders": 444889,
       "total_shares": 1981857000,
+      "close_price": 169.0,
       "distribution": []
     },
     {
@@ -37,6 +40,7 @@
       "big_ratio": 45.26,
       "total_holders": 449280,
       "total_shares": 1981857000,
+      "close_price": 146.5,
       "distribution": []
     },
     {
@@ -46,6 +50,7 @@
       "big_ratio": 47.46,
       "total_holders": 433011,
       "total_shares": 1981831000,
+      "close_price": 150.0,
       "distribution": []
     },
     {
@@ -55,6 +60,7 @@
       "big_ratio": 45.97,
       "total_holders": 441092,
       "total_shares": 1981783000,
+      "close_price": 166.5,
       "distribution": []
     },
     {
@@ -64,6 +70,7 @@
       "big_ratio": 41.46,
       "total_holders": 472576,
       "total_shares": 1981309000,
+      "close_price": 149.5,
       "distribution": []
     },
     {
@@ -73,6 +80,7 @@
       "big_ratio": 47.97,
       "total_holders": 428742,
       "total_shares": 1981309000,
+      "close_price": 162.5,
       "distribution": []
     },
     {
@@ -82,6 +90,7 @@
       "big_ratio": 48.46,
       "total_holders": 423776,
       "total_shares": 1981309000,
+      "close_price": 153.0,
       "distribution": []
     },
     {
@@ -91,6 +100,7 @@
       "big_ratio": 51.84,
       "total_holders": 388017,
       "total_shares": 1981309000,
+      "close_price": 154.0,
       "distribution": []
     },
     {
@@ -100,6 +110,7 @@
       "big_ratio": 46.35,
       "total_holders": 422076,
       "total_shares": 1981309000,
+      "close_price": 132.0,
       "distribution": []
     },
     {
@@ -109,6 +120,7 @@
       "big_ratio": 48.58,
       "total_holders": 406329,
       "total_shares": 1981310000,
+      "close_price": 131.0,
       "distribution": []
     },
     {
@@ -118,6 +130,7 @@
       "big_ratio": 50.79,
       "total_holders": 386049,
       "total_shares": 1981309000,
+      "close_price": 146.0,
       "distribution": []
     },
     {
@@ -127,6 +140,7 @@
       "big_ratio": 52.34,
       "total_holders": 371943,
       "total_shares": 1981309000,
+      "close_price": 129.0,
       "distribution": []
     },
     {
@@ -136,6 +150,7 @@
       "big_ratio": 51.81,
       "total_holders": 378307,
       "total_shares": 1981309000,
+      "close_price": 125.0,
       "distribution": []
     },
     {
@@ -145,6 +160,7 @@
       "big_ratio": 53.47,
       "total_holders": 354041,
       "total_shares": 1981057000,
+      "close_price": 160.0,
       "distribution": []
     },
     {
@@ -154,6 +170,7 @@
       "big_ratio": 46.84,
       "total_holders": 386809,
       "total_shares": 1980813000,
+      "close_price": 108.5,
       "distribution": []
     },
     {
@@ -163,6 +180,7 @@
       "big_ratio": 50.11,
       "total_holders": 361113,
       "total_shares": 1980557000,
+      "close_price": 102.5,
       "distribution": []
     },
     {
@@ -172,6 +190,7 @@
       "big_ratio": 50.18,
       "total_holders": 351817,
       "total_shares": 1979722000,
+      "close_price": 110.0,
       "distribution": []
     },
     {
@@ -181,6 +200,7 @@
       "big_ratio": 53.36,
       "total_holders": 312595,
       "total_shares": 1978891000,
+      "close_price": 98.5,
       "distribution": []
     },
     {
@@ -190,6 +210,7 @@
       "big_ratio": 46.97,
       "total_holders": 352391,
       "total_shares": 1977905000,
+      "close_price": 80.8,
       "distribution": []
     },
     {
@@ -199,6 +220,7 @@
       "big_ratio": 49.29,
       "total_holders": 329185,
       "total_shares": 1972352000,
+      "close_price": 92.8,
       "distribution": []
     },
     {
@@ -208,6 +230,7 @@
       "big_ratio": 45.23,
       "total_holders": 334700,
       "total_shares": 1964613000,
+      "close_price": 69.3,
       "distribution": []
     },
     {
@@ -217,6 +240,7 @@
       "big_ratio": 44.48,
       "total_holders": 333202,
       "total_shares": 1960409000,
+      "close_price": 67.0,
       "distribution": []
     },
     {
@@ -226,6 +250,7 @@
       "big_ratio": 45.45,
       "total_holders": 320122,
       "total_shares": 1956318000,
+      "close_price": 58.3,
       "distribution": []
     },
     {
@@ -235,6 +260,7 @@
       "big_ratio": 37.61,
       "total_holders": 325722,
       "total_shares": 1933378000,
+      "close_price": 43.35,
       "distribution": []
     },
     {
@@ -244,6 +270,7 @@
       "big_ratio": 35.6,
       "total_holders": 332325,
       "total_shares": 1928322000,
+      "close_price": 39.2,
       "distribution": []
     },
     {
@@ -253,6 +280,7 @@
       "big_ratio": 34.38,
       "total_holders": 336734,
       "total_shares": 1927039000,
+      "close_price": 37.15,
       "distribution": []
     },
     {
@@ -262,6 +290,7 @@
       "big_ratio": 32.6,
       "total_holders": 340586,
       "total_shares": 1924292000,
+      "close_price": 38.1,
       "distribution": []
     },
     {
@@ -271,6 +300,7 @@
       "big_ratio": 31.75,
       "total_holders": 336687,
       "total_shares": 1920648000,
+      "close_price": 33.9,
       "distribution": []
     },
     {
@@ -280,6 +310,7 @@
       "big_ratio": 34.25,
       "total_holders": 329755,
       "total_shares": 1920613000,
+      "close_price": 34.1,
       "distribution": []
     },
     {
@@ -289,6 +320,7 @@
       "big_ratio": 35.48,
       "total_holders": 328841,
       "total_shares": 1920370000,
+      "close_price": 34.5,
       "distribution": []
     },
     {
@@ -298,6 +330,7 @@
       "big_ratio": 36.82,
       "total_holders": 324827,
       "total_shares": 1917052000,
+      "close_price": 38.05,
       "distribution": []
     },
     {
@@ -307,6 +340,7 @@
       "big_ratio": 34.68,
       "total_holders": 316903,
       "total_shares": 1890466000,
+      "close_price": 35.25,
       "distribution": []
     },
     {
@@ -316,6 +350,7 @@
       "big_ratio": 32.53,
       "total_holders": 326412,
       "total_shares": 1884696000,
+      "close_price": 31.2,
       "distribution": []
     },
     {
@@ -325,6 +360,7 @@
       "big_ratio": 28.71,
       "total_holders": 310814,
       "total_shares": 1857592000,
+      "close_price": 30.15,
       "distribution": []
     },
     {
@@ -334,6 +370,7 @@
       "big_ratio": 29.25,
       "total_holders": 307065,
       "total_shares": 1857348000,
+      "close_price": 26.75,
       "distribution": []
     },
     {
@@ -343,6 +380,7 @@
       "big_ratio": 28.07,
       "total_holders": 311531,
       "total_shares": 1857348000,
+      "close_price": 27.5,
       "distribution": []
     },
     {
@@ -352,6 +390,7 @@
       "big_ratio": 27.99,
       "total_holders": 310918,
       "total_shares": 1857348000,
+      "close_price": 25.3,
       "distribution": []
     },
     {
@@ -361,6 +400,7 @@
       "big_ratio": 28.86,
       "total_holders": 310049,
       "total_shares": 1857348000,
+      "close_price": 24.3,
       "distribution": []
     },
     {
@@ -370,6 +410,7 @@
       "big_ratio": 30.43,
       "total_holders": 302440,
       "total_shares": 1855848000,
+      "close_price": 27.85,
       "distribution": []
     },
     {
@@ -379,6 +420,7 @@
       "big_ratio": 29.09,
       "total_holders": 302421,
       "total_shares": 1855826000,
+      "close_price": 22.6,
       "distribution": []
     },
     {
@@ -388,6 +430,7 @@
       "big_ratio": 28.19,
       "total_holders": 304097,
       "total_shares": 1855826000,
+      "close_price": 20.45,
       "distribution": []
     },
     {
@@ -397,6 +440,7 @@
       "big_ratio": 27.99,
       "total_holders": 304520,
       "total_shares": 1855826000,
+      "close_price": 20.1,
       "distribution": []
     },
     {
@@ -406,6 +450,7 @@
       "big_ratio": 27.65,
       "total_holders": 305535,
       "total_shares": 1855826000,
+      "close_price": 19.7,
       "distribution": []
     },
     {
@@ -415,6 +460,7 @@
       "big_ratio": 27.83,
       "total_holders": 306308,
       "total_shares": 1855826000,
+      "close_price": 19.65,
       "distribution": []
     },
     {
@@ -424,6 +470,7 @@
       "big_ratio": 27.59,
       "total_holders": 307094,
       "total_shares": 1855826000,
+      "close_price": 19.05,
       "distribution": []
     },
     {
@@ -433,6 +480,7 @@
       "big_ratio": 27.79,
       "total_holders": 306940,
       "total_shares": 1855826000,
+      "close_price": 18.85,
       "distribution": []
     },
     {
@@ -442,6 +490,7 @@
       "big_ratio": 28.27,
       "total_holders": 306591,
       "total_shares": 1855826000,
+      "close_price": 20.1,
       "distribution": []
     },
     {
@@ -451,6 +500,7 @@
       "big_ratio": 28.6,
       "total_holders": 306748,
       "total_shares": 1855826000,
+      "close_price": 20.75,
       "distribution": []
     },
     {
@@ -460,6 +510,7 @@
       "big_ratio": 28.7,
       "total_holders": 307070,
       "total_shares": 1855826000,
+      "close_price": 20.75,
       "distribution": []
     },
     {
@@ -469,6 +520,7 @@
       "big_ratio": 29.1,
       "total_holders": 306900,
       "total_shares": 1855826000,
+      "close_price": 21.35,
       "distribution": []
     }
   ],

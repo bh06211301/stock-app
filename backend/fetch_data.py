@@ -71,15 +71,28 @@ def fetch_opendata_csv():
 
 
 def fetch_stock_names():
-    """從 TWSE 取得股票名稱對照表"""
+    """從 TWSE 取得股票名稱與收盤價對照表"""
     try:
         url = 'https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL'
         r = requests.get(url, timeout=15)
         data = r.json()
-        return {item['Code']: item['Name'] for item in data if 'Code' in item and 'Name' in item}
+        name_map = {}
+        price_map = {}
+        for item in data:
+            code = item.get('Code', '')
+            if not code:
+                continue
+            name_map[code] = item.get('Name', code)
+            try:
+                price = float(str(item.get('ClosingPrice', '0')).replace(',', ''))
+                if price > 0:
+                    price_map[code] = price
+            except (ValueError, TypeError):
+                pass
+        return name_map, price_map
     except Exception as e:
         print(f'⚠️  無法取得股票名稱: {e}')
-        return {}
+        return {}, {}
 
 
 def parse_stock_week(stock_code, all_rows):
@@ -134,9 +147,9 @@ def main():
     data_date = all_rows[0][0] if all_rows else 'unknown'
     print(f'✅ 下載完成，共 {len(all_rows)} 筆，資料日期: {data_date}')
 
-    print('📋 取得股票名稱...')
-    name_map = fetch_stock_names()
-    print(f'   取得 {len(name_map)} 支股票名稱')
+    print('📋 取得股票名稱與收盤價...')
+    name_map, price_map = fetch_stock_names()
+    print(f'   取得 {len(name_map)} 支股票名稱, {len(price_map)} 支收盤價')
 
     raw_file = os.path.join('data', 'stocks_raw.json')
     existing = {}
@@ -154,6 +167,10 @@ def main():
         week_data = parse_stock_week(stock_code, all_rows)
 
         if week_data:
+            # 補入 TWSE 收盤價（TDCC CSV 本身不含股價）
+            if stock_code in price_map:
+                week_data['close_price'] = price_map[stock_code]
+
             entry = existing.get(stock_code, {
                 'stock_code': stock_code,
                 'stock_name': name_map.get(stock_code, stock_code),

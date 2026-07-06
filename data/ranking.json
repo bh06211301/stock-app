@@ -1,8 +1,8 @@
 {
-  "update_time": "2026-07-06 15:27:56",
+  "update_time": "2026-07-06 15:44:53",
   "data_source": "20260703",
   "summary": {
-    "total": 66,
+    "total": 64,
     "strong_buy": 4,
     "buy": 3,
     "hold": 16
@@ -80,13 +80,13 @@
         "stock_name": "緯創",
         "latest": {
           "big_holders": 281,
-          "big_ratio": 58.54,
+          "big_ratio": 58.55,
           "date": "20260703"
         },
         "trend": {
           "holder_change": 11,
           "holder_change_pct": 4.07,
-          "ratio_change": 5.16,
+          "ratio_change": 5.17,
           "weeks": 12
         },
         "signal": {
@@ -95,7 +95,7 @@
           "level": "strong_buy",
           "color": "green"
         },
-        "score": 55.67
+        "score": 55.77
       },
       {
         "stock_code": "2327",
@@ -108,7 +108,7 @@
         "trend": {
           "holder_change": 2,
           "holder_change_pct": 0.95,
-          "ratio_change": 4.85,
+          "ratio_change": 4.84,
           "weeks": 12
         },
         "signal": {
@@ -117,7 +117,7 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 49.45
+        "score": 49.35
       },
       {
         "stock_code": "3034",
@@ -168,13 +168,13 @@
         "stock_name": "南亞",
         "latest": {
           "big_holders": 374,
-          "big_ratio": 84.53,
+          "big_ratio": 84.54,
           "date": "20260703"
         },
         "trend": {
           "holder_change": 6,
           "holder_change_pct": 1.63,
-          "ratio_change": 3.19,
+          "ratio_change": 3.2,
           "weeks": 12
         },
         "signal": {
@@ -183,7 +183,7 @@
           "level": "buy",
           "color": "green"
         },
-        "score": 33.53
+        "score": 33.63
       },
       {
         "stock_code": "1301",
@@ -196,7 +196,7 @@
         "trend": {
           "holder_change": 9,
           "holder_change_pct": 3.12,
-          "ratio_change": 2.89,
+          "ratio_change": 2.88,
           "weeks": 12
         },
         "signal": {
@@ -205,7 +205,7 @@
           "level": "buy",
           "color": "green"
         },
-        "score": 32.02
+        "score": 31.92
       },
       {
         "stock_code": "2303",
@@ -234,7 +234,7 @@
         "stock_name": "中租-KY",
         "latest": {
           "big_holders": 204,
-          "big_ratio": 63.66,
+          "big_ratio": 63.67,
           "date": "20260703"
         },
         "trend": {
@@ -256,7 +256,7 @@
         "stock_name": "台化",
         "latest": {
           "big_holders": 263,
-          "big_ratio": 80.46,
+          "big_ratio": 80.47,
           "date": "20260703"
         },
         "trend": {
@@ -284,7 +284,7 @@
         "trend": {
           "holder_change": 34,
           "holder_change_pct": 2.7,
-          "ratio_change": 1.54,
+          "ratio_change": 1.53,
           "weeks": 12
         },
         "signal": {
@@ -293,7 +293,7 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 18.1
+        "score": 18.0
       },
       {
         "stock_code": "2886",
@@ -306,7 +306,7 @@
         "trend": {
           "holder_change": 4,
           "holder_change_pct": 0.87,
-          "ratio_change": 1.72,
+          "ratio_change": 1.71,
           "weeks": 12
         },
         "signal": {
@@ -315,14 +315,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 18.07
+        "score": 17.97
       },
       {
         "stock_code": "2892",
         "stock_name": "第一金",
         "latest": {
           "big_holders": 749,
-          "big_ratio": 67.17,
+          "big_ratio": 67.18,
           "date": "20260703"
         },
         "trend": {
@@ -438,7 +438,7 @@
         "trend": {
           "holder_change": 4,
           "holder_change_pct": 1.77,
-          "ratio_change": 0.93,
+          "ratio_change": 0.92,
           "weeks": 12
         },
         "signal": {
@@ -447,7 +447,7 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 11.07
+        "score": 10.97
       },
       {
         "stock_code": "2347",
@@ -482,7 +482,7 @@
         "trend": {
           "holder_change": 17,
           "holder_change_pct": 2.61,
-          "ratio_change": 0.62,
+          "ratio_change": 0.61,
           "weeks": 12
         },
         "signal": {
@@ -491,7 +491,7 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 8.81
+        "score": 8.71
       },
       {
         "stock_code": "5876",
@@ -504,7 +504,7 @@
         "trend": {
           "holder_change": 0,
           "holder_change_pct": 0.0,
-          "ratio_change": 0.82,
+          "ratio_change": 0.81,
           "weeks": 12
         },
         "signal": {
@@ -513,7 +513,7 @@
           "level": "neutral",
           "color": "gray"
         },
-        "score": 8.2
+        "score": 8.1
       },
       {
         "stock_code": "5880",
@@ -548,7 +548,7 @@
         "trend": {
           "holder_change": -7,
           "holder_change_pct": -2.33,
-          "ratio_change": 0.88,
+          "ratio_change": 0.87,
           "weeks": 12
         },
         "signal": {
@@ -557,7 +557,7 @@
           "level": "sell",
           "color": "red"
         },
-        "score": 6.47
+        "score": 6.37
       },
       {
         "stock_code": "0050",
@@ -586,7 +586,7 @@
         "stock_name": "統一",
         "latest": {
           "big_holders": 444,
-          "big_ratio": 85.53,
+          "big_ratio": 85.54,
           "date": "20260703"
         },
         "trend": {
@@ -608,13 +608,13 @@
         "stock_name": "永豐金",
         "latest": {
           "big_holders": 813,
-          "big_ratio": 77.59,
+          "big_ratio": 77.6,
           "date": "20260703"
         },
         "trend": {
           "holder_change": 23,
           "holder_change_pct": 2.91,
-          "ratio_change": 0.23,
+          "ratio_change": 0.24,
           "weeks": 12
         },
         "signal": {
@@ -623,7 +623,7 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 5.21
+        "score": 5.31
       },
       {
         "stock_code": "2615",
@@ -658,7 +658,7 @@
         "trend": {
           "holder_change": 16,
           "holder_change_pct": 6.48,
-          "ratio_change": -0.15,
+          "ratio_change": -0.16,
           "weeks": 12
         },
         "signal": {
@@ -667,7 +667,7 @@
           "level": "neutral",
           "color": "gray"
         },
-        "score": 4.98
+        "score": 4.88
       }
     ],
     "strong_buy": [
@@ -742,13 +742,13 @@
         "stock_name": "緯創",
         "latest": {
           "big_holders": 281,
-          "big_ratio": 58.54,
+          "big_ratio": 58.55,
           "date": "20260703"
         },
         "trend": {
           "holder_change": 11,
           "holder_change_pct": 4.07,
-          "ratio_change": 5.16,
+          "ratio_change": 5.17,
           "weeks": 12
         },
         "signal": {
@@ -757,7 +757,7 @@
           "level": "strong_buy",
           "color": "green"
         },
-        "score": 55.67
+        "score": 55.77
       }
     ],
     "buy": [
@@ -788,13 +788,13 @@
         "stock_name": "南亞",
         "latest": {
           "big_holders": 374,
-          "big_ratio": 84.53,
+          "big_ratio": 84.54,
           "date": "20260703"
         },
         "trend": {
           "holder_change": 6,
           "holder_change_pct": 1.63,
-          "ratio_change": 3.19,
+          "ratio_change": 3.2,
           "weeks": 12
         },
         "signal": {
@@ -803,7 +803,7 @@
           "level": "buy",
           "color": "green"
         },
-        "score": 33.53
+        "score": 33.63
       },
       {
         "stock_code": "1301",
@@ -816,7 +816,7 @@
         "trend": {
           "holder_change": 9,
           "holder_change_pct": 3.12,
-          "ratio_change": 2.89,
+          "ratio_change": 2.88,
           "weeks": 12
         },
         "signal": {
@@ -825,7 +825,7 @@
           "level": "buy",
           "color": "green"
         },
-        "score": 32.02
+        "score": 31.92
       }
     ],
     "hold": [
@@ -840,7 +840,7 @@
         "trend": {
           "holder_change": 2,
           "holder_change_pct": 0.95,
-          "ratio_change": 4.85,
+          "ratio_change": 4.84,
           "weeks": 12
         },
         "signal": {
@@ -849,7 +849,7 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 49.45
+        "score": 49.35
       },
       {
         "stock_code": "3034",
@@ -900,7 +900,7 @@
         "stock_name": "中租-KY",
         "latest": {
           "big_holders": 204,
-          "big_ratio": 63.66,
+          "big_ratio": 63.67,
           "date": "20260703"
         },
         "trend": {
@@ -928,7 +928,7 @@
         "trend": {
           "holder_change": 34,
           "holder_change_pct": 2.7,
-          "ratio_change": 1.54,
+          "ratio_change": 1.53,
           "weeks": 12
         },
         "signal": {
@@ -937,7 +937,7 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 18.1
+        "score": 18.0
       },
       {
         "stock_code": "2886",
@@ -950,7 +950,7 @@
         "trend": {
           "holder_change": 4,
           "holder_change_pct": 0.87,
-          "ratio_change": 1.72,
+          "ratio_change": 1.71,
           "weeks": 12
         },
         "signal": {
@@ -959,14 +959,14 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 18.07
+        "score": 17.97
       },
       {
         "stock_code": "2892",
         "stock_name": "第一金",
         "latest": {
           "big_holders": 749,
-          "big_ratio": 67.17,
+          "big_ratio": 67.18,
           "date": "20260703"
         },
         "trend": {
@@ -994,7 +994,7 @@
         "trend": {
           "holder_change": 4,
           "holder_change_pct": 1.77,
-          "ratio_change": 0.93,
+          "ratio_change": 0.92,
           "weeks": 12
         },
         "signal": {
@@ -1003,7 +1003,7 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 11.07
+        "score": 10.97
       },
       {
         "stock_code": "2347",
@@ -1038,7 +1038,7 @@
         "trend": {
           "holder_change": 17,
           "holder_change_pct": 2.61,
-          "ratio_change": 0.62,
+          "ratio_change": 0.61,
           "weeks": 12
         },
         "signal": {
@@ -1047,7 +1047,7 @@
           "level": "hold",
           "color": "gray"
         },
-        "score": 8.81
+        "score": 8.71
       }
     ]
   }
