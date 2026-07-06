@@ -197,7 +197,7 @@ def main():
     hold       = [r for r in rankings if r['signal']['level'] == 'hold']
 
     recent_up = sorted(
-        [r for r in rankings if r['recent_change'] is not None and r['recent_change'] > 0],
+        [r for r in rankings if r['recent_change'] is not None and r['recent_change'] >= 0.5],
         key=lambda x: x['recent_change'],
         reverse=True
     )

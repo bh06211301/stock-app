@@ -225,7 +225,7 @@ body {
     <div class="summary-item" id="tab-recent_up" onclick="setFilter('recent_up')">
       <div class="summary-number" style="color: #9B59B6;" id="recentUpCount">0</div>
       <div class="summary-label">⚡ 近期動能</div>
-      <div class="summary-hint">近2週比例<br>仍在上升</div>
+      <div class="summary-hint">近2週+0.5%↑<br>歷史勝率82%</div>
     </div>
   </div>
 
@@ -285,7 +285,7 @@ const FILTER_LABELS = {
   strong_buy: '🚀 快速集中：12週比例 +3% 且人數 +10',
   buy:        '📈 持續增加：12週比例 +2% 且人數 +5',
   divergence: '📊 籌碼背離：大戶比例↑但股價尚未跟漲',
-  recent_up:  '⚡ 近期動能：近2週大戶比例仍在上升（按幅度排序）',
+  recent_up:  '⚡ 近期動能：近2週大戶比例 +0.5% 以上（歷史12週勝率 82%，按幅度排序）',
 };
 
 function setFilter(filter) {
