@@ -334,16 +334,9 @@ body {
 
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-label">總持股人數</div>
-        <div class="stat-value" id="totalHolders">1,234,567</div>
-      </div>
-      <div class="stat-card">
         <div class="stat-label">千張大戶人數</div>
         <div class="stat-value" id="bigHolders">1,234</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">總發行張數</div>
-        <div class="stat-value" id="totalShares">25,930</div>
+        <div id="bigHolderChange" style="font-size:13px; margin-top:6px; font-weight:600;"></div>
       </div>
       <div class="stat-card">
         <div class="stat-label">大戶持股張數</div>
@@ -380,7 +373,7 @@ body {
 
     <!-- 雙軸趨勢圖（比例 % + 大戶人數）-->
     <div class="chart-card">
-      <h3>大戶比例 &amp; 人數趨勢</h3>
+      <h3 id="holdersChartTitle">大戶比例 &amp; 人數趨勢</h3>
       <canvas id="holdersChart"></canvas>
     </div>
 
@@ -484,6 +477,7 @@ async function fetchFromLocalJSON(stockCode) {
     if (!json || !json.history || json.history.length === 0) return null;
 
     const latest = json.history[0];
+    const prevWeek = json.history.length > 1 ? json.history[1] : null;
     const dist = latest.distribution || [];
 
     // 格式化日期 20260703 -> 2026-07-03
@@ -497,9 +491,8 @@ async function fetchFromLocalJSON(stockCode) {
       stockCode: json.stock_code,
       stockName: json.stock_name,
       dataDate,
-      totalHolders: latest.total_holders.toLocaleString(),
-      totalShares: Math.round(latest.total_shares / 1000).toLocaleString(),
       bigHolders: latest.big_holders.toLocaleString(),
+      bigHolderChange: prevWeek ? latest.big_holders - prevWeek.big_holders : null,
       bigHoldersShares: Math.round(latest.big_shares / 1000).toLocaleString(),
       bigHolderRatio: latest.big_ratio.toFixed(1),
       distributions: dist.map(d => ({
@@ -511,7 +504,8 @@ async function fetchFromLocalJSON(stockCode) {
       trendHistory: json.history.map(h => ({
         date: h.date,
         big_ratio: h.big_ratio,
-        big_holders: h.big_holders
+        big_holders: h.big_holders,
+        close_price: h.close_price ?? null
       })).reverse(),
       signal: json.signal || null
     };
@@ -589,6 +583,7 @@ function parseNorwayHtml(html, stockCode) {
       const totalHolders = norParseInt(cells[4].textContent);
       const bigHolders   = norParseInt(cells[12].textContent);
       const bigRatio     = norParseFloat(cells[13].textContent);
+      const closePrice   = norParseFloat(cells[14].textContent);
 
       if (totalLots === 0 && bigHolders === 0) continue;
 
@@ -599,6 +594,7 @@ function parseNorwayHtml(html, stockCode) {
         total_holders: totalHolders,
         total_shares: totalLots * 1000,
         big_shares: Math.round(bigRatio / 100 * totalLots) * 1000,
+        close_price: closePrice > 0 ? closePrice : null,
       });
     }
 
@@ -627,14 +623,13 @@ function parseNorwayHtml(html, stockCode) {
       stockCode,
       stockName,
       dataDate,
-      totalHolders: latest.total_holders.toLocaleString(),
-      totalShares: Math.round(latest.total_shares / 1000).toLocaleString(),
       bigHolders: latest.big_holders.toLocaleString(),
+      bigHolderChange: history.length > 1 ? history[0].big_holders - history[1].big_holders : null,
       bigHoldersShares: Math.round(latest.big_shares / 1000).toLocaleString(),
       bigHolderRatio: latest.big_ratio.toFixed(1),
       distributions: [],
       trendHistory: [...history].reverse().map(h => ({
-        date: h.date, big_ratio: h.big_ratio, big_holders: h.big_holders
+        date: h.date, big_ratio: h.big_ratio, big_holders: h.big_holders, close_price: h.close_price ?? null
       })),
       signal,
       trend,
@@ -670,10 +665,17 @@ function displayData(data) {
   document.getElementById('stockCodeDisplay').textContent = data.stockCode;
   document.getElementById('dataDate').textContent = data.dataDate;
   document.getElementById('bigHolderRatio').textContent = data.bigHolderRatio;
-  document.getElementById('totalHolders').textContent = data.totalHolders;
   document.getElementById('bigHolders').textContent = data.bigHolders;
-  document.getElementById('totalShares').textContent = data.totalShares;
   document.getElementById('bigHoldersShares').textContent = data.bigHoldersShares;
+
+  const changeEl = document.getElementById('bigHolderChange');
+  if (data.bigHolderChange !== null && data.bigHolderChange !== undefined) {
+    const sign = data.bigHolderChange > 0 ? '+' : '';
+    changeEl.textContent = `vs 上週 ${sign}${data.bigHolderChange} 人`;
+    changeEl.style.color = data.bigHolderChange > 0 ? '#34c759' : data.bigHolderChange < 0 ? '#ff3b30' : '#86868b';
+  } else {
+    changeEl.textContent = '';
+  }
 
   // 顯示趨勢信號
   if (data.signal) {
@@ -796,38 +798,101 @@ function drawDualAxisChart(trendHistory) {
     return d.length === 8 ? `${d.slice(4,6)}/${d.slice(6,8)}` : d;
   });
 
+  const hasPriceData = recent.some(h => h.close_price != null && h.close_price > 0);
+
+  const titleEl = document.getElementById('holdersChartTitle');
+  if (hasPriceData) titleEl.textContent = '大戶比例 vs 股價';
+  else              titleEl.textContent = '大戶比例 & 人數趨勢';
+
+  const datasets = hasPriceData ? [
+    {
+      type: 'line',
+      label: '大戶比例 (%)',
+      data: recent.map(h => h.big_ratio),
+      borderColor: 'rgba(127, 119, 221, 1)',
+      backgroundColor: 'rgba(127, 119, 221, 0.08)',
+      fill: true,
+      tension: 0.3,
+      pointRadius: 2,
+      pointHoverRadius: 6,
+      borderWidth: 2.5,
+      yAxisID: 'yRatio',
+      order: 1,
+    },
+    {
+      type: 'line',
+      label: '收盤價 (元)',
+      data: recent.map(h => h.close_price),
+      borderColor: 'rgba(255, 159, 64, 1)',
+      backgroundColor: 'rgba(255, 159, 64, 0)',
+      tension: 0.3,
+      pointRadius: 2,
+      pointHoverRadius: 6,
+      borderWidth: 2,
+      borderDash: [],
+      yAxisID: 'yPrice',
+      order: 2,
+    }
+  ] : [
+    {
+      type: 'line',
+      label: '大戶比例 (%)',
+      data: recent.map(h => h.big_ratio),
+      borderColor: 'rgba(127, 119, 221, 1)',
+      backgroundColor: 'rgba(127, 119, 221, 0)',
+      tension: 0.3,
+      pointRadius: 3,
+      pointHoverRadius: 6,
+      borderWidth: 2.5,
+      yAxisID: 'yRatio',
+      order: 1,
+    },
+    {
+      type: 'bar',
+      label: '大戶人數',
+      data: recent.map(h => h.big_holders),
+      backgroundColor: 'rgba(55, 138, 221, 0.45)',
+      borderColor: 'rgba(55, 138, 221, 0.8)',
+      borderWidth: 1,
+      borderRadius: 3,
+      yAxisID: 'yHolders',
+      order: 2,
+    }
+  ];
+
+  const scalesConfig = hasPriceData ? {
+    x: { ticks: { font: { size: 10 }, maxRotation: 45 }, grid: { display: false } },
+    yRatio: {
+      type: 'linear', position: 'left',
+      ticks: { font: { size: 11 }, callback: v => v.toFixed(1) + '%' },
+      title: { display: false }
+    },
+    yPrice: {
+      type: 'linear', position: 'right',
+      ticks: { font: { size: 11 }, callback: v => v.toLocaleString() },
+      grid: { drawOnChartArea: false }
+    }
+  } : {
+    x: { ticks: { font: { size: 10 }, maxRotation: 45 }, grid: { display: false } },
+    yRatio: {
+      type: 'linear', position: 'left',
+      ticks: { font: { size: 11 }, callback: v => v.toFixed(1) + '%' }
+    },
+    yHolders: {
+      type: 'linear', position: 'right',
+      ticks: { font: { size: 11 }, callback: v => v.toLocaleString() },
+      grid: { drawOnChartArea: false }
+    }
+  };
+
   chartInstances.holders = new Chart(ctx, {
     type: 'bar',
-    data: {
-      labels,
-      datasets: [{
-        type: 'line',
-        label: '大戶比例 (%)',
-        data: recent.map(h => h.big_ratio),
-        borderColor: 'rgba(127, 119, 221, 1)',
-        backgroundColor: 'rgba(127, 119, 221, 0)',
-        tension: 0.3,
-        pointRadius: 3,
-        pointHoverRadius: 6,
-        borderWidth: 2.5,
-        yAxisID: 'yRatio',
-        order: 1,
-      }, {
-        type: 'bar',
-        label: '大戶人數',
-        data: recent.map(h => h.big_holders),
-        backgroundColor: 'rgba(55, 138, 221, 0.45)',
-        borderColor: 'rgba(55, 138, 221, 0.8)',
-        borderWidth: 1,
-        borderRadius: 3,
-        yAxisID: 'yHolders',
-        order: 2,
-      }]
-    },
+    data: { labels, datasets },
     options: {
       responsive: true,
       maintainAspectRatio: true,
       aspectRatio: 1.5,
+      interaction: { mode: 'index', intersect: false },
       plugins: {
         legend: {
           display: true,
@@ -836,24 +901,15 @@ function drawDualAxisChart(trendHistory) {
         },
         tooltip: {
           callbacks: {
-            label: c => c.dataset.label === '大戶比例 (%)'
-              ? `比例: ${c.parsed.y.toFixed(2)}%`
-              : `人數: ${c.parsed.y.toLocaleString()} 人`
+            label: c => {
+              if (c.dataset.label === '大戶比例 (%)') return `比例: ${c.parsed.y.toFixed(2)}%`;
+              if (c.dataset.label === '收盤價 (元)')  return `股價: $${c.parsed.y.toLocaleString()}`;
+              return `人數: ${c.parsed.y.toLocaleString()} 人`;
+            }
           }
         }
       },
-      scales: {
-        x: { ticks: { font: { size: 10 }, maxRotation: 45 }, grid: { display: false } },
-        yRatio: {
-          type: 'linear', position: 'left',
-          ticks: { font: { size: 11 }, callback: v => v.toFixed(1) + '%' }
-        },
-        yHolders: {
-          type: 'linear', position: 'right',
-          ticks: { font: { size: 11 }, callback: v => v.toLocaleString() },
-          grid: { drawOnChartArea: false }
-        }
-      }
+      scales: scalesConfig
     }
   });
 }
