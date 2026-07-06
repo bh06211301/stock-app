@@ -513,7 +513,6 @@ async function fetchFromLocalJSON(stockCode) {
       dataDate,
       bigHolders: latest.big_holders.toLocaleString(),
       bigHolderChange: prevWeek ? latest.big_holders - prevWeek.big_holders : null,
-      bigHoldersShares: Math.round(latest.big_shares / 1000).toLocaleString(),
       bigHolderRatio: latest.big_ratio.toFixed(1),
       distributions: dist.map(d => ({
         range: d.level_name,
@@ -645,7 +644,6 @@ function parseNorwayHtml(html, stockCode) {
       dataDate,
       bigHolders: latest.big_holders.toLocaleString(),
       bigHolderChange: history.length > 1 ? history[0].big_holders - history[1].big_holders : null,
-      bigHoldersShares: Math.round(latest.big_shares / 1000).toLocaleString(),
       bigHolderRatio: latest.big_ratio.toFixed(1),
       distributions: [],
       trendHistory: [...history].reverse().map(h => ({
@@ -686,7 +684,6 @@ function displayData(data) {
   document.getElementById('dataDate').textContent = data.dataDate;
   document.getElementById('bigHolderRatio').textContent = data.bigHolderRatio;
   document.getElementById('bigHolders').textContent = data.bigHolders;
-  document.getElementById('bigHoldersShares').textContent = data.bigHoldersShares;
 
   const changeEl = document.getElementById('bigHolderChange');
   if (data.bigHolderChange !== null && data.bigHolderChange !== undefined) {
