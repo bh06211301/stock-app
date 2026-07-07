@@ -1,13 +1,13 @@
 {
-  "update_time": "2026-07-06 21:28:26",
+  "update_time": "2026-07-07 09:47:50",
   "data_source": "20260703",
   "summary": {
-    "total": 64,
+    "total": 68,
     "strong_buy": 4,
     "buy": 3,
     "hold": 16,
-    "divergence": 41,
-    "recent_up": 4
+    "divergence": 43,
+    "recent_up": 5
   },
   "rankings": {
     "all": [
@@ -351,6 +351,37 @@
           "weeks": 12
         },
         "recent_change": 0.64
+      },
+      {
+        "stock_code": "4749",
+        "stock_name": "新應材",
+        "latest": {
+          "big_holders": 9,
+          "big_ratio": 23.89,
+          "date": "20260703",
+          "close_price": 913.0
+        },
+        "trend": {
+          "holder_change": 0,
+          "holder_change_pct": 0.0,
+          "ratio_change": 2.22,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "趨勢不明顯",
+          "level": "neutral",
+          "color": "gray"
+        },
+        "score": 22.2,
+        "divergence": {
+          "ratio_change": 2.22,
+          "price_change_pct": 2.24,
+          "divergence_score": 19.96,
+          "latest_price": 913.0,
+          "weeks": 12
+        },
+        "recent_change": -1.01
       },
       {
         "stock_code": "1326",
@@ -909,31 +940,6 @@
           "weeks": 12
         },
         "recent_change": -0.33
-      },
-      {
-        "stock_code": "2301",
-        "stock_name": "光寶科",
-        "latest": {
-          "big_holders": 263,
-          "big_ratio": 73.5,
-          "date": "20260703",
-          "close_price": 219.0
-        },
-        "trend": {
-          "holder_change": 16,
-          "holder_change_pct": 6.48,
-          "ratio_change": -0.16,
-          "weeks": 12
-        },
-        "signal": {
-          "icon": "➡️",
-          "text": "趨勢不明顯",
-          "level": "neutral",
-          "color": "gray"
-        },
-        "score": 4.88,
-        "divergence": null,
-        "recent_change": -0.27
       }
     ],
     "strong_buy": [
@@ -1517,6 +1523,29 @@
         }
       },
       {
+        "stock_code": "4749",
+        "stock_name": "新應材",
+        "latest": {
+          "big_holders": 9,
+          "big_ratio": 23.89,
+          "date": "20260703",
+          "close_price": 913.0
+        },
+        "divergence": {
+          "ratio_change": 2.22,
+          "price_change_pct": 2.24,
+          "divergence_score": 19.96,
+          "latest_price": 913.0,
+          "weeks": 12
+        },
+        "signal": {
+          "icon": "➡️",
+          "text": "趨勢不明顯",
+          "level": "neutral",
+          "color": "gray"
+        }
+      },
+      {
         "stock_code": "2376",
         "stock_name": "技嘉",
         "latest": {
@@ -1906,21 +1935,22 @@
           "level": "neutral",
           "color": "gray"
         }
-      },
+      }
+    ],
+    "recent_up": [
       {
-        "stock_code": "4904",
-        "stock_name": "遠傳",
+        "stock_code": "3715",
+        "stock_name": "定穎投控",
         "latest": {
-          "big_holders": 233,
-          "big_ratio": 91.11,
+          "big_holders": 31,
+          "big_ratio": 29.98,
           "date": "20260703",
-          "close_price": 105.0
+          "close_price": 172.0
         },
-        "divergence": {
-          "ratio_change": 0.28,
-          "price_change_pct": 10.99,
-          "divergence_score": -8.19,
-          "latest_price": 105.0,
+        "trend": {
+          "holder_change": -5,
+          "holder_change_pct": -13.89,
+          "ratio_change": -6.75,
           "weeks": 12
         },
         "signal": {
@@ -1928,10 +1958,11 @@
           "text": "大戶持股減少",
           "level": "sell",
           "color": "red"
-        }
-      }
-    ],
-    "recent_up": [
+        },
+        "score": -81.39,
+        "divergence": null,
+        "recent_change": 2.13
+      },
       {
         "stock_code": "1301",
         "stock_name": "台塑",
