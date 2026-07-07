@@ -88,6 +88,60 @@ def calculate_divergence(history):
     }
 
 
+def calculate_profit_taking(history):
+    """
+    偵測獲利了結風險：曾連續吃貨 ≥ 3 週後，大戶比例開始回落
+    條件：
+      1. 最近 ≥ 1 週比例連續下降
+      2. 下降之前曾有 ≥ 3 週連續上升（確認為吃貨後出貨，非隨機波動）
+    """
+    if len(history) < 5:
+        return None
+
+    # 計算最近連續下降週數
+    recent_down = 0
+    for i in range(len(history) - 1):
+        if history[i]['big_ratio'] < history[i + 1]['big_ratio']:
+            recent_down += 1
+        else:
+            break
+
+    if recent_down < 1:
+        return None
+
+    # 下降之前找連續上升週數
+    prev_streak = 0
+    for i in range(recent_down, len(history) - 1):
+        if history[i]['big_ratio'] > history[i + 1]['big_ratio']:
+            prev_streak += 1
+        else:
+            break
+
+    if prev_streak < 3:
+        return None
+
+    peak_week  = history[recent_down]
+    base_week  = history[recent_down + prev_streak]
+
+    latest_price = history[0].get('close_price')
+    peak_price   = peak_week.get('close_price')
+    base_price   = base_week.get('close_price')
+
+    price_gain_pct = None
+    if peak_price and base_price and base_price > 0:
+        price_gain_pct = round((peak_price - base_price) / base_price * 100, 2)
+
+    ratio_drop = round(history[0]['big_ratio'] - peak_week['big_ratio'], 2)
+
+    return {
+        'recent_down_weeks': recent_down,
+        'prev_streak_weeks': prev_streak,
+        'ratio_drop':        ratio_drop,
+        'price_gain_pct':    price_gain_pct,
+        'latest_price':      latest_price,
+    }
+
+
 def generate_signal(trend):
     """生成趨勢判斷信號"""
     if not trend:
@@ -151,8 +205,9 @@ def main():
         print('❌ 找不到 data/stocks_raw.json，請先執行 fetch_data.py')
         return
 
-    rankings   = []
+    rankings        = []
     divergence_list = []
+    pt_list         = []
 
     for stock in raw_data['stocks']:
         history = stock['history']
@@ -163,6 +218,7 @@ def main():
         trend         = calculate_trend(history)
         signal        = generate_signal(trend)
         div           = calculate_divergence(history)
+        pt            = calculate_profit_taking(history)
         recent_change = calculate_recent_change(history)
 
         save_stock_json(stock, trend, signal)
@@ -199,8 +255,27 @@ def main():
                 'signal':     signal,
             })
 
+        if pt:
+            pt_list.append({
+                'stock_code':    stock['stock_code'],
+                'stock_name':    stock['stock_name'],
+                'latest': {
+                    'big_holders': latest['big_holders'],
+                    'big_ratio':   latest['big_ratio'],
+                    'date':        latest['date'],
+                    'close_price': latest.get('close_price'),
+                },
+                'profit_taking': pt,
+                'signal':        signal,
+            })
+
     rankings.sort(key=lambda x: x['score'], reverse=True)
     divergence_list.sort(key=lambda x: x['divergence']['divergence_score'], reverse=True)
+    # 出貨警示：先看出貨時間長度，再看吃貨期漲幅（漲越多越要小心）
+    pt_list.sort(key=lambda x: (
+        x['profit_taking']['recent_down_weeks'],
+        x['profit_taking']['price_gain_pct'] or 0
+    ), reverse=True)
 
     strong_buy = [r for r in rankings if r['signal']['level'] == 'strong_buy']
     buy        = [r for r in rankings if r['signal']['level'] == 'buy']
@@ -216,20 +291,22 @@ def main():
         'update_time': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
         'data_source': raw_data.get('data_date', ''),
         'summary': {
-            'total':      len(rankings),
-            'strong_buy': len(strong_buy),
-            'buy':        len(buy),
-            'hold':       len(hold),
-            'divergence': len(divergence_list),
-            'recent_up':  len(recent_up),
+            'total':          len(rankings),
+            'strong_buy':     len(strong_buy),
+            'buy':            len(buy),
+            'hold':           len(hold),
+            'divergence':     len(divergence_list),
+            'recent_up':      len(recent_up),
+            'profit_taking':  len(pt_list),
         },
         'rankings': {
-            'all':        rankings[:30],
-            'strong_buy': strong_buy[:10],
-            'buy':        buy[:10],
-            'hold':       hold[:10],
-            'divergence': divergence_list[:20],
-            'recent_up':  recent_up[:20],
+            'all':            rankings[:30],
+            'strong_buy':     strong_buy[:10],
+            'buy':            buy[:10],
+            'hold':           hold[:10],
+            'divergence':     divergence_list[:20],
+            'recent_up':      recent_up[:20],
+            'profit_taking':  pt_list[:20],
         }
     }
 
@@ -241,6 +318,7 @@ def main():
     print(f'📈 持續增加: {len(buy)} 支')
     print(f'➡️  微幅增加: {len(hold)} 支')
     print(f'📊 籌碼背離: {len(divergence_list)} 支')
+    print(f'⚠️  注意出貨: {len(pt_list)} 支')
     print(f'📁 已產生 data/stocks/{"{code}"}.json 個股檔案')
     print(f'📁 已更新 data/ranking.json')
 

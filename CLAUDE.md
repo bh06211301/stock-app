@@ -229,6 +229,24 @@ divergence_score   = total_ratio_change * 10 - price_change_pct + consecutive_we
 - **連續週加成**：每多一週 +3 分，獎勵持續性訊號
 - 分數越高 = 連續吃貨週數越多、股價越落後 → 訊號越可靠
 
+### 出貨警示（calculate_profit_taking）
+
+```python
+# 最近連續下降週數
+recent_down = ...  # history[i]['big_ratio'] < history[i+1]['big_ratio'] 連續幾週
+
+# 下降前的連續上升週數
+prev_streak = ...  # 從 recent_down 往回數
+
+# 條件：recent_down >= 1 且 prev_streak >= 3
+ratio_drop     = history[0]['big_ratio'] - history[recent_down]['big_ratio']
+price_gain_pct = (peak_price - base_price) / base_price * 100  # 吃貨期間漲幅
+```
+
+- **意義**：曾連續吃貨 ≥ 3 週，但大戶比例已開始回落 → 可能進入獲利了結階段
+- **排序**：先按出貨週數降序（出貨越久越優先），再按吃貨期漲幅降序
+- **顯示欄位**：吃貨持續週數、已出貨週數、比例回落幅度、吃貨期間股價漲幅
+
 ---
 
 ## ranking.json 格式
@@ -295,7 +313,9 @@ divergence 清單每項格式：
 | 全部排行 | 全部有 trend | score 降序 | 大戶人數變化、持股比例、比例變化 |
 | 🚀 快速集中 | level == strong_buy | score 降序 | 同上 |
 | 📈 持續增加 | level == buy | score 降序 | 同上 |
-| 📊 籌碼背離 | ratio_change > 0 且有股價 | divergence_score 降序 | 大戶比例變化、股價漲跌(12週)、背離分數 |
+| 📊 籌碼背離 | 連續 ≥2 週上升且有股價 | divergence_score 降序 | 連續買進週數、比例累積、股價漲跌(N週)、背離分數 |
+| ⚡ 近期動能 | 近2週比例 +0.5% 以上 | recent_change 降序 | 大戶人數、12週比例、近2週動向 |
+| ⚠️ 注意出貨 | 連續 ≥3 週上升後開始回落 | 出貨週數+漲幅降序 | 吃貨持續週數、已出貨週數、比例回落、吃貨期漲幅 |
 
 ---
 
