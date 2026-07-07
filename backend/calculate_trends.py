@@ -44,37 +44,47 @@ def calculate_trend(history):
 
 def calculate_divergence(history):
     """
-    計算籌碼背離分數：大戶比例上升但股價未跟上
-    背離分數 = 大戶比例變化(pp) × 10 − 股價漲幅(%)
-    分數越高 = 大戶越積極吃貨、股價越落後 → 潛在爆發力越強
+    計算籌碼背離分數：大戶比例「連續上升」但股價尚未跟上
+    - 需連續 ≥ 2 週上升，過濾單週雜訊
+    - 比較基準為連漲起點（動態），非固定 12 週前
+    - 分數 = 比例累積變化 × 10 − 股價漲幅 + 連續週數 × 3
+    分數越高 = 持續吃貨且股價越落後 → 訊號越可靠
     """
-    if len(history) < 2:
+    if len(history) < 3:
         return None
 
-    weeks_ago = min(12, len(history) - 1)
-    latest   = history[0]
-    previous = history[weeks_ago]
+    # 從最新週往回數，計算大戶比例連續上升週數
+    consecutive_weeks = 0
+    for i in range(len(history) - 1):
+        if history[i]['big_ratio'] > history[i + 1]['big_ratio']:
+            consecutive_weeks += 1
+        else:
+            break
+
+    if consecutive_weeks < 2:
+        return None
+
+    latest      = history[0]
+    streak_start = history[consecutive_weeks]   # 連漲起點那週
 
     latest_price = latest.get('close_price')
-    prev_price   = previous.get('close_price')
+    start_price  = streak_start.get('close_price')
 
-    if not latest_price or not prev_price or prev_price <= 0:
+    if not latest_price or not start_price or start_price <= 0:
         return None
 
-    ratio_change     = latest['big_ratio'] - previous['big_ratio']
-    price_change_pct = (latest_price - prev_price) / prev_price * 100
+    total_ratio_change = latest['big_ratio'] - streak_start['big_ratio']
+    price_change_pct   = (latest_price - start_price) / start_price * 100
 
-    if ratio_change <= 0:   # 大戶比例沒增加就不算背離
-        return None
-
-    divergence_score = round(ratio_change * 10 - price_change_pct, 2)
+    # 連續週數加成：每多一週給 +3 分（獎勵持續性）
+    divergence_score = round(total_ratio_change * 10 - price_change_pct + consecutive_weeks * 3, 2)
 
     return {
-        'ratio_change':     round(ratio_change, 2),
-        'price_change_pct': round(price_change_pct, 2),
-        'divergence_score': divergence_score,
-        'latest_price':     latest_price,
-        'weeks':            weeks_ago,
+        'consecutive_weeks': consecutive_weeks,
+        'ratio_change':      round(total_ratio_change, 2),
+        'price_change_pct':  round(price_change_pct, 2),
+        'divergence_score':  divergence_score,
+        'latest_price':      latest_price,
     }
 
 

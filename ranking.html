@@ -335,13 +335,17 @@ function renderList(filter) {
         </div>
         <div class="stock-stats">
           <div class="stat-item">
-            <div class="stat-label">大戶比例變化</div>
+            <div class="stat-label">連續買進</div>
+            <div class="stat-value positive">${d.consecutive_weeks} 週</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">比例累積</div>
             <div class="stat-value ${ratioClass}">
               ${d.ratio_change >= 0 ? '+' : ''}${d.ratio_change}%
             </div>
           </div>
           <div class="stat-item">
-            <div class="stat-label">股價漲跌(12週)</div>
+            <div class="stat-label">股價漲跌(${d.consecutive_weeks}週)</div>
             <div class="stat-value ${priceClass}">
               ${d.price_change_pct >= 0 ? '+' : ''}${d.price_change_pct.toFixed(1)}%
             </div>
